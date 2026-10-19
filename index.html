@@ -239,12 +239,12 @@
   .hero-body > *,.hero header,.hero .divider,.hero .door{opacity:0;animation:softrise 1.8s cubic-bezier(.22,.61,.36,1) forwards;}
   .hero-body > :nth-child(2){animation-delay:4.9s;}
   .hero-body > :nth-child(3){animation-delay:5.25s;}
-  .hero-body > :nth-child(4){animation-delay:5.75s;}
-  .hero-body > :nth-child(5){animation-delay:6.15s;}
-  .hero .divider{animation-delay:6.5s;}
-  .hero .door:nth-child(1){animation-delay:6.8s;}
-  .hero .door:nth-child(2){animation-delay:7.1s;}
-  .hero header{animation-delay:7.35s;animation-duration:2.2s;}
+  .hero-body > :nth-child(4){animation-delay:8.7s;}
+  .hero-body > :nth-child(5){animation-delay:9.1s;}
+  .hero .divider{animation-delay:9.45s;}
+  .hero .door:nth-child(1){animation-delay:9.75s;}
+  .hero .door:nth-child(2){animation-delay:10.05s;}
+  .hero header{animation-delay:10.3s;animation-duration:2.2s;}
   /* The small crest rises out of the backdrop: it starts exactly over the large faint crest, then lifts and shrinks to its place */
   .hero-body > .seal{transform-origin:50% 50%;animation:emergeT 2.6s cubic-bezier(.5,0,.2,1) 3.3s both,emergeO 2.6s cubic-bezier(.6,0,.4,1) 3.3s both,gleam 8s ease-in-out 6.2s infinite;}
   @keyframes emergeT{
@@ -265,6 +265,35 @@
     .hero > .crest{animation:none!important;opacity:var(--crest-o)!important;transform:translateX(-50%)!important;}
     .hero-body > *,.hero header,.hero .divider,.hero .door{animation:none!important;opacity:1!important;transform:none!important;}
   }
+  /* After the opening: a gold shimmer travels across the two door labels, and the arrows answer with a soft ring */
+  .door .who{background:linear-gradient(100deg,var(--antique) 0%,var(--antique) 38%,#fff3cf 48%,#f6e2a8 52%,var(--antique) 62%,var(--antique) 100%);background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  @keyframes sheen{0%{background-position:100% 0;}16%,100%{background-position:0% 0;}}
+  @keyframes ring{0%{box-shadow:0 0 0 0 rgba(233,196,111,.0);border-color:rgba(236,227,210,.45);}4%{box-shadow:0 0 0 0 rgba(233,196,111,.55);border-color:var(--gold);}16%{box-shadow:0 0 0 12px rgba(233,196,111,0);border-color:rgba(236,227,210,.45);}100%{box-shadow:0 0 0 12px rgba(233,196,111,0);}}
+  .hero .door:nth-child(1) .who{animation:sheen 9s cubic-bezier(.4,0,.2,1) 11.6s infinite;}
+  .hero .door:nth-child(2) .who{animation:sheen 9s cubic-bezier(.4,0,.2,1) 12.1s infinite;}
+  .hero .door:nth-child(1) .go{animation:ring 9s ease-out 11.9s infinite;}
+  .hero .door:nth-child(2) .go{animation:ring 9s ease-out 12.4s infinite;}
+  html.intro-done .hero .door:nth-child(1) .who{animation-delay:1s;}
+  html.intro-done .hero .door:nth-child(2) .who{animation-delay:1.5s;}
+  html.intro-done .hero .door:nth-child(1) .go{animation-delay:1.3s;}
+  html.intro-done .hero .door:nth-child(2) .go{animation-delay:1.8s;}
+  .doors:hover .who,.doors:hover .go,.doors:focus-within .who,.doors:focus-within .go{animation-play-state:paused;}
+  @media (prefers-reduced-motion:reduce){.door .who,.door .go{animation:none!important;}}
+  .door .who{font-size:17px;}
+  .door h2{background:linear-gradient(100deg,var(--bone) 0%,var(--bone) 40%,#f7dd9a 49%,#fbe8b8 51%,var(--bone) 60%,var(--bone) 100%);background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .hero .door:nth-child(1) h2{animation:sheen 9s cubic-bezier(.4,0,.2,1) 11.75s infinite;}
+  .hero .door:nth-child(2) h2{animation:sheen 9s cubic-bezier(.4,0,.2,1) 12.25s infinite;}
+  html.intro-done .hero .door:nth-child(1) h2{animation-delay:1.15s;}
+  html.intro-done .hero .door:nth-child(2) h2{animation-delay:1.65s;}
+  .doors:hover h2,.doors:focus-within h2{animation-play-state:paused;}
+  @media (prefers-reduced-motion:reduce){.door h2{animation:none!important;}}
+  /* Typewriter headline */
+  .hero-body > h1.tw{animation:none!important;opacity:1!important;transform:none!important;filter:none!important;}
+  h1.tw .c{visibility:hidden;}
+  h1.tw .c.on{visibility:visible;}
+  h1.tw .caret{display:inline-block;width:0;height:.82em;border-right:2px solid var(--antique);margin-right:-2px;vertical-align:-.04em;animation:blink 1.05s steps(1) infinite;}
+  h1.tw .caret.gone{opacity:0;transition:opacity .8s ease;animation:none;}
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 </head>
@@ -428,11 +457,11 @@
 <script>
 (function(){
   var root=document.documentElement;
-  function done(){root.classList.add('intro-done');try{sessionStorage.setItem('vaaIntro','1');}catch(e){}off();}
+  function done(){if(window.__vaaTypeFinish)window.__vaaTypeFinish();root.classList.add('intro-done');try{sessionStorage.setItem('vaaIntro','1');}catch(e){}off();}
   function off(){['pointerdown','keydown','wheel','touchstart'].forEach(function(t){window.removeEventListener(t,done);});}
   try{if(sessionStorage.getItem('vaaIntro')){root.classList.add('intro-done');return;}}catch(e){}
   ['pointerdown','keydown','wheel','touchstart'].forEach(function(t){window.addEventListener(t,done,{passive:true});});
-  setTimeout(function(){try{sessionStorage.setItem('vaaIntro','1');}catch(e){}off();},9800);
+  setTimeout(function(){try{sessionStorage.setItem('vaaIntro','1');}catch(e){}off();},12800);
   try{
     var hero=document.querySelector('.hero'),crest=hero.querySelector(':scope > .crest'),seal=hero.querySelector('.hero-body > .seal');
     var hr=hero.getBoundingClientRect(),sr=seal.getBoundingClientRect();
@@ -443,6 +472,42 @@
     seal.style.setProperty('--dy',(cy-sy)+'px');
     seal.style.setProperty('--s',(cw/sr.width).toFixed(3));
   }catch(e){}
+})();
+</script>
+<script>
+(function(){
+  var root=document.documentElement,h1=document.querySelector('.hero-body > h1');
+  if(!h1||root.classList.contains('intro-done'))return;
+  try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;}catch(e){}
+  var full=h1.textContent.replace(/\s+/g,' ').trim();
+  h1.setAttribute('aria-label',full);
+  var chars=[],pauseAt=-1;
+  (function wrap(node){
+    Array.prototype.slice.call(node.childNodes).forEach(function(n){
+      if(n.nodeType===3){
+        var frag=document.createDocumentFragment();
+        n.nodeValue.split('').forEach(function(ch){var sp=document.createElement('span');sp.className='c';sp.setAttribute('aria-hidden','true');sp.textContent=ch;frag.appendChild(sp);chars.push(sp);});
+        n.parentNode.replaceChild(frag,n);
+      }else if(n.nodeType===1){ if(n.classList.contains('soft')&&pauseAt<0)pauseAt=chars.length; wrap(n); }
+    });
+  })(h1);
+  var caret=document.createElement('span');caret.className='caret';caret.setAttribute('aria-hidden','true');
+  h1.classList.add('tw');
+  setTimeout(function(){if(!finished&&chars[0])chars[0].parentNode.insertBefore(caret,chars[0]);},4500);
+  var i=0,timer=null,finished=false;
+  function place(el){el.parentNode.insertBefore(caret,el.nextSibling);}
+  function finish(){if(finished)return;finished=true;clearTimeout(timer);chars.forEach(function(c){c.classList.add('on');});if(chars.length)place(chars[chars.length-1]);caret.classList.add('gone');}
+  window.__vaaTypeFinish=finish;
+  function step(){
+    if(finished)return;
+    if(i>=chars.length){setTimeout(function(){caret.classList.add('gone');},1400);finished=true;return;}
+    var c=chars[i];c.classList.add('on');place(c);i++;
+    var d=58+Math.random()*55;
+    if(c.textContent===' ')d+=40;
+    if(i===pauseAt)d=850;
+    timer=setTimeout(step,d);
+  }
+  timer=setTimeout(step,5300);
 })();
 </script>
 </body>
