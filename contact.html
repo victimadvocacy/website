@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Contact | Victim Advocacy Associates</title>
+<meta name="description" content="Contact Victim Advocacy Associates. Attorneys and individuals can reach us here; we reply within one business day.">
+<link rel="icon" href="crest.png">
+<link rel="stylesheet" href="fonts.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+:root{
+  --night:#170d14;--aubergine:#2a1424;--plum:#4b2242;--mulberry:#7a4468;
+  --bone:#ece3d2;--paper:#f3ede2;--card:#fbf7f0;--stone:#6f655f;--laurel-deep:#5d6a45;
+  --rule:rgba(75,34,66,.18);--antique:#d4c091;--gold:#e9c46f;--ok:#3f6b3a;--err:#9b2c2c;
+  --display:"Caslon Display",Georgia,serif;--text:"Caslon Text",Georgia,serif;
+  --playfair:"Playfair Display","Caslon Display",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+body{font-family:var(--text);background:var(--paper);color:var(--plum);-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga","onum";font-size:18px;line-height:1.65;}
+a{color:var(--aubergine);}
+:focus-visible{outline:2px solid var(--mulberry);outline-offset:3px;border-radius:3px;}
+.skip{position:absolute;left:-9999px;top:0;background:var(--bone);color:var(--aubergine);padding:10px 16px;z-index:10;}
+.skip:focus{left:16px;top:16px;}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));}
+.top{background:radial-gradient(120% 140% at 80% 0%,#3a1b31 0%,var(--aubergine) 45%,var(--night) 100%);color:var(--bone);}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding-block:20px;}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.brand img{width:46px;height:auto;}
+.wm{display:inline-flex;flex-direction:column;align-items:center;gap:5px;line-height:1;}
+.wm1{font-family:var(--playfair);font-variant-caps:small-caps;font-size:24px;letter-spacing:.03em;color:var(--bone);white-space:nowrap;}
+.wm2{display:flex;align-items:center;gap:9px;font-family:var(--playfair);font-size:10px;letter-spacing:.46em;text-transform:uppercase;color:var(--antique);white-space:nowrap;}
+.wm2::before,.wm2::after{content:"";width:18px;height:1px;background:var(--antique);opacity:.75;}
+.wm2::after{margin-left:-.46em;}
+.top nav ul{display:flex;flex-wrap:wrap;gap:6px 26px;list-style:none;font-size:16px;}
+.top nav a{color:rgba(236,227,210,.78);text-decoration:none;}
+.top nav a:hover,.top nav a[aria-current]{color:var(--bone);}
+.top nav a[aria-current]{border-bottom:1px solid var(--antique);}
+.head{padding-block:clamp(40px,8vh,84px) clamp(44px,8vh,80px);}
+.eb{font-family:var(--playfair);font-style:italic;color:var(--antique);font-size:17px;margin-bottom:10px;}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(42px,6vw,76px);line-height:1;letter-spacing:-.015em;color:var(--bone);text-wrap:balance;max-width:18ch;}
+.head .sub{margin-top:18px;font-size:clamp(18px,1.6vw,21px);font-style:italic;color:rgba(236,227,210,.8);max-width:58ch;}
+.head .meta{margin-top:18px;font-size:15px;color:rgba(236,227,210,.6);}
+main{padding-block:clamp(48px,8vh,88px);}
+.doc{max-width:760px;}
+.doc h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,2.6vw,36px);line-height:1.15;color:var(--aubergine);margin:52px 0 14px;text-wrap:balance;}
+.doc h2:first-child{margin-top:0;}
+.doc h3{font-family:var(--playfair);font-weight:500;font-size:20px;color:var(--aubergine);margin:28px 0 8px;}
+.doc p,.doc li{color:var(--plum);}
+.doc p+p{margin-top:14px;}
+.doc ul,.doc ol{margin:12px 0 0 1.3em;display:flex;flex-direction:column;gap:8px;}
+.doc strong{color:var(--aubergine);font-weight:700;}
+.note{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:22px 24px;margin:24px 0;}
+.note p{font-size:17px;}
+.toc{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;margin-bottom:44px;}
+.toc p{font-family:var(--playfair);font-style:italic;color:var(--laurel-deep);font-size:16px;margin-bottom:8px;}
+.toc ol{margin:0 0 0 1.2em;columns:2;column-gap:40px;font-size:16px;}
+.toc li{break-inside:avoid;margin-bottom:6px;}
+@media (max-width:640px){.toc ol{columns:1;}}
+.ph{background:rgba(233,196,111,.28);padding:0 3px;border-radius:2px;}
+footer{background:var(--night);color:rgba(236,227,210,.7);font-size:15px;}
+footer .wrap{padding-block:48px 36px;display:flex;flex-direction:column;gap:22px;}
+footer .legal{font-style:italic;max-width:78ch;line-height:1.6;}
+.fbase{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center;font-size:13.5px;color:rgba(236,227,210,.5);}
+.fbase nav{display:flex;flex-wrap:wrap;gap:8px 24px;}
+.fbase a{color:rgba(236,227,210,.72);text-decoration:none;}
+.fbase a:hover{color:var(--bone);}
+.credit{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.04em;}
+.credit b{font-weight:500;color:var(--antique);letter-spacing:.06em;}
+.credit img{height:20px;width:auto;opacity:.85;}
+
+.cgrid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);align-items:start;}
+@media (max-width:860px){.cgrid{grid-template-columns:1fr;}}
+.aside h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,2.6vw,36px);line-height:1.15;color:var(--aubergine);margin-bottom:14px;}
+.aside p+p{margin-top:14px;}
+.aside ul{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:14px;}
+.aside li{border-top:1px solid var(--rule);padding-top:14px;font-size:17px;}
+.aside li strong{display:block;font-family:var(--playfair);font-weight:500;color:var(--aubergine);}
+form{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:clamp(22px,3.4vw,40px);display:flex;flex-direction:column;gap:20px;}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media (max-width:560px){.row{grid-template-columns:1fr;}}
+label,legend{display:block;font-family:var(--playfair);font-weight:500;font-size:16px;color:var(--aubergine);margin-bottom:6px;}
+.opt{font-family:var(--text);font-weight:400;font-style:italic;color:var(--stone);font-size:14px;}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;font:inherit;font-size:17px;color:var(--aubergine);background:#fff;border:1px solid #b9a99b;border-radius:4px;padding:12px 14px;min-height:48px;}
+textarea{min-height:150px;resize:vertical;}
+input:focus,textarea:focus{outline:2px solid var(--mulberry);outline-offset:1px;border-color:var(--mulberry);}
+fieldset{border:0;}
+.choices{display:flex;flex-wrap:wrap;gap:10px 22px;}
+.choices label,.check label{font-family:var(--text);font-weight:400;font-size:17px;color:var(--plum);display:flex;align-items:center;gap:10px;min-height:44px;margin:0;cursor:pointer;}
+.check label{align-items:flex-start;min-height:0;}
+input[type=radio],input[type=checkbox]{width:20px;height:20px;accent-color:var(--plum);flex:none;margin-top:3px;}
+.hint{font-size:14.5px;color:var(--stone);margin-top:6px;}
+.warn{background:rgba(233,196,111,.18);border-left:0;border:1px solid rgba(180,140,60,.35);border-radius:4px;padding:14px 16px;font-size:15.5px;color:var(--aubergine);}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+button{font:inherit;font-size:17px;font-weight:600;align-self:flex-start;background:var(--aubergine);color:var(--bone);border:0;border-radius:999px;padding:14px 32px;min-height:50px;cursor:pointer;transition:background .2s;}
+button:hover{background:var(--plum);}
+button[disabled]{opacity:.6;cursor:wait;}
+.status{font-size:16px;padding:14px 16px;border-radius:4px;}
+.status.ok{background:rgba(63,107,58,.1);color:var(--ok);border:1px solid rgba(63,107,58,.3);}
+.status.bad{background:rgba(155,44,44,.08);color:var(--err);border:1px solid rgba(155,44,44,.3);}
+.small{font-size:14.5px;color:var(--stone);}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="top">
+  <header class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Victim Advocacy Associates, home"><img src="crest.png" alt="" width="367" height="299"><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
+    <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="index.html#how">How it works</a></li><li><a href="index.html#about">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+  </header>
+  <div class="wrap head">
+    <p class="eb">Contact</p>
+    <h1>Start the conversation.</h1>
+    <p class="sub">One short message is enough to begin. Nothing you send here commits you to anything.</p>
+  </div>
+</div>
+<main id="main" class="wrap">
+
+<div class="cgrid">
+  <div class="aside">
+    <h2>Tell us a little. We&rsquo;ll take it from there.</h2>
+    <p>Whether you are an attorney with a matter that needs organizing, or a person trying to make sense of what happened to you or someone you love, a short note is enough to begin.</p>
+    <p>We reply within one business day.</p>
+    <ul>
+      <li><strong>Attorneys</strong>Tell us about the matter and your timeline. We&rsquo;ll follow up to discuss scope.</li>
+      <li><strong>Individuals and families</strong>Tell us what happened in a few sentences. We&rsquo;ll explain what a case assessment includes and what it costs, before anything begins.</li>
+      <li><strong>Already working with an attorney?</strong>Let us know who, and we&rsquo;ll introduce ourselves to them directly.</li>
+    </ul>
+  </div>
+
+  <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+    <input type="hidden" name="access_key" value="ffdc2a3f-7c4d-4645-aa49-b4b0c1e29fb9">
+    <input type="hidden" name="subject" value="New inquiry from victimadvocacy.com">
+    <input type="hidden" name="from_name" value="Victim Advocacy Associates website">
+    <div class="hp" aria-hidden="true"><label for="botcheck">Leave this empty</label><input type="checkbox" id="botcheck" name="botcheck" tabindex="-1"></div>
+
+    <div class="row">
+      <div><label for="name">Your name</label><input type="text" id="name" name="name" autocomplete="name" required maxlength="120"></div>
+      <div><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required maxlength="160"></div>
+    </div>
+    <div><label for="phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="40"></div>
+
+    <fieldset>
+      <legend>I am</legend>
+      <div class="choices">
+        <label><input type="radio" name="i_am" value="An attorney" required> An attorney</label>
+        <label><input type="radio" name="i_am" value="An individual"> An individual</label>
+        <label><input type="radio" name="i_am" value="A family member"> A family member</label>
+        <label><input type="radio" name="i_am" value="Other"> Other</label>
+      </div>
+    </fieldset>
+
+    <div>
+      <label for="message">What happened, in a few sentences</label>
+      <textarea id="message" name="message" required maxlength="3000" aria-describedby="msg-hint"></textarea>
+      <p class="hint" id="msg-hint">A brief summary is all we need for now.</p>
+    </div>
+
+    <p class="warn">Please do not include account numbers, Social Security numbers, passwords, or documents here. Once we speak, we&rsquo;ll send you a secure way to share your records.</p>
+
+    <div class="check"><label><input type="checkbox" name="acknowledgment" value="Acknowledged" required> <span>I understand that Victim Advocacy Associates is not a law firm, that sending this message does not create a client or attorney-client relationship, and I agree to the <a href="privacy.html">Privacy Policy</a>.</span></label></div>
+
+    <button type="submit">Send message</button>
+    <div id="form-status" class="status" role="status" aria-live="polite" hidden></div>
+    <p class="small">If you are in immediate danger, call 911. If you believe you are a victim of fraud, you may also report it to the FBI at <a href="https://www.ic3.gov" target="_blank" rel="noopener">ic3.gov</a> or the Federal Trade Commission at <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">reportfraud.ftc.gov</a>.</p>
+  </form>
+</div>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p class="legal">Victim Advocacy Associates is not a law firm. We do not provide legal advice or investigative services that require a license, and our fees are never tied to the outcome of a case.</p>
+    <div class="fbase">
+      <span>&copy; 2026 Victim Advocacy Associates LLC.</span>
+      <a class="credit" href="https://www.dominiumdomains.com" target="_blank" rel="noopener" aria-label="Website designed by Dominium Domains (opens in a new tab)"><img src="dominium.png" alt="" width="160" height="123"><span>Designed by <b>Dominium Domains</b></span></a>
+      <nav aria-label="Legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Refunds</a><a href="accessibility.html">Accessibility</a></nav>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var f=document.getElementById('contact-form'), st=document.getElementById('form-status'), btn=f.querySelector('button');
+  function show(msg,ok){st.hidden=false;st.className='status '+(ok?'ok':'bad');st.textContent=msg;}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){
+      var bad=f.querySelector(':invalid');
+      show('Please complete the highlighted field: '+((bad&&bad.labels&&bad.labels[0])?bad.labels[0].textContent.trim():'a required field')+'.',false);
+      if(bad)bad.focus();
+      return;
+    }
+    if(f.botcheck.checked)return;
+    btn.disabled=true;btn.textContent='Sending...';st.hidden=true;
+    var data={};new FormData(f).forEach(function(v,k){data[k]=v;});
+    fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success){f.reset();show('Thank you. Your message was sent, and we will reply within one business day.',true);}
+        else{show('Your message could not be sent. Please try again in a moment.',false);}
+      })
+      .catch(function(){show('Your message could not be sent. Please check your connection and try again.',false);})
+      .finally(function(){btn.disabled=false;btn.textContent='Send message';});
+  });
+})();
+</script>
+</body>
+</html>
