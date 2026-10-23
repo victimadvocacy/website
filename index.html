@@ -243,9 +243,8 @@
   @keyframes softrise{from{opacity:0;transform:translateY(6px);filter:blur(5px);}to{opacity:1;transform:none;filter:blur(0);}}
   .hero-body > *,.hero header,.hero .divider,.hero .door{opacity:0;animation:softrise 1.8s cubic-bezier(.22,.61,.36,1) forwards;}
   .hero-body > :nth-child(2){animation-delay:4.9s;}
-  .hero-body > :nth-child(3){animation-delay:5.25s;}
-  .hero-body > :nth-child(4){animation-delay:8.7s;}
-  .hero-body > :nth-child(5){animation-delay:9.1s;}
+  .hero-body > :nth-child(3){animation-delay:8.7s;}
+  .hero-body > :nth-child(4){animation-delay:9.1s;}
   .hero .divider{animation-delay:9.45s;}
   .hero .door:nth-child(1){animation-delay:9.75s;}
   .hero .door:nth-child(2){animation-delay:10.05s;}
@@ -302,6 +301,10 @@
   .about .portrait.has-photo{padding:0;overflow:hidden;position:relative;}
   .about .portrait.has-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%;}
   .about .portrait.has-photo::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 6px var(--aubergine),inset 0 0 0 7px rgba(233,196,111,.75);}
+  .creed .two{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;}
+  .creed .two > div.to-them h4{color:var(--plum);}
+  .creed .two > div.to-them .who{color:var(--mulberry);}
+  @media (max-width:900px){.creed .two{grid-template-columns:1fr;gap:28px;}.creed .two > div{padding:0;}.creed .two > div + div{border-left:0;border-top:1px solid var(--rule);padding-top:28px;}}
 </style>
 <link rel="icon" href="crest.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 </head>
@@ -312,14 +315,13 @@
   <header>
     <div class="wrap bar">
       <a class="brand" href="#" aria-label="Victim Advocacy Associates, home"><svg viewBox="0 0 2898 2746" aria-hidden="true" style="color:var(--laurel)"><use href="#mark"/></svg><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
-      <nav aria-label="Main"><ul><li><a href="#how">How it works</a></li><li><a href="#ways">For attorneys</a></li><li><a href="#ways">For clients</a></li><li><a href="#about">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+      <nav aria-label="Main"><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="attorneys.html">For attorneys</a></li><li><a href="individuals.html">For clients</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
       <a class="btn ghost" href="contact.html">Start an assessment</a>
     </div>
   </header>
 
   <div class="wrap hero-body">
     <svg class="seal" viewBox="0 0 2898 2746" role="img" aria-label="The Victim Advocacy Associates dove and laurel mark"><use href="#mark"/></svg>
-    <p class="motto" lang="la">Tenax verbi</p>
     <h1>Where the story <span class="soft">becomes the case.</span></h1>
     <p class="lead">Between the people who lived it and the people who can act on it.</p>
     <p class="desc">Case development for fraud, financial abuse and fiduciary misconduct. Fixed fees, agreed in writing before any work begins.</p>
@@ -328,11 +330,11 @@
   <div class="wrap span">
     <div class="divider" aria-hidden="true"><svg viewBox="0 0 2898 2746"><use href="#mark"/></svg></div>
     <div class="doors">
-      <a class="door" href="contact.html">
+      <a class="door" href="attorneys.html">
         <div><span class="who">For attorneys</span><h2>Send us the matter that isn&rsquo;t ready yet.</h2><p>Chronologies, evidence tables and transaction analyses, coordinated with licensed professionals where the work requires it.</p></div>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 10 H16 M11 5 L16 10 L11 15" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
       </a>
-      <a class="door" href="contact.html">
+      <a class="door" href="individuals.html">
         <div><span class="who">For individuals and families</span><h2>You know what happened. We help you show it.</h2><p>Begin with a case assessment: an intake conversation, a review of your records, and a written memo.</p></div>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 10 H16 M11 5 L16 10 L11 15" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
       </a>
@@ -417,20 +419,24 @@
   <section class="creed" aria-labelledby="creed-h">
     <div class="wrap">
       <svg class="sealmark" viewBox="0 0 300 300" aria-hidden="true"><defs><path id="ring" d="M38,150 a112,112 0 1,1 224,0 a112,112 0 1,1 -224,0"/></defs><circle cx="150" cy="150" r="142" class="r1"/><circle cx="150" cy="150" r="137" class="r2"/><circle cx="150" cy="150" r="88" class="r2"/><text class="rt"><textPath href="#ring" textLength="690" lengthAdjust="spacing">VICTIM ADVOCACY ✦ ASSOCIATES ✦</textPath></text><use href="#mark" x="92" y="96" width="116" height="110" class="sm"/></svg>
-      <p class="m" lang="la">Tenax verbi</p>
-      <p class="pr">Said TEN-ax VER-bee. Latin for</p>
-      <h3 id="creed-h">Steadfast to the word.</h3>
-      <p class="lead">Two thousand years ago, the poet Horace praised the person who holds firm to their purpose, unmoved by pressure from anyone. We carry that promise in two directions.</p>
+      <p class="pr">What drives us</p>
+      <h3 id="creed-h">We hold fast to our word.</h3>
+      <p class="lead">Every promise we make comes back to one belief: no one who has been wronged should have to prove it alone.</p>
       <div class="two">
         <div>
           <span class="who">To the people we serve</span>
-          <h4>We hold fast to your word.</h4>
+          <h4>Your story will be heard.</h4>
           <p>Your story is not set aside, softened, or lost in a stack of paper. We stay with it until it becomes a record no one can dismiss.</p>
         </div>
         <div>
           <span class="who">To the attorneys we work beside</span>
-          <h4>We hold fast to our own.</h4>
+          <h4>Our word is our work.</h4>
           <p>The scope we put in writing is the work we deliver, on the timeline we promised, in the same form every time.</p>
+        </div>
+        <div class="to-them">
+          <span class="who">To those who prey on others</span>
+          <h4>We are putting it together.</h4>
+          <p>You count on the people you harm being too ashamed, too tired, or too alone to piece together what you did. But every transfer leaves a trace, and every message carries a date. What drives us, every day, is the moment the people you took from can finally rest, knowing the truth was heard and placed in front of those who can act on it.</p>
         </div>
       </div>
     </div>
@@ -453,7 +459,6 @@
   <div class="wrap">
     <div class="frow">
       <a class="fbrand" href="#" aria-label="Victim Advocacy Associates, home"><svg viewBox="0 0 2898 2746" aria-hidden="true"><use href="#mark"/></svg><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
-      <span class="motto-f" lang="la">Tenax verbi</span>
     </div>
     <p class="legal">Victim Advocacy Associates is not a law firm. We do not provide legal advice or investigative services that require a license, and our fees are never tied to the outcome of a case.</p>
     <div class="fbase">
