@@ -1,137 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Accessibility | Victim Advocacy Associates</title>
-<meta name="description" content="Accessibility statement for victimadvocacy.com. We work toward WCAG 2.2 Level AA.">
-<link rel="icon" href="favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="canonical" href="https://victimadvocacy.com/accessibility">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Victim Advocacy Associates">
-<meta property="og:title" content="Accessibility | Victim Advocacy Associates"><meta property="og:description" content="Accessibility statement for victimadvocacy.com. We work toward WCAG 2.2 Level AA.">
-<meta property="og:url" content="https://victimadvocacy.com/accessibility"><meta property="og:image" content="https://victimadvocacy.com/og.jpg"><meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="fonts.css">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
-<style>
-:root{
-  --night:#170d14;--aubergine:#2a1424;--plum:#4b2242;--mulberry:#7a4468;
-  --bone:#ece3d2;--paper:#f3ede2;--card:#fbf7f0;--stone:#6f655f;--laurel-deep:#5d6a45;
-  --rule:rgba(75,34,66,.18);--antique:#d4c091;--gold:#e9c46f;--ok:#3f6b3a;--err:#9b2c2c;
-  --display:"Caslon Display",Georgia,serif;--text:"Caslon Text",Georgia,serif;
-  --playfair:"Playfair Display","Caslon Display",Georgia,serif;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
-body{font-family:var(--text);background:var(--paper);color:var(--plum);-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga","onum";font-size:18px;line-height:1.65;}
-a{color:var(--aubergine);}
-:focus-visible{outline:2px solid var(--mulberry);outline-offset:3px;border-radius:3px;}
-.skip{position:absolute;left:-9999px;top:0;background:var(--bone);color:var(--aubergine);padding:10px 16px;z-index:10;}
-.skip:focus{left:16px;top:16px;}
-.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));}
-.top{background:radial-gradient(120% 140% at 80% 0%,#3a1b31 0%,var(--aubergine) 45%,var(--night) 100%);color:var(--bone);}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding-block:20px;}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.brand img{width:46px;height:auto;}
-.wm{display:inline-flex;flex-direction:column;align-items:center;gap:5px;line-height:1;}
-.wm1{font-family:var(--playfair);font-variant-caps:small-caps;font-size:24px;letter-spacing:.03em;color:var(--bone);white-space:nowrap;}
-.wm2{display:flex;align-items:center;gap:9px;font-family:var(--playfair);font-size:10px;letter-spacing:.46em;text-transform:uppercase;color:var(--antique);white-space:nowrap;}
-.wm2::before,.wm2::after{content:"";width:18px;height:1px;background:var(--antique);opacity:.75;}
-.wm2::after{margin-left:-.46em;}
-.top nav ul{display:flex;flex-wrap:wrap;gap:6px 26px;list-style:none;font-size:16px;}
-.top nav a{color:rgba(236,227,210,.78);text-decoration:none;}
-.top nav a:hover,.top nav a[aria-current]{color:var(--bone);}
-.top nav a[aria-current]{border-bottom:1px solid var(--antique);}
-.head{padding-block:clamp(40px,8vh,84px) clamp(44px,8vh,80px);}
-.eb{font-family:var(--playfair);font-style:italic;color:var(--antique);font-size:17px;margin-bottom:10px;}
-h1{font-family:var(--display);font-weight:400;font-size:clamp(42px,6vw,76px);line-height:1;letter-spacing:-.015em;color:var(--bone);text-wrap:balance;max-width:18ch;}
-.head .sub{margin-top:18px;font-size:clamp(18px,1.6vw,21px);font-style:italic;color:rgba(236,227,210,.8);max-width:58ch;}
-.head .meta{margin-top:18px;font-size:15px;color:rgba(236,227,210,.6);}
-main{padding-block:clamp(48px,8vh,88px);}
-.doc{max-width:760px;}
-.doc h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,2.6vw,36px);line-height:1.15;color:var(--aubergine);margin:52px 0 14px;text-wrap:balance;}
-.doc h2:first-child{margin-top:0;}
-.doc h3{font-family:var(--playfair);font-weight:500;font-size:20px;color:var(--aubergine);margin:28px 0 8px;}
-.doc p,.doc li{color:var(--plum);}
-.doc p+p{margin-top:14px;}
-.doc ul,.doc ol{margin:12px 0 0 1.3em;display:flex;flex-direction:column;gap:8px;}
-.doc strong{color:var(--aubergine);font-weight:700;}
-.note{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:22px 24px;margin:24px 0;}
-.note p{font-size:17px;}
-.toc{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;margin-bottom:44px;}
-.toc p{font-family:var(--playfair);font-style:italic;color:var(--laurel-deep);font-size:16px;margin-bottom:8px;}
-.toc ol{margin:0 0 0 1.2em;columns:2;column-gap:40px;font-size:16px;}
-.toc li{break-inside:avoid;margin-bottom:6px;}
-@media (max-width:640px){.toc ol{columns:1;}}
-.ph{background:rgba(233,196,111,.28);padding:0 3px;border-radius:2px;}
-footer{background:var(--night);color:rgba(236,227,210,.7);font-size:15px;}
-footer .wrap{padding-block:48px 36px;display:flex;flex-direction:column;gap:22px;}
-footer .legal{font-style:italic;max-width:78ch;line-height:1.6;}
-.fbase{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center;font-size:13.5px;color:rgba(236,227,210,.5);}
-.fbase nav{display:flex;flex-wrap:wrap;gap:8px 24px;}
-.fbase a{color:rgba(236,227,210,.72);text-decoration:none;}
-.fbase a:hover{color:var(--bone);}
-.credit{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.04em;}
-.credit b{font-weight:500;color:var(--antique);letter-spacing:.06em;}
-.credit img{height:20px;width:auto;opacity:.85;}
-</style>
+<meta name="description" content="VAA&#x27;s accessibility goals and contact information for help using victimadvocacy.com or requesting information in another format.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Victim Advocacy Associates">
+<meta property="og:title" content="Accessibility | Victim Advocacy Associates">
+<meta property="og:description" content="VAA&#x27;s accessibility goals and contact information for help using victimadvocacy.com or requesting information in another format.">
+<meta property="og:url" content="https://victimadvocacy.com/accessibility.html">
+<meta property="og:image" content="https://victimadvocacy.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://victimadvocacy.com/accessibility.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="top">
-  <header class="wrap bar">
-    <a class="brand" href="index.html" aria-label="Victim Advocacy Associates, home"><img src="crest.png" alt="" width="367" height="299"><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
-    <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="how-it-works.html">How it works</a></li><li><a href="attorneys.html">For attorneys</a></li><li><a href="individuals.html">For clients</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-  </header>
-  <div class="wrap head">
-    <p class="eb">Accessibility Statement</p>
-    <h1>A site everyone can use.</h1>
-    
-  </div>
-</div>
-<main id="main" class="wrap">
-
-<article class="doc">
-<h2>Our commitment</h2>
-<p>Fraud and financial abuse reach people of every age and ability, and many of the people who need us are older adults or living with a disability. Everyone deserves to use this website with ease and dignity. Victim Advocacy Associates is committed to making victimadvocacy.com accessible, and to improving it continually.</p>
-
-<h2>The standard we work toward</h2>
-<p>We aim to meet the <strong>Web Content Accessibility Guidelines (WCAG) 2.2, Level AA</strong>, published by the World Wide Web Consortium. These guidelines explain how to make web content usable by people with a wide range of disabilities, including blindness and low vision, deafness, limited movement, and cognitive differences.</p>
-
-<h2>What we have done</h2>
-<ul>
-<li>Every page can be used with a keyboard alone, with a visible focus outline and a &ldquo;skip to content&rdquo; link.</li>
-<li>Text and backgrounds are chosen for strong contrast, and text can be enlarged without breaking the layout.</li>
-<li>Images that carry meaning have text descriptions; decorative images are hidden from screen readers.</li>
-<li>The homepage opening animation can be skipped with any tap, click, scroll or key press, and does not play at all for visitors whose device is set to reduce motion. Screen readers hear the full headline at once.</li>
-<li>Form fields have clear labels, and error and success messages are announced to screen readers.</li>
-<li>The site never plays sound on its own.</li>
-<li>Pages work on phones, tablets and computers.</li>
-</ul>
-
-<h2>Known limitations</h2>
-<p>Some content provided by third parties, such as linked websites, may not be fully accessible, and we cannot control it. We review the site regularly, and if we find a barrier we will fix it as quickly as we can.</p>
-
-<h2>Need help, or found a barrier?</h2>
-<p>If any part of this site is hard for you to use, please tell us. We will respond within two business days and, in the meantime, help you get the information or service you need in another way, such as by phone or email, or in a format that works for you.</p>
-<div class="note"><p>Email: <a href="mailto:arpey@victimadvocacy.com">arpey@victimadvocacy.com</a><br>Or use our <a href="contact.html">contact page</a>.<br>When writing, it helps to tell us the page and what happened, and the device or assistive technology you use if you are comfortable sharing it.</p></div>
-
-<p class="small" style="margin-top:28px;color:var(--stone);font-size:15px;">This statement was last reviewed October 22, 2026.</p>
-</article>
-
+<body data-page="accessibility">
+<a class="skip" href="#content">Skip to Content</a>
+<div class="top"><header class="site-header"><div class="wrap bar">
+<a class="brand" href="index.html" aria-label="Victim Advocacy Associates, home"><img src="crest.png" alt="" width="46" height="38"><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
+<button id="menu" aria-expanded="false" aria-controls="nav">Menu <span aria-hidden="true">☰</span></button>
+<nav id="nav" aria-label="Main"><a href="attorneys.html">For Attorneys</a><a href="individuals.html">For Individuals</a><a href="how-it-works.html">How It Works</a><a href="our-work.html">Our Work</a><a href="about.html">About</a><a href="advocates.html">Our Team</a><a href="resources.html">Resources</a><a class="btn ghost" href="contact.html">Contact Us</a></nav>
+</div></header>
+<div class="wrap head">
+<p class="eyebrow">Accessibility</p>
+<h1>Help Using Our Website</h1>
+<p class="lead"></p>
+</div></div>
+<main id="content" tabindex="-1">
+<section class="content-section"><h2>Our Commitment</h2>
+<p class="">We want people of different abilities to be able to find information about VAA and contact us. We welcome feedback about barriers and requests for information in another format.</p>
+</section>
+<section class="content-section"><h2>The Standard We Work Toward</h2>
+<p class="">Our accessibility goal is WCAG 2.2 Level AA. This is a development target, not a claim that the site has been audited or meets every requirement.</p>
+</section>
+<section class="content-section"><h2>What We Are Working Toward</h2>
+<p>• Keyboard access to navigation, links and forms, with visible focus and a way to skip repeated navigation.</p>
+<p>• Readable text, sufficient color contrast and layouts that remain usable when text is enlarged.</p>
+<p>• Useful text alternatives for meaningful images and appropriate handling of decorative images.</p>
+<p>• Controls to skip nonessential animation and support for visitors who prefer reduced motion.</p>
+<p>• Clearly labeled form fields and understandable error and confirmation messages, including for screen reader users.</p>
+<p>• No automatically playing audio.</p>
+<p>• Usable layouts on phones, tablets and computers.</p>
+</section>
+<section class="content-section"><h2>Known Limitations</h2>
+<p class="">Some linked or third-party content may have accessibility limitations outside our control. Tell us about a barrier so we can review it and discuss another way to provide the information.</p>
+</section>
+<section class="content-section"><h2>Need Help, or Found a Barrier?</h2>
+<p class="">If any part of this site is difficult to use, contact us and describe the help you need. We will discuss available alternatives, such as information by email or phone.</p>
+<p class="">Email arpey@victimadvocacy.com or use the contact page if it is accessible to you. Include the page, what went wrong and your preferred way to receive a response. Device or assistive-technology details are optional.</p>
+<p class="fine">Last reviewed: 10/24/2026 10:39 AM</p>
+</section>
 </main>
 <footer>
   <div class="wrap">
-    <p class="legal">Victim Advocacy Associates is not a law firm and does not provide legal representation or legal advice. We are not licensed private investigators; work that requires a license is performed by licensed professionals. We do not provide counseling, therapy or mental health treatment. Our fees are never tied to the outcome of a case.</p>
-    <p class="legal" style="font-style:normal;margin-top:-10px;">Victim Advocacy Associates LLC &middot; P.O. Box 281, Colleyville, Texas 76034 &middot; <a href="mailto:arpey@victimadvocacy.com" style="color:inherit;">arpey@victimadvocacy.com</a></p>
+    <div class="frow">
+      <a class="fbrand" href="index.html" aria-label="Victim Advocacy Associates, home"><img src="crest.png" alt="" width="42" height="34"><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
+      <a class="fcta" href="contact.html">Start a Conversation</a>
+    </div>
+    <p class="legal">Victim Advocacy Associates is not a law firm and does not provide legal representation or legal advice. We are not licensed private investigators; work that requires a license is performed by licensed professionals. We do not provide counseling, therapy or mental health treatment. Our fees are never tied to the outcome of a case, and we never pay or accept referral fees.</p>
+    <p class="legal addr">Victim Advocacy Associates LLC · P.O. Box 281, Colleyville, Texas 76034 · <a href="mailto:arpey@victimadvocacy.com">arpey@victimadvocacy.com</a></p>
     <div class="fbase">
-      <span>&copy; 2026 Victim Advocacy Associates LLC.</span>
-      <a class="credit" href="https://www.dominiumdomains.com" target="_blank" rel="noopener" aria-label="Website designed by Dominium Domains (opens in a new tab)"><img src="dominium.png" alt="" width="160" height="123"><span>Designed by <b>Dominium Domains</b></span></a>
-      <nav aria-label="Legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Refunds</a><a href="accessibility.html">Accessibility</a></nav>
+      <span>© 2026 Victim Advocacy Associates LLC.</span>
+      <a class="credit" href="https://www.dominiumdomains.com" target="_blank" rel="noopener" aria-label="Website designed by Dominium Domains (opens in a new tab)"><img class="credit-mark" src="dominium-mark.png" alt="" width="160" height="123"><span>Designed by <b>Dominium Domains</b></span></a>
+      <nav aria-label="Legal"><a href="resources.html">Resources</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Refunds</a><a href="accessibility.html">Accessibility</a></nav>
     </div>
   </div>
 </footer>
-
+<script src="site.js"></script>
 </body>
 </html>

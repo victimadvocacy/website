@@ -1,212 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>How it works | Victim Advocacy Associates</title>
-<meta name="description" content="How Victim Advocacy Associates turns scattered records into an attorney-ready file: assessment, case build, handoff to counsel and continued support.">
-<link rel="icon" href="favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="canonical" href="https://victimadvocacy.com/how-it-works">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Victim Advocacy Associates">
-<meta property="og:title" content="How it works | Victim Advocacy Associates"><meta property="og:description" content="How Victim Advocacy Associates turns scattered records into an attorney-ready file: assessment, case build, handoff to counsel and continued support.">
-<meta property="og:url" content="https://victimadvocacy.com/how-it-works"><meta property="og:image" content="https://victimadvocacy.com/og.jpg"><meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="fonts.css">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
-<style>
-:root{
-  --night:#170d14;--aubergine:#2a1424;--plum:#4b2242;--mulberry:#7a4468;
-  --bone:#ece3d2;--paper:#f3ede2;--card:#fbf7f0;--stone:#6f655f;--laurel-deep:#5d6a45;
-  --rule:rgba(75,34,66,.18);--antique:#d4c091;--gold:#e9c46f;--ok:#3f6b3a;--err:#9b2c2c;
-  --display:"Caslon Display",Georgia,serif;--text:"Caslon Text",Georgia,serif;
-  --playfair:"Playfair Display","Caslon Display",Georgia,serif;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
-body{font-family:var(--text);background:var(--paper);color:var(--plum);-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga","onum";font-size:18px;line-height:1.65;}
-a{color:var(--aubergine);}
-:focus-visible{outline:2px solid var(--mulberry);outline-offset:3px;border-radius:3px;}
-.skip{position:absolute;left:-9999px;top:0;background:var(--bone);color:var(--aubergine);padding:10px 16px;z-index:10;}
-.skip:focus{left:16px;top:16px;}
-.wrap{width:100%;max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));}
-.top{background:radial-gradient(120% 140% at 80% 0%,#3a1b31 0%,var(--aubergine) 45%,var(--night) 100%);color:var(--bone);}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;padding-block:20px;}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.brand img{width:46px;height:auto;}
-.wm{display:inline-flex;flex-direction:column;align-items:center;gap:5px;line-height:1;}
-.wm1{font-family:var(--playfair);font-variant-caps:small-caps;font-size:24px;letter-spacing:.03em;color:var(--bone);white-space:nowrap;}
-.wm2{display:flex;align-items:center;gap:9px;font-family:var(--playfair);font-size:10px;letter-spacing:.46em;text-transform:uppercase;color:var(--antique);white-space:nowrap;}
-.wm2::before,.wm2::after{content:"";width:18px;height:1px;background:var(--antique);opacity:.75;}
-.wm2::after{margin-left:-.46em;}
-.top nav ul{display:flex;flex-wrap:wrap;gap:6px 26px;list-style:none;font-size:16px;}
-.top nav a{color:rgba(236,227,210,.78);text-decoration:none;}
-.top nav a:hover,.top nav a[aria-current]{color:var(--bone);}
-.top nav a[aria-current]{border-bottom:1px solid var(--antique);}
-.head{padding-block:clamp(40px,8vh,84px) clamp(44px,8vh,80px);}
-.eb{font-family:var(--playfair);font-style:italic;color:var(--antique);font-size:17px;margin-bottom:10px;}
-h1{font-family:var(--display);font-weight:400;font-size:clamp(42px,6vw,76px);line-height:1;letter-spacing:-.015em;color:var(--bone);text-wrap:balance;max-width:18ch;}
-.head .sub{margin-top:18px;font-size:clamp(18px,1.6vw,21px);font-style:italic;color:rgba(236,227,210,.8);max-width:58ch;}
-.head .meta{margin-top:18px;font-size:15px;color:rgba(236,227,210,.6);}
-main{padding-block:clamp(48px,8vh,88px);}
-.doc{max-width:760px;}
-.doc h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,2.6vw,36px);line-height:1.15;color:var(--aubergine);margin:52px 0 14px;text-wrap:balance;}
-.doc h2:first-child{margin-top:0;}
-.doc h3{font-family:var(--playfair);font-weight:500;font-size:20px;color:var(--aubergine);margin:28px 0 8px;}
-.doc p,.doc li{color:var(--plum);}
-.doc p+p{margin-top:14px;}
-.doc ul,.doc ol{margin:12px 0 0 1.3em;display:flex;flex-direction:column;gap:8px;}
-.doc strong{color:var(--aubergine);font-weight:700;}
-.note{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:22px 24px;margin:24px 0;}
-.note p{font-size:17px;}
-.toc{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;margin-bottom:44px;}
-.toc p{font-family:var(--playfair);font-style:italic;color:var(--laurel-deep);font-size:16px;margin-bottom:8px;}
-.toc ol{margin:0 0 0 1.2em;columns:2;column-gap:40px;font-size:16px;}
-.toc li{break-inside:avoid;margin-bottom:6px;}
-@media (max-width:640px){.toc ol{columns:1;}}
-.ph{background:rgba(233,196,111,.28);padding:0 3px;border-radius:2px;}
-footer{background:var(--night);color:rgba(236,227,210,.7);font-size:15px;}
-footer .wrap{padding-block:48px 36px;display:flex;flex-direction:column;gap:22px;}
-footer .legal{font-style:italic;max-width:78ch;line-height:1.6;}
-.fbase{display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center;font-size:13.5px;color:rgba(236,227,210,.5);}
-.fbase nav{display:flex;flex-wrap:wrap;gap:8px 24px;}
-.fbase a{color:rgba(236,227,210,.72);text-decoration:none;}
-.fbase a:hover{color:var(--bone);}
-.credit{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.04em;}
-.credit b{font-weight:500;color:var(--antique);letter-spacing:.06em;}
-.credit img{height:20px;width:auto;opacity:.85;}
-
-.sec{padding-block:clamp(8px,2vh,16px) clamp(44px,7vh,72px);}
-.sec + .sec{border-top:1px solid var(--rule);padding-top:clamp(44px,7vh,72px);}
-.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:start;}
-@media (max-width:860px){.split{grid-template-columns:1fr;}}
-.k{font-family:var(--playfair);font-style:italic;color:var(--laurel-deep);font-size:17px;margin-bottom:10px;}
-.sec h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,3.6vw,50px);line-height:1.06;color:var(--aubergine);text-wrap:balance;}
-.sec h3{font-family:var(--display);font-weight:400;font-size:clamp(23px,2vw,28px);line-height:1.15;color:var(--aubergine);}
-.prose p{color:var(--plum);max-width:62ch;}
-.prose p+p{margin-top:14px;}
-.prose em{color:var(--aubergine);}
-.steps{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:36px;}
-@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;}}
-@media (max-width:560px){.steps{grid-template-columns:1fr;}}
-.steps li{border-top:1px solid var(--plum);padding-top:20px;display:flex;flex-direction:column;gap:8px;min-width:0;}
-.steps .n{font-family:var(--display);font-size:22px;color:var(--mulberry);}
-.steps p{font-size:16.5px;color:var(--plum);}
-.steps .tag{font-family:var(--playfair);font-style:italic;color:var(--laurel-deep);font-size:15.5px;margin-top:auto;}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:32px;}
-.card{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:26px 24px;display:flex;flex-direction:column;gap:10px;}
-.card p{font-size:16.5px;color:var(--plum);}
-.list{list-style:none;margin-top:20px;display:flex;flex-direction:column;}
-.list li{padding:16px 0;border-bottom:1px solid var(--rule);color:var(--plum);}
-.list li:first-child{border-top:1px solid var(--rule);}
-.list strong{color:var(--aubergine);}
-.band{background:var(--aubergine);color:var(--bone);border-radius:6px;padding:clamp(28px,4vw,48px);display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between;margin-bottom:clamp(44px,7vh,72px);}
-.band h2{font-family:var(--display);font-weight:400;color:var(--bone);font-size:clamp(30px,3.2vw,44px);line-height:1.08;}
-.band p{color:rgba(236,227,210,.8);margin-top:8px;max-width:56ch;}
-.cta{display:inline-flex;align-items:center;min-height:50px;padding:0 28px;border-radius:999px;background:var(--bone);color:var(--aubergine);text-decoration:none;font-weight:600;white-space:nowrap;}
-.cta:hover{background:#fff;}
-.cta.dark{background:var(--aubergine);color:var(--bone);}
-.cta.dark:hover{background:var(--plum);}
-.portrait{position:relative;border-radius:2px;overflow:hidden;max-width:420px;box-shadow:0 0 0 1px rgba(233,196,111,.75),0 0 0 7px var(--paper),0 0 0 8px rgba(233,196,111,.45),0 18px 40px rgba(42,20,36,.18);}
-.portrait img{display:block;width:100%;height:auto;}
-.sig{margin-top:22px;}
-.sig b{display:block;font-family:var(--display);font-weight:400;font-size:28px;color:var(--aubergine);}
-.sig span{font-family:var(--playfair);font-style:italic;color:var(--laurel-deep);}
-.pair{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:32px;}
-.pair > div{padding:4px clamp(18px,3vw,40px) 4px 0;display:flex;flex-direction:column;gap:10px;min-width:0;}
-.pair > div + div{border-left:1px solid var(--rule);padding-left:clamp(18px,3vw,40px);}
-@media (max-width:680px){.pair{grid-template-columns:1fr;gap:28px;}.pair > div{padding:0;}.pair > div + div{border-left:0;border-top:1px solid var(--rule);padding-top:28px;}}
-.pair p{color:var(--plum);}
-.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:32px;}
-.trio > div{padding:4px clamp(18px,2.6vw,36px);display:flex;flex-direction:column;gap:10px;min-width:0;}
-.trio > div:first-child{padding-left:0;}
-.trio > div + div{border-left:1px solid var(--rule);}
-.trio p{color:var(--plum);}
-@media (max-width:900px){.trio{grid-template-columns:1fr;gap:28px;}.trio > div{padding:0;}.trio > div + div{border-left:0;border-top:1px solid var(--rule);padding-top:28px;}}
-.warnbox{background:rgba(233,196,111,.16);border:1px solid rgba(180,140,60,.35);border-radius:4px;padding:22px 24px;margin-top:24px;}
-.warnbox p{color:var(--aubergine);}
-.warnbox p+p{margin-top:10px;}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How It Works | Victim Advocacy Associates</title>
+<meta name="description" content="See how VAA scopes an engagement, organizes records and coordinates client support for attorneys, individuals and families.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Victim Advocacy Associates">
+<meta property="og:title" content="How It Works | Victim Advocacy Associates">
+<meta property="og:description" content="See how VAA scopes an engagement, organizes records and coordinates client support for attorneys, individuals and families.">
+<meta property="og:url" content="https://victimadvocacy.com/how-it-works.html">
+<meta property="og:image" content="https://victimadvocacy.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://victimadvocacy.com/how-it-works.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
 </head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<div class="top">
-  <header class="wrap bar">
-    <a class="brand" href="index.html" aria-label="Victim Advocacy Associates, home"><img src="crest.png" alt="" width="367" height="299"><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
-    <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="how-it-works.html" aria-current="page">How it works</a></li><li><a href="attorneys.html">For attorneys</a></li><li><a href="individuals.html">For clients</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-  </header>
-  <div class="wrap head">
-    <p class="eb">How it works</p>
-    <h1>From what happened to what holds up.</h1>
-    <p class="sub">A calm, methodical process, the same every time.</p>
-  </div>
+<body data-page="how-it-works">
+<a class="skip" href="#content">Skip to Content</a>
+<div class="top"><header class="site-header"><div class="wrap bar">
+<a class="brand" href="index.html" aria-label="Victim Advocacy Associates, home"><img src="crest.png" alt="" width="46" height="38"><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
+<button id="menu" aria-expanded="false" aria-controls="nav">Menu <span aria-hidden="true">☰</span></button>
+<nav id="nav" aria-label="Main"><a href="attorneys.html">For Attorneys</a><a href="individuals.html">For Individuals</a><a href="how-it-works.html" aria-current="page">How It Works</a><a href="our-work.html">Our Work</a><a href="about.html">About</a><a href="advocates.html">Our Team</a><a href="resources.html">Resources</a><a class="btn ghost" href="contact.html">Contact Us</a></nav>
+</div></header>
+<div class="wrap head">
+<p class="eyebrow">How It Works</p>
+<h1>What Happens After<br>You Reach Out</h1>
+<p>Your firm manages the legal process. We agree on practical support, fees and communication so clients feel supported and your team stays informed.</p>
+<div class="actions"><a class="btn" href="contact.html#attorney">Discuss Your Matter</a><a class="textlink" href="#on-your-own">Coming to Us on Your Own? See Your Steps ↓</a></div>
+</div></div>
+<main id="content" tabindex="-1">
+<section class="process-overview" aria-label="Steps for attorneys and law firms"><div class="process-cards"><article class="process-card"><span class="step-number">01</span><h2>Tell Us What Your Client Needs</h2>
+<p>Start with the person, the matter and upcoming milestones.</p>
+<span class="fee-note">Free 15-Minute Call</span><details><summary>View Details</summary><p>Discuss the support needed, timing and whether the engagement calls for private advocacy, case building or both. A records assessment is available when relevant.</p>
+</details>
+</article>
+<article class="process-card"><span class="step-number">02</span><h2>We Send You a Proposal</h2>
+<p>A written proposal covering services, fees and how we communicate.</p>
+<span class="fee-note">Fees Set Out in Writing</span><details><summary>View Details</summary><p>The proposal sets out services, fees, duration, authorized client contact and reporting. It also sets out how we report to your team and who we may contact on your client’s behalf. Work begins once you approve it.</p>
+</details>
+</article>
+<article class="process-card"><span class="step-number">03</span><h2>Put Personal Support in Place</h2>
+<p>Follow through for the client and keep the legal team informed.</p>
+<span class="fee-note">Within the Agreed Scope</span><details><summary>View Details</summary><p>Provide agreed accompaniment, resource connections, check-ins or factual work. Follow the firm’s communication preferences and route legal questions to its team. Report to your team in the agreed form.</p>
+</details>
+</article>
+<article class="process-card"><span class="step-number">04</span><h2>Support the Transition</h2>
+<p>Plan continued support as the matter concludes.</p>
+<span class="fee-note">Separately Scoped</span><details><summary>View Details</summary><p>As the matter concludes, we agree on what support continues, such as following up on referrals, coordinating resources and helping your client take practical next steps. The scope and duration are set in writing.</p>
+</details>
+</article>
 </div>
-<main id="main" class="wrap">
-
-<section class="sec">
-  <p class="k">Our services</p>
-  <h2>Two lines of service, one standard of care.</h2>
-  <div class="pair">
-    <div><span class="k" style="margin:0;">For attorneys</span><h3>Fraud Investigation and Litigation Support</h3><p>Organizing records, building chronologies and evidence indexes, tracing transactions, and preparing files that are ready for litigation.</p><p style="font-size:15px;font-style:italic;color:var(--stone);">We are not licensed private investigators. Work that requires a license is performed by licensed professionals we coordinate with.</p></div>
-    <div><span class="k" style="margin:0;">For individuals and families</span><h3>Victim Advocacy and Case Coordination</h3><p>Helping you put what happened in order, and coordinating with your attorney and the professionals your matter needs, so you are not carrying it alone.</p><p style="font-size:15px;font-style:italic;color:var(--stone);">We do not provide legal representation or legal advice.</p></div>
-  </div>
 </section>
-<section class="sec">
-  <div class="split">
-    <div><p class="k">Our process</p><h2>The facts do not organize themselves.</h2></div>
-    <div class="prose">
-      <p>Fraud and financial abuse leave a trail: statements, transfers, messages, signatures, dates. But that trail is usually scattered across years, accounts and devices, and the person who lived through it is often too close and too exhausted to put it in order.</p>
-      <p>We follow the same careful path on every matter, so an attorney always receives the file in the same form, and a client always knows what comes next.</p>
-    </div>
-  </div>
-  <ol class="steps">
-    <li><span class="n">1</span><h3>Assessment</h3><p>An intake conversation, a review of a defined set of records, and a written memo on what you have and where it could go.</p><span class="tag">Fixed fee, stated up front</span></li>
-    <li><span class="n">2</span><h3>Case Build</h3><p>A chronology, an evidence index, a summary of losses, and a case memo, organized so an attorney can evaluate the matter quickly.</p><span class="tag">Quoted in writing</span></li>
-    <li><span class="n">3</span><h3>Handoff to counsel</h3><p>An attorney-ready file, delivered to the attorney of your choice, with introductions coordinated.</p><span class="tag">Included</span></li>
-    <li><span class="n">4</span><h3>Continued support</h3><p>Ongoing organization and preparation as the matter moves forward, often engaged directly by counsel.</p><span class="tag">By engagement</span></li>
-  </ol>
+<section id="on-your-own" class="solo-track"><p class="eyebrow">On Your Own</p>
+<h2>If You’re Coming<br>to Us Yourself</h2>
+<p class="lead" style="max-width:62ch">You don’t need an attorney to start. Here is what happens when you contact us on your own, one step at a time. You decide how far to go.</p>
+<div class="process-cards" style="margin-top:32px"><article class="process-card"><span class="step-number">01</span><h2>A Free Call, by Phone or Video</h2>
+<p>Tell us what happened in your own words, at your own pace.</p>
+<span class="fee-note">Free, No Obligation</span><details open><summary>View Details</summary><p>Send a short message through our contact form, and we’ll call you. The call takes about 15 minutes, by phone or video, in English or Spanish. If it isn’t safe to call you at certain times, tell us and we’ll work around it.</p>
+</details>
+</article>
+<article class="process-card"><span class="step-number">02</span><h2>A Written Price Before You Pay</h2>
+<p>If we can help, you get a short written proposal first.</p>
+<span class="fee-note">Nothing Charged Until You Sign</span><details><summary>View Details</summary><p>The proposal says what we’ll do, what it costs, how long it should take and who we may share information with. Take your time, ask questions or say no. Nothing is charged until you sign it.</p>
+</details>
+</article>
+<article class="process-card"><span class="step-number">03</span><h2>Your First Week</h2>
+<p>We set things up so you can share records safely and know what comes next.</p>
+<span class="fee-note">Within the Agreed Scope</span><details><summary>View Details</summary><p>We agree on a secure way to share records, the best times and ways to reach you, and the dates that matter, such as a hearing or sentencing. Then we start the agreed work: gathering records, preparing for a hearing or helping you write your impact statement. Your written proposal gives the delivery date for a records assessment.</p>
+</details>
+</article>
+<article class="process-card"><span class="step-number">04</span><h2>Where We Work</h2>
+<p>By phone and video in every state, and in person when we can travel to you.</p>
+<span class="fee-note">Travel Agreed in Writing</span><details><summary>View Details</summary><p>By phone and video anywhere in the U.S. In-person meetings and hearings can be arranged, with any travel costs agreed in writing before a trip.</p>
+</details>
+</article>
+</div>
+<p class="process-note">Already have an attorney? With your permission, we coordinate with them, and you keep going to them for legal advice.</p>
+<div class="actions"><a class="btn" href="contact.html#individual">Book a Free Call</a><a class="textlink" href="individuals.html">More for Individuals and Families</a></div>
 </section>
-
-<section class="sec">
-  <div class="split">
-    <div><p class="k">What you receive</p><h2>A file built to hold up.</h2></div>
-    <div>
-      <ul class="list">
-        <li><strong>Chronology.</strong> Every relevant event in order, each tied to the document that shows it.</li>
-        <li><strong>Evidence index.</strong> Every record catalogued, labeled and easy to find.</li>
-        <li><strong>Loss summary.</strong> What moved, when, and where, laid out clearly.</li>
-        <li><strong>Case memo.</strong> A plain-language summary of what the record shows and what remains open.</li>
-      </ul>
-    </div>
-  </div>
+<section id="pricing"><p class="eyebrow">Pricing</p>
+<h2>Clear Prices,<br>Set Out in Writing</h2>
+<div class="case-grid price-grid" style="margin-top:32px">
+<article class="case"><span class="tag">Start Here</span><h3>15-Minute Call</h3><p class="price">Free</p><p>A short call to talk through the matter and whether VAA is the right fit. No obligation.</p></article>
+<article class="case"><span class="tag">Fixed Fee</span><h3>Records Assessment</h3><p class="price">$500</p><p>An intake conversation, review of a defined set of records and a written summary of what they show and what’s missing.</p></article>
+<article class="case"><span class="tag">Quoted in Writing</span><h3>Comprehensive Case Work</h3><p class="price">$1,500–$6,000</p><p>The typical range for a chronology, evidence index, documented-loss summary and factual memo. Larger matters are quoted in stages.</p></article>
+<article class="case"><span class="tag">Active Matters</span><h3>Ongoing Support</h3><p class="price">$2,500<small>/month</small></p><p>Continuing client advocacy, hearing support, coordination and records updates while a matter is active. Includes up to 20 hours a month; additional time at the hourly rate.</p></article>
+<article class="case"><span class="tag">Flat Fee</span><h3>Impact Statement Drafting</h3><p class="price">$450</p><p>An interview, a draft in your words, revisions until it’s yours, and coordination with the prosecutor’s office.</p></article>
+<article class="case"><span class="tag">As Needed</span><h3>Hourly Work</h3><p class="price">$125<small>/hour</small></p><p>For work outside a defined project, agreed in writing before it begins.</p></article>
+</div>
+<p class="fine" style="margin-top:24px">Fees are never tied to the outcome of a case, and we never pay or accept referral fees. Your written proposal sets the final scope and price, and nothing is added without your written approval.</p>
 </section>
-
-<section class="sec">
-  <div class="split">
-    <div><p class="k">Our boundaries</p><h2>What we will never sell you.</h2></div>
-    <div>
-      <ul class="list">
-        <li><strong>No promised recovery.</strong> We never guarantee that money will be returned.</li>
-        <li><strong>No legal advice.</strong> We are not a law firm. We prepare your file for one.</li>
-        <li><strong>No licensed investigation.</strong> Work that requires a license is done by licensed professionals we coordinate with.</li>
-        <li><strong>No surprise fees.</strong> Scope and price are agreed in writing before any work begins.</li>
-      </ul>
-    </div>
-  </div>
+<section class="process-more"><p class="eyebrow">The Details, When You Need Them</p>
+<details><summary>Our Services</summary><div><p class="">We organize records, build source-referenced chronologies and evidence indexes, and summarize documented transactions for counsel's review.</p>
+<p class="">VAA does not perform licensed private investigation. Tasks requiring a license are handled by appropriately licensed professionals under a separate, agreed scope.</p>
+<p class="">We help you organize what happened, prepare for attorney meetings and keep track of records and next steps. With your authorization, we coordinate with your attorney.</p>
+<p class="">We do not provide legal representation or legal advice.</p>
+</div>
+</details>
+<details><summary>What You Receive</summary><div><p>• Chronology. Relevant events from the reviewed materials, with source references and unresolved dates identified.</p>
+<p>• Evidence index. Records within the agreed scope, catalogued and labeled so counsel can locate them.</p>
+<p>• Documented-loss summary. Amounts and transactions supported by the records, with estimates and gaps clearly identified.</p>
+<p>• Factual memo. A concise account of what the reviewed records show, what is reported and what remains unresolved.</p>
+</div>
+</details>
+<details><summary>Scope, Fees &amp; Professional Boundaries</summary><div><p>• No guaranteed outcome. We cannot promise recovery, attorney acceptance or a particular result.</p>
+<p>• No legal advice or representation. VAA organizes information for review; legal decisions belong to a licensed attorney.</p>
+<p>• No unlicensed professional services. Work requiring a license is handled by appropriately licensed professionals.</p>
+<p>• Written fees and scope. Any additional work or charges require written agreement before proceeding.</p>
+</div>
+</details>
+<p class="process-note">Start with one defined assignment and agree on any further support.</p>
 </section>
-<div class="band"><div><h2>Ready to begin?</h2><p>Tell us a little about what happened. We will explain what an assessment includes and what it costs before anything begins.</p></div><a class="cta" href="contact.html">Start an assessment</a></div>
 </main>
 <footer>
   <div class="wrap">
-    <p class="legal">Victim Advocacy Associates is not a law firm and does not provide legal representation or legal advice. We are not licensed private investigators; work that requires a license is performed by licensed professionals. We do not provide counseling, therapy or mental health treatment. Our fees are never tied to the outcome of a case.</p>
-    <p class="legal" style="font-style:normal;margin-top:-10px;">Victim Advocacy Associates LLC &middot; P.O. Box 281, Colleyville, Texas 76034 &middot; <a href="mailto:arpey@victimadvocacy.com" style="color:inherit;">arpey@victimadvocacy.com</a></p>
+    <div class="frow">
+      <a class="fbrand" href="index.html" aria-label="Victim Advocacy Associates, home"><img src="crest.png" alt="" width="42" height="34"><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
+      <a class="fcta" href="contact.html">Start a Conversation</a>
+    </div>
+    <p class="legal">Victim Advocacy Associates is not a law firm and does not provide legal representation or legal advice. We are not licensed private investigators; work that requires a license is performed by licensed professionals. We do not provide counseling, therapy or mental health treatment. Our fees are never tied to the outcome of a case, and we never pay or accept referral fees.</p>
+    <p class="legal addr">Victim Advocacy Associates LLC · P.O. Box 281, Colleyville, Texas 76034 · <a href="mailto:arpey@victimadvocacy.com">arpey@victimadvocacy.com</a></p>
     <div class="fbase">
-      <span>&copy; 2026 Victim Advocacy Associates LLC.</span>
-      <a class="credit" href="https://www.dominiumdomains.com" target="_blank" rel="noopener" aria-label="Website designed by Dominium Domains (opens in a new tab)"><img src="dominium.png" alt="" width="160" height="123"><span>Designed by <b>Dominium Domains</b></span></a>
-      <nav aria-label="Legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Refunds</a><a href="accessibility.html">Accessibility</a></nav>
+      <span>© 2026 Victim Advocacy Associates LLC.</span>
+      <a class="credit" href="https://www.dominiumdomains.com" target="_blank" rel="noopener" aria-label="Website designed by Dominium Domains (opens in a new tab)"><img class="credit-mark" src="dominium-mark.png" alt="" width="160" height="123"><span>Designed by <b>Dominium Domains</b></span></a>
+      <nav aria-label="Legal"><a href="resources.html">Resources</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Refunds</a><a href="accessibility.html">Accessibility</a></nav>
     </div>
   </div>
 </footer>
-
+<script src="site.js"></script>
 </body>
 </html>
