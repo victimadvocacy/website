@@ -1,519 +1,132 @@
-<!DOCTYPE html>
-<html lang="en" class="intro-done">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Victim Advocacy Associates | Case Development for Fraud and Financial Abuse</title>
-<meta name="description" content="Case development for fraud, financial abuse and fiduciary misconduct. Fixed fees, agreed in writing before any work begins. Not a law firm.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Victim Advocacy Associates</title>
+<meta name="description" content="Client coordination, record organization and case building for attorneys handling fraud, abuse, stalking and other matters where someone has been harmed. Paid professional services.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Victim Advocacy Associates">
-<meta property="og:title" content="Victim Advocacy Associates | Where the story becomes the case">
-<meta property="og:description" content="Case development for fraud, financial abuse and fiduciary misconduct. Fixed fees, agreed in writing. Not a law firm.">
+<meta property="og:title" content="Victim Advocacy Associates | Private Advocacy Firm | For Every Victim">
+<meta property="og:description" content="Client coordination, record organization and case building for attorneys handling fraud, abuse, stalking and other matters where someone has been harmed. Paid professional services.">
 <meta property="og:url" content="https://victimadvocacy.com/">
 <meta property="og:image" content="https://victimadvocacy.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://victimadvocacy.com/">
-
-<style>
-
-  :root{
-    --night:#170d14;--ink:#1d1119;--aubergine:#2a1424;--plum:#4b2242;--mulberry:#7a4468;
-    --bone:#ece3d2;--paper:#f3ede2;--stone:#8a7f78;--laurel:#a3ad85;--laurel-deep:#5d6a45;
-    --rule:rgba(75,34,66,.18);--antique:#d4c091;--gold:#e9c46f;--gold-hi:#fbe4a4;--gold-soft:rgba(233,196,111,.95);
-    --display:"Caslon Display",Georgia,serif;--text:"Caslon Text",Georgia,serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:var(--text);background:var(--paper);color:var(--plum);-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga","onum";}
-  a{color:inherit;text-decoration:none;}
-  :focus-visible{outline:2px solid var(--laurel);outline-offset:3px;border-radius:4px;}
-  .wrap{width:100%;max-width:1400px;margin:0 auto;padding-left:clamp(20px,4.5vw,72px);padding-right:clamp(20px,4.5vw,72px);}
-
-  .hero{position:relative;min-height:100vh;min-height:100svh;background:radial-gradient(120% 90% at 78% 30%,#3a1b31 0%,var(--aubergine) 38%,var(--night) 100%);color:var(--bone);display:flex;flex-direction:column;overflow:hidden;}
-  .crest{position:absolute;left:50%;top:clamp(70px,9vh,110px);transform:translateX(-50%);width:min(52vw,640px);color:var(--bone);opacity:.085;pointer-events:none;}
-  header{position:relative;z-index:3;}
-  .bar{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px;}
-  .brand{display:flex;align-items:center;gap:14px;}
-  .brand svg{width:38px;height:38px;}
-  .brand span{font-family:var(--display);font-size:27px;color:var(--bone);}
-  .brand span i{font-family:var(--text);font-style:italic;color:var(--laurel);}
-  header nav ul{display:flex;gap:34px;list-style:none;font-size:16px;}
-  header nav a{color:rgba(236,227,210,.72);transition:color .2s;}
-  header nav a:hover{color:var(--bone);}
-  .btn{display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:999px;font-size:16px;white-space:nowrap;transition:background .2s,color .2s,border-color .2s;}
-  .btn.ghost{border:1px solid rgba(236,227,210,.4);color:var(--bone);}
-  .btn.ghost:hover{background:var(--bone);color:var(--aubergine);border-color:var(--bone);}
-
-  .hero-body{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-top:clamp(8px,2vh,24px);}
-  .seal{width:clamp(84px,9.5vh,118px);color:var(--laurel);margin-bottom:14px;}
-  .motto{font-family:var(--display);font-size:17px;letter-spacing:.42em;padding-left:.38em;text-transform:uppercase;color:var(--laurel);margin-bottom:clamp(22px,3.4vh,34px);}
-  .motto-f{font-family:var(--display);letter-spacing:.3em;text-transform:uppercase;font-size:12.5px;color:var(--laurel);}
-  .kick{font-style:italic;color:var(--laurel);font-size:clamp(16px,1.3vw,19px);margin-bottom:clamp(18px,3vh,30px);}
-  h1{font-family:var(--display);font-weight:400;font-size:clamp(56px,7.2vw,132px);line-height:.95;letter-spacing:-.022em;max-width:13ch;color:var(--bone);text-wrap:balance;}
-  h1 .soft{color:rgba(236,227,210,.5);}
-  .lead{margin-top:clamp(18px,3vh,28px);font-style:italic;font-size:clamp(20px,1.75vw,27px);line-height:1.45;max-width:40ch;color:rgba(236,227,210,.86);}
-  .desc{margin-top:12px;font-size:clamp(15px,1.1vw,17px);line-height:1.6;max-width:60ch;color:rgba(236,227,210,.58);}
-
-  .span{position:relative;z-index:2;margin-top:clamp(26px,4vh,48px);}
-  .divider{display:flex;align-items:center;gap:22px;color:var(--laurel);}
-  .divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(163,173,133,.55));}
-  .divider::after{background:linear-gradient(90deg,rgba(163,173,133,.55),transparent);}
-  .divider svg{width:34px;height:32px;flex:none;}
-  .divider.light{color:var(--mulberry);}
-  /* Why we exist + two ways in */
-  .carry{background:var(--paper);border-top:1px solid var(--rule);}
-  .carry .wrap{padding-block:clamp(64px,10vh,112px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);align-items:start;}
-  .carry .eb{font-style:italic;color:var(--laurel-deep);font-size:17px;margin-bottom:12px;}
-  .carry h3{font-family:var(--display);font-weight:400;font-size:clamp(38px,4.4vw,62px);line-height:1.02;color:var(--aubergine);text-wrap:balance;}
-  .carry .say{font-size:clamp(18px,1.45vw,21px);line-height:1.65;color:var(--plum);max-width:58ch;}
-  .carry .say + .say{margin-top:18px;}
-  .carry .say em{color:var(--aubergine);}
-  .ways{border-top:1px solid var(--rule);}
-  .ways .wrap{padding-block:clamp(56px,9vh,100px);display:flex;flex-direction:column;gap:clamp(28px,4vh,44px);}
-  .ways h3{font-family:var(--display);font-weight:400;font-size:clamp(34px,3.6vw,52px);line-height:1.05;color:var(--aubergine);}
-  .ways .pair{display:grid;grid-template-columns:1fr 1fr;gap:0;}
-  .way{padding:6px clamp(20px,3vw,44px) 6px 0;display:flex;flex-direction:column;gap:12px;min-width:0;}
-  .way + .way{border-left:1px solid var(--rule);padding-left:clamp(20px,3vw,44px);}
-  .way .who{font-style:italic;color:var(--laurel-deep);font-size:16px;}
-  .way h4{font-family:var(--display);font-weight:400;font-size:clamp(26px,2.3vw,34px);line-height:1.1;color:var(--aubergine);}
-  .way p{font-size:17px;line-height:1.6;color:var(--plum);max-width:48ch;}
-  .way a{align-self:flex-start;margin-top:6px;color:var(--aubergine);border-bottom:1px solid var(--mulberry);padding-bottom:2px;}
-  .bridge{background:var(--bone);border-radius:4px;padding:clamp(24px,3.4vw,40px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px clamp(24px,4vw,56px);align-items:center;}
-  .bridge .who{font-style:italic;color:var(--laurel-deep);font-size:16px;display:block;margin-bottom:8px;}
-  .bridge h4{font-family:var(--display);font-weight:400;font-size:clamp(26px,2.3vw,34px);line-height:1.1;color:var(--aubergine);margin-bottom:10px;}
-  .bridge p{font-size:17px;line-height:1.6;color:var(--plum);max-width:64ch;}
-  .bridge a{color:var(--bone);background:var(--aubergine);border-radius:999px;padding:13px 24px;min-height:46px;box-sizing:border-box;display:inline-flex;align-items:center;white-space:nowrap;}
-  .bridge a:hover{background:var(--plum);}
-  @media (max-width:760px){.bridge{grid-template-columns:1fr;}.bridge a{justify-self:start;white-space:normal;}}
-  .about{background:var(--aubergine);color:var(--bone);}
-  .about .wrap{padding-block:clamp(64px,11vh,120px);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,5vw,88px);align-items:center;}
-  .about .portrait{aspect-ratio:4/5;max-width:100%;border:1px solid rgba(163,173,133,.45);border-radius:2px;display:grid;place-items:center;text-align:center;padding:24px;color:rgba(236,227,210,.55);font-style:italic;font-size:15.5px;background:radial-gradient(ellipse at 50% 35%,rgba(122,68,104,.35),transparent 70%);box-shadow:inset 0 0 0 6px var(--aubergine),inset 0 0 0 7px rgba(233,196,111,.75),0 0 18px rgba(233,196,111,.18);}
-  .about .eb{font-style:italic;color:var(--laurel);font-size:17px;margin-bottom:12px;text-shadow:-.4px -.4px 0 rgba(251,228,164,.55),.8px .8px 0 var(--gold),0 0 10px rgba(233,196,111,.35);}
-  .about h3{font-family:var(--display);font-weight:400;font-size:clamp(38px,4.4vw,62px);line-height:1.02;color:var(--bone);text-wrap:balance;margin-bottom:clamp(20px,3vh,30px);}
-  .about p.say{font-size:clamp(18px,1.45vw,21px);line-height:1.65;color:rgba(236,227,210,.82);max-width:60ch;}
-  .about p.say + p.say{margin-top:18px;}
-  .about .sig{margin-top:clamp(24px,3.5vh,36px);display:flex;flex-direction:column;gap:2px;}
-  .about .sig b{font-family:var(--display);font-weight:400;font-size:28px;color:var(--bone);}
-  .about .sig span{font-style:italic;color:var(--laurel);font-size:16px;}
-  @media (max-width:820px){.about .wrap{grid-template-columns:1fr;}.about .portrait{max-width:340px;}}
-  .creed{background:var(--paper);border-top:1px solid var(--rule);text-align:center;}
-  .creed .wrap{padding-block:clamp(64px,10vh,112px);display:flex;flex-direction:column;align-items:center;gap:14px;}
-  .creed .crest{width:64px;height:61px;color:var(--laurel-deep);filter:drop-shadow(.5px .5px 0 var(--gold));shape-rendering:geometricPrecision;}
-  .creed .m{font-family:var(--display);font-size:clamp(26px,2.6vw,36px);letter-spacing:.42em;padding-left:.42em;text-transform:uppercase;color:var(--aubergine);}
-  .creed .pr{font-style:italic;font-size:16px;color:var(--stone);}
-  .creed h3{font-family:var(--display);font-weight:400;font-size:clamp(34px,3.8vw,54px);line-height:1.05;color:var(--aubergine);margin-top:6px;}
-  .creed .lead{font-size:clamp(17px,1.35vw,20px);line-height:1.65;color:var(--plum);max-width:60ch;margin-top:4px;}
-  .creed .two{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(24px,4vh,44px);width:100%;max-width:980px;text-align:left;}
-  .creed .two > div{padding:4px clamp(20px,3vw,44px);display:flex;flex-direction:column;gap:10px;min-width:0;}
-  .creed .two > div + div{border-left:1px solid var(--rule);}
-  .creed .who{font-style:italic;color:var(--laurel-deep);font-size:16px;}
-  .creed h4{font-family:var(--display);font-weight:400;font-size:clamp(24px,2vw,30px);line-height:1.15;color:var(--aubergine);}
-  .creed .two p{font-size:17px;line-height:1.6;color:var(--plum);}
-  @media (max-width:680px){.creed .two{grid-template-columns:1fr;gap:28px;}.creed .two > div{padding:0;}.creed .two > div + div{border-left:0;border-top:1px solid var(--rule);padding-top:28px;}}
-  @media (max-width:720px){.steps{grid-template-columns:1fr;row-gap:30px;}.step{padding-right:0;}.step p{max-width:52ch;}}
-  /* Wordmark lockup: small-caps name over tracked ASSOCIATES between rules */
-  .wm{display:inline-flex;flex-direction:column;align-items:center;gap:5px;line-height:1;}
-  .brand .wm1,.fbrand .wm1{font-family:var(--display);font-variant-caps:small-caps;font-size:26px;letter-spacing:.05em;color:var(--bone);white-space:nowrap;}
-  .brand .wm2,.fbrand .wm2{display:flex;align-items:center;gap:9px;font-family:var(--display);font-size:10.5px;letter-spacing:.46em;text-transform:uppercase;color:var(--antique);white-space:nowrap;}
-  .wm2::before,.wm2::after{content:"";width:20px;height:1px;background:var(--antique);opacity:.75;}
-  .wm2::after{margin-left:-.46em;}
-  @media (max-width:560px){.brand .wm1{font-size:21px;}.brand .wm2{font-size:9px;}}
-  /* Seal in the creed */
-  .creed .sealmark{width:clamp(150px,16vw,190px);height:auto;margin-bottom:6px;}
-  .creed .sealmark .r1{fill:none;stroke:var(--antique);stroke-width:1.2;}
-  .creed .sealmark .r2{fill:none;stroke:var(--antique);stroke-width:.6;opacity:.8;}
-  .creed .sealmark .rt{font-family:var(--display);font-size:19px;fill:var(--aubergine);}
-  .creed .sealmark .sm{color:var(--laurel-deep);filter:drop-shadow(.5px .5px 0 var(--gold));}
-  .fbase .credit{display:inline-flex;align-items:center;gap:8px;color:rgba(236,227,210,.5);border-bottom:0;font-size:12.5px;letter-spacing:.04em;transition:color .25s;}
-  .fbase .credit b{font-weight:500;color:var(--antique);letter-spacing:.06em;}
-  .fbase .credit:hover{color:var(--bone);}
-  .fbase .credit-mark{height:20px;width:auto;flex:none;opacity:.85;transition:opacity .25s;}
-  .fbase .credit:hover .credit-mark{opacity:1;}
-  .ways .fine{font-style:italic;font-size:15.5px;color:var(--stone);border-top:1px solid var(--rule);padding-top:20px;}
-  @media (max-width:860px){.carry .wrap{grid-template-columns:1fr;}}
-  @media (max-width:640px){.ways .pair{grid-template-columns:1fr;gap:28px;}.way + .way{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:28px;}}
-  /* Gold trim: a fine gilded edge on the mark, rules and sage labels */
-  .seal,.brand svg,.fbrand svg,.divider:not(.light) svg{filter:drop-shadow(.5px .5px 0 var(--gold));shape-rendering:geometricPrecision;}
-  .seal{filter:drop-shadow(-.3px -.3px 0 var(--gold-hi)) drop-shadow(.6px .6px 0 var(--gold));}
-  .divider:not(.light)::before,.divider:not(.light)::after{height:2px;}
-  .divider:not(.light)::before{background:linear-gradient(90deg,transparent,rgba(163,173,133,.55)) top/100% 1px no-repeat,linear-gradient(90deg,transparent 15%,var(--gold-soft)) bottom/100% 1px no-repeat;}
-  .divider:not(.light)::after{background:linear-gradient(90deg,rgba(163,173,133,.55),transparent) top/100% 1px no-repeat,linear-gradient(90deg,var(--gold-soft),transparent 85%) bottom/100% 1px no-repeat;}
-  .motto,.motto-f,.kick,.door .who{text-shadow:-.4px -.4px 0 rgba(251,228,164,.55),.8px .8px 0 var(--gold),0 0 10px rgba(233,196,111,.35);}
-  .divider:not(.light)::before,.divider:not(.light)::after{filter:drop-shadow(0 0 3px rgba(233,196,111,.5));}
-  .divider:not(.light){position:relative;}
-  .divider:not(.light)::before{background:linear-gradient(90deg,transparent,rgba(163,173,133,.55)) top/100% 1px no-repeat,linear-gradient(90deg,transparent 10%,var(--gold) 70%,var(--gold-hi)) bottom/100% 1px no-repeat;}
-  .divider:not(.light)::after{background:linear-gradient(90deg,rgba(163,173,133,.55),transparent) top/100% 1px no-repeat,linear-gradient(90deg,var(--gold-hi),var(--gold) 30%,transparent 90%) bottom/100% 1px no-repeat;}
-  @media (prefers-reduced-motion:no-preference){
-    .seal{animation:gleam 7s ease-in-out infinite;}
-    @keyframes gleam{0%,100%{filter:drop-shadow(-.3px -.3px 0 var(--gold-hi)) drop-shadow(.6px .6px 0 var(--gold)) brightness(1);}50%{filter:drop-shadow(-.3px -.3px 0 var(--gold-hi)) drop-shadow(.6px .6px 0 var(--gold)) brightness(1.18);}}
-  }
-  .divider.light::before{background:linear-gradient(90deg,transparent,rgba(122,68,104,.45));}
-  .divider.light::after{background:linear-gradient(90deg,rgba(122,68,104,.45),transparent);}
-  .hero-body > *{opacity:0;transform:translateY(10px);animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards;}
-  .hero-body > :nth-child(2){animation-delay:.2s;} .hero-body > :nth-child(3){animation-delay:.35s;} .hero-body > :nth-child(4){animation-delay:.55s;} .hero-body > :nth-child(5){animation-delay:.7s;}
-  .crest{animation:fade 2s ease .1s both;}
-  @keyframes rise{to{opacity:1;transform:none;}} @keyframes fade{from{opacity:0;}}
-  .doors{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;margin-top:clamp(10px,1.6vh,18px);}
-  .door{display:grid;grid-template-columns:1fr auto;align-items:end;gap:20px;padding:clamp(18px,2.8vh,28px) clamp(4px,1vw,12px) clamp(24px,3.8vh,38px) 0;}
-  .door + .door{border-left:1px solid rgba(163,173,133,.45);padding-left:clamp(24px,3vw,44px);}
-  .door > div{align-self:start;}
-  .door .who{display:block;font-style:italic;color:var(--laurel);font-size:15.5px;margin-bottom:6px;}
-  .door h2{font-family:var(--display);font-weight:400;font-size:clamp(25px,2.1vw,34px);line-height:1.08;color:var(--bone);max-width:26ch;}
-  .door p{margin-top:10px;font-size:16px;line-height:1.55;color:rgba(236,227,210,.7);max-width:44ch;}
-  .door .go{width:58px;height:58px;border-radius:50%;border:1px solid rgba(236,227,210,.45);display:grid;place-items:center;color:var(--bone);transition:background .25s,border-color .25s,color .25s;}
-  .door .go svg{width:20px;height:20px;}
-  .door:hover .go{background:var(--bone);border-color:var(--bone);color:var(--aubergine);}
-
-  .loop{padding-top:clamp(80px,13vh,140px);padding-bottom:clamp(72px,11vh,120px);}
-  .loop-head{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;margin-bottom:56px;}
-  .loop-head h3{font-family:var(--display);font-weight:400;font-size:clamp(40px,4.6vw,72px);line-height:1;letter-spacing:-.012em;}
-  .loop-head p{font-size:18px;line-height:1.65;color:#3b2734;max-width:46ch;}
-  .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));}
-  .step{padding:26px 28px 0 0;border-top:1px solid var(--plum);}
-  .step .n{font-family:var(--display);font-size:22px;color:var(--mulberry);}
-  .step h4{font-family:var(--display);font-weight:400;font-size:clamp(26px,2.2vw,32px);line-height:1.08;margin:10px 0;}
-  .step p{font-size:16px;line-height:1.6;color:#3b2734;max-width:28ch;}
-  .step .price{display:block;margin-top:14px;font-style:italic;color:var(--laurel-deep);font-size:16px;}
-  .return{margin-top:36px;}
-  .return svg{width:100%;height:70px;display:block;color:var(--mulberry);}
-  .return p{font-style:italic;color:var(--mulberry);font-size:18px;text-align:center;margin-top:6px;}
-
-  .proof{background:var(--aubergine);color:var(--bone);padding-top:clamp(72px,11vh,120px);padding-bottom:clamp(72px,11vh,120px);}
-  .proof h3{font-family:var(--display);font-weight:400;font-size:clamp(36px,3.8vw,58px);line-height:1.04;max-width:18ch;margin-bottom:56px;}
-  .proof .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,56px);}
-  .proof .item{border-top:1px solid rgba(236,227,210,.25);padding-top:22px;}
-  .proof .item h5{font-family:var(--display);font-weight:400;font-size:27px;line-height:1.15;margin-bottom:10px;}
-  .proof .item p{font-size:16.5px;line-height:1.6;color:rgba(236,227,210,.72);}
-  .voices{margin-top:64px;padding-top:28px;border-top:1px solid rgba(236,227,210,.25);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
-  .voices p{font-family:var(--display);font-size:clamp(26px,2.4vw,34px);}
-  .voices span{font-style:italic;color:rgba(236,227,210,.55);font-size:15px;}
-
-  footer{background:var(--night);color:rgba(236,227,210,.55);padding:56px 0 40px;font-size:14.5px;}
-  .frow{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid rgba(236,227,210,.14);}
-  .fbrand{display:flex;align-items:center;gap:12px;}
-  .fbrand svg{width:34px;height:32px;color:var(--laurel);}
-  .fbrand span{font-family:var(--display);font-size:24px;color:var(--bone);}
-  .fbrand span i{font-family:var(--text);color:var(--laurel);}
-  footer .legal{font-style:italic;max-width:78ch;line-height:1.6;margin:22px 0 30px;}
-  .fbase{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px;color:rgba(236,227,210,.45);}
-  .fbase nav{display:flex;gap:26px;}
-  .fbase a{color:rgba(236,227,210,.62);border-bottom:1px solid transparent;transition:border-color .2s,color .2s;}
-  .fbase a:hover{color:var(--bone);border-bottom-color:rgba(236,227,210,.4);}
-  @media (max-width:980px){
-    header nav{display:none;}
-    .door{grid-template-columns:1fr;gap:14px;}
-    .door .go{width:48px;height:48px;}
-  }
-  @media (max-width:560px){
-    .doors{grid-template-columns:1fr;}
-    .door + .door{border-left:0;border-top:1px solid rgba(163,173,133,.45);padding-left:0;}
-  }
-  @media (max-width:980px){
-    .loop-head{grid-template-columns:1fr;}
-    .step{padding-right:18px;}
-    .return{display:none;}
-    .proof .grid{grid-template-columns:1fr;}
-    .crest{width:110vw;opacity:.07;}
-  }
-  @media (max-width:600px){.brand span{font-size:22px;white-space:nowrap;}.btn{height:42px;padding:0 16px;font-size:14.5px;}.bar{height:72px;}}
-  @media (prefers-reduced-motion:reduce){.hero-body > *,.crest{animation:none;opacity:1;transform:none;}.btn,.go{transition:none;}}
-  /* Shield crest is a full-color image: no tint or trim filters on it */
-  .brand svg,.fbrand svg,.divider svg,.creed .sealmark .sm{filter:none!important;}
-  .seal{filter:none;}
-  .brand svg{width:46px;height:38px;}
-  .fbrand svg{width:42px;height:34px;}
-  .divider svg{width:42px;height:34px;}
-  .seal{width:clamp(110px,12vh,150px);height:auto;}
-  @keyframes gleam{0%,100%{filter:brightness(1);}50%{filter:brightness(1.15);}}
-  .seal{animation-name:gleam;}
-  /* Gold type: Playfair Display, solid antique gold, no shadows */
-  :root{--playfair:"Playfair Display","Caslon Display",Georgia,serif;}
-  .motto,.motto-f,.kick,.door .who,.about .eb,.about .sig span{text-shadow:none!important;color:var(--antique);font-family:var(--playfair);-webkit-font-smoothing:antialiased;}
-  .door .who,.kick,.about .eb{font-style:italic;font-weight:400;letter-spacing:.01em;}
-  .motto{font-weight:400;letter-spacing:.5em;}
-  .brand .wm1,.fbrand .wm1,.brand .wm2,.fbrand .wm2{font-family:var(--playfair);}
-  .brand .wm1,.fbrand .wm1{font-weight:400;letter-spacing:.03em;}
-  .creed .m,.creed .sealmark .rt{font-family:var(--playfair);}
-  .carry .eb,.way .who,.creed .who,.bridge .who{font-family:var(--playfair);font-style:italic;}
-  /* Opening sequence: the crest appears alone, falls back into a backdrop, then the words roll out in reading order */
-  :root{--crest-o:.085;}
-  @media (max-width:980px){:root{--crest-o:.07;}}
-  .hero > .crest{transform-origin:50% 38%;animation:crestIn 3.8s cubic-bezier(.37,0,.63,1) both;}
-  @keyframes crestIn{
-    0%{opacity:0;transform:translateX(-50%) scale(.46);filter:blur(6px);}
-    24%{opacity:1;transform:translateX(-50%) scale(.48);filter:blur(0);}
-    44%{opacity:1;transform:translateX(-50%) scale(.5);filter:blur(0);}
-    100%{opacity:var(--crest-o);transform:translateX(-50%) scale(1);filter:blur(0);}
-  }
-  @keyframes softrise{from{opacity:0;transform:translateY(6px);filter:blur(5px);}to{opacity:1;transform:none;filter:blur(0);}}
-  .hero-body > *,.hero header,.hero .divider,.hero .door{opacity:0;animation:softrise 1.8s cubic-bezier(.22,.61,.36,1) forwards;}
-  .hero-body > :nth-child(2){animation-delay:4.9s;}
-  .hero-body > :nth-child(3){animation-delay:8.7s;}
-  .hero-body > :nth-child(4){animation-delay:9.1s;}
-  .hero .divider{animation-delay:9.45s;}
-  .hero .door:nth-child(1){animation-delay:9.75s;}
-  .hero .door:nth-child(2){animation-delay:10.05s;}
-  .hero header{animation-delay:10.3s;animation-duration:2.2s;}
-  /* The small crest rises out of the backdrop: it starts exactly over the large faint crest, then lifts and shrinks to its place */
-  .hero-body > .seal{transform-origin:50% 50%;animation:emergeT 2.6s cubic-bezier(.5,0,.2,1) 3.3s both,emergeO 2.6s cubic-bezier(.6,0,.4,1) 3.3s both,gleam 8s ease-in-out 6.2s infinite;}
-  @keyframes emergeT{
-    0%{transform:translate(var(--dx,0px),var(--dy,0px)) scale(var(--s,1));}
-    10%{transform:translate(var(--dx,0px),var(--dy,0px)) scale(var(--s,1));}
-    100%{transform:none;}
-  }
-  @keyframes emergeO{
-    0%{opacity:0;}
-    10%{opacity:var(--crest-o);}
-    55%{opacity:.4;}
-    100%{opacity:1;}
-  }
-  html.intro-done .hero > .crest{animation:none;opacity:var(--crest-o);transform:translateX(-50%);}
-  html.intro-done .hero-body > *,html.intro-done .hero header,html.intro-done .hero .divider,html.intro-done .hero .door{animation:none;opacity:1;transform:none;}
-  html.intro-done .hero-body > .seal{animation:gleam 7s ease-in-out infinite;}
-  @media (prefers-reduced-motion:reduce){
-    .hero > .crest{animation:none!important;opacity:var(--crest-o)!important;transform:translateX(-50%)!important;}
-    .hero-body > *,.hero header,.hero .divider,.hero .door{animation:none!important;opacity:1!important;transform:none!important;}
-  }
-  /* After the opening: a gold shimmer travels across the two door labels, and the arrows answer with a soft ring */
-  .door .who{background:linear-gradient(100deg,var(--antique) 0%,var(--antique) 38%,#fff3cf 48%,#f6e2a8 52%,var(--antique) 62%,var(--antique) 100%);background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-  @keyframes sheen{0%{background-position:100% 0;}16%,100%{background-position:0% 0;}}
-  @keyframes ring{0%{box-shadow:0 0 0 0 rgba(233,196,111,.0);border-color:rgba(236,227,210,.45);}4%{box-shadow:0 0 0 0 rgba(233,196,111,.55);border-color:var(--gold);}16%{box-shadow:0 0 0 12px rgba(233,196,111,0);border-color:rgba(236,227,210,.45);}100%{box-shadow:0 0 0 12px rgba(233,196,111,0);}}
-  .hero .door:nth-child(1) .who{animation:sheen 9s cubic-bezier(.4,0,.2,1) 11.6s infinite;}
-  .hero .door:nth-child(2) .who{animation:sheen 9s cubic-bezier(.4,0,.2,1) 12.1s infinite;}
-  .hero .door:nth-child(1) .go{animation:ring 9s ease-out 11.9s infinite;}
-  .hero .door:nth-child(2) .go{animation:ring 9s ease-out 12.4s infinite;}
-  html.intro-done .hero .door:nth-child(1) .who{animation-delay:1s;}
-  html.intro-done .hero .door:nth-child(2) .who{animation-delay:1.5s;}
-  html.intro-done .hero .door:nth-child(1) .go{animation-delay:1.3s;}
-  html.intro-done .hero .door:nth-child(2) .go{animation-delay:1.8s;}
-  .doors:hover .who,.doors:hover .go,.doors:focus-within .who,.doors:focus-within .go{animation-play-state:paused;}
-  @media (prefers-reduced-motion:reduce){.door .who,.door .go{animation:none!important;}}
-  .door .who{font-size:17px;}
-  .door h2{background:linear-gradient(100deg,var(--bone) 0%,var(--bone) 40%,#f7dd9a 49%,#fbe8b8 51%,var(--bone) 60%,var(--bone) 100%);background-size:260% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-  .hero .door:nth-child(1) h2{animation:sheen 9s cubic-bezier(.4,0,.2,1) 11.75s infinite;}
-  .hero .door:nth-child(2) h2{animation:sheen 9s cubic-bezier(.4,0,.2,1) 12.25s infinite;}
-  html.intro-done .hero .door:nth-child(1) h2{animation-delay:1.15s;}
-  html.intro-done .hero .door:nth-child(2) h2{animation-delay:1.65s;}
-  .doors:hover h2,.doors:focus-within h2{animation-play-state:paused;}
-  @media (prefers-reduced-motion:reduce){.door h2{animation:none!important;}}
-  /* Typewriter headline */
-  .hero-body > h1.tw{animation:none!important;opacity:1!important;transform:none!important;filter:none!important;}
-  h1.tw .c{visibility:hidden;}
-  h1.tw .c.on{visibility:visible;}
-  h1.tw .caret{display:inline-block;width:0;height:.82em;border-right:2px solid var(--antique);margin-right:-2px;vertical-align:-.04em;animation:blink 1.05s steps(1) infinite;}
-  h1.tw .caret.gone{opacity:0;transition:opacity .8s ease;animation:none;}
-  @keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
-  .about .portrait.has-photo{padding:0;overflow:hidden;position:relative;}
-  .about .portrait.has-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%;}
-  .about .portrait.has-photo::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 6px var(--aubergine),inset 0 0 0 7px rgba(233,196,111,.75);}
-  .creed .two{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1200px;}
-  .creed .two > div.to-them h4{color:var(--plum);}
-  .creed .two > div.to-them .who{color:var(--mulberry);}
-  @media (max-width:900px){.creed .two{grid-template-columns:1fr;gap:28px;}.creed .two > div{padding:0;}.creed .two > div + div{border-left:0;border-top:1px solid var(--rule);padding-top:28px;}}
-  .svc{background:var(--paper);}
-  .svc .wrap{padding-block:clamp(64px,10vh,104px) clamp(16px,3vh,32px);display:flex;flex-direction:column;gap:14px;}
-  .svc .eb{font-family:var(--playfair);font-style:italic;color:var(--laurel-deep);font-size:17px;}
-  .svc h3{font-family:var(--display);font-weight:400;font-size:clamp(34px,3.8vw,54px);line-height:1.05;color:var(--aubergine);max-width:22ch;text-wrap:balance;}
-  .svc-pair{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(18px,3vh,30px);}
-  .svc-pair > div{padding:4px clamp(20px,3vw,44px) 4px 0;display:flex;flex-direction:column;gap:12px;min-width:0;}
-  .svc-pair > div + div{border-left:1px solid var(--rule);padding-left:clamp(20px,3vw,44px);}
-  .svc .who{font-family:var(--playfair);font-style:italic;color:var(--laurel-deep);font-size:16px;}
-  .svc h4{font-family:var(--display);font-weight:400;font-size:clamp(26px,2.3vw,34px);line-height:1.1;color:var(--aubergine);}
-  .svc p{font-size:17px;line-height:1.6;color:var(--plum);max-width:52ch;}
-  .svc p.note{font-size:15px;font-style:italic;color:var(--stone);border-top:1px solid var(--rule);padding-top:12px;}
-  @media (max-width:700px){.svc-pair{grid-template-columns:1fr;gap:28px;}.svc-pair > div{padding:0;}.svc-pair > div + div{border-left:0;border-top:1px solid var(--rule);padding-top:28px;}}
-  footer .legal a{color:inherit;}
-  /* No animation: everything appears at rest */
-  .hero,.hero *,.creed *,.seal{animation:none!important;transition:none;}
-  .hero-body > *,.hero header,.hero .divider,.hero .door{opacity:1!important;transform:none!important;filter:none!important;}
-  .hero > .crest{opacity:var(--crest-o)!important;transform:translateX(-50%)!important;filter:none!important;}
-  .door .who,.door h2{background:none!important;-webkit-text-fill-color:currentColor!important;}
-  .door .who{color:var(--antique)!important;}
-  .door h2{color:var(--bone)!important;}
-  .door .go{transition:background .25s,border-color .25s,color .25s!important;}
-</style>
-<link rel="icon" href="favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="stylesheet" href="fonts.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mark" viewBox="0 0 367 299"><image href="crest.png" x="0" y="0" width="367" height="299"/></symbol></svg>
-<section class="hero">
-  <svg class="crest" viewBox="0 0 2898 2746" aria-hidden="true"><use href="#mark"/></svg>
-  <header>
-    <div class="wrap bar">
-      <a class="brand" href="#" aria-label="Victim Advocacy Associates, home"><svg viewBox="0 0 2898 2746" aria-hidden="true" style="color:var(--laurel)"><use href="#mark"/></svg><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
-      <nav aria-label="Main"><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="attorneys.html">For attorneys</a></li><li><a href="individuals.html">For clients</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-      <a class="btn ghost" href="contact.html">Start an assessment</a>
-    </div>
-  </header>
-
-  <div class="wrap hero-body">
-    <svg class="seal" viewBox="0 0 2898 2746" role="img" aria-label="The Victim Advocacy Associates dove and laurel mark"><use href="#mark"/></svg>
-    <h1>Where the story <span class="soft">becomes the case.</span></h1>
-    <p class="lead">Between the people who lived it and the people who can act on it.</p>
-    <p class="desc">Case development for fraud, financial abuse and fiduciary misconduct. Fixed fees, agreed in writing before any work begins.</p>
-  </div>
-
-  <div class="wrap span">
-    <div class="divider" aria-hidden="true"><svg viewBox="0 0 2898 2746"><use href="#mark"/></svg></div>
-    <div class="doors">
-      <a class="door" href="attorneys.html">
-        <div><span class="who">For attorneys</span><h2>Send us the matter that isn&rsquo;t ready yet.</h2><p>Chronologies, evidence tables and transaction analyses, coordinated with licensed professionals where the work requires it.</p></div>
-        <span class="go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 10 H16 M11 5 L16 10 L11 15" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
-      </a>
-      <a class="door" href="individuals.html">
-        <div><span class="who">For individuals and families</span><h2>You know what happened. We help you show it.</h2><p>Begin with a case assessment: an intake conversation, a review of your records, and a written memo.</p></div>
-        <span class="go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 10 H16 M11 5 L16 10 L11 15" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
-      </a>
-    </div>
-  </div>
+<div data-page="index">
+<a class="skip" href="#content">Skip to Content</a>
+<section class="hero"><img class="crest" src="crest.png" alt="" aria-hidden="true"><header class="site-header"><div class="wrap bar">
+<a class="brand" href="index.html" aria-label="Victim Advocacy Associates, home"><img src="crest.png" alt="" width="46" height="38"><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
+<button id="menu" aria-expanded="false" aria-controls="nav">Menu <span aria-hidden="true">☰</span></button>
+<nav id="nav" aria-label="Main"><a href="attorneys.html">For Attorneys</a><a href="individuals.html">For Individuals</a><a href="how-it-works.html">How It Works</a><a href="our-work.html">Our Work</a><a href="about.html">About</a><a href="advocates.html">Our Team</a><a href="resources.html">Resources</a><a class="btn ghost" href="contact.html">Contact Us</a></nav>
+</div></header>
+<div class="wrap hero-body">
+<img class="seal" src="crest.png" alt="The Victim Advocacy Associates dove and laurel crest" width="150" height="122">
+<h1>Your Firm Leads the Case. <span class="soft">We Support Your Client and Your Team.</span></h1>
+<p class="desc">Source-tied chronologies, evidence indexes and loss summaries for your team, plus a dedicated advocate for your client in fraud, financial abuse, fiduciary and stalking matters. Everything is done under your direction.</p>
+<div class="actions hero-actions"><a class="btn" href="sample-work.html">See a Sample File</a><a class="btn ghost" href="contact.html#attorney">Discuss a Matter</a></div>
+<p class="hero-alt" style="align-items:center"><a class="btn ghost" style="min-height:40px;padding:0 20px;font-size:15px" href="individuals.html">Harmed by fraud or abuse? Start here</a><a class="textlink" href="resources.html#every-state">Find Help in Your State</a></p>
+</div>
+<div class="wrap span">
+<div class="divider" aria-hidden="true"><img src="crest.png" alt=""></div>
+<div class="doors">
+<a class="door" href="attorneys.html"><div><span class="who">For Attorneys</span><h2>Case Building and Client Advocacy, Under Your Direction</h2><p>Source-tied chronologies and evidence indexes for your team, and a dedicated advocate for your client.</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 10 H16 M11 5 L16 10 L11 15" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span></a>
+<a class="door" href="individuals.html"><div><span class="who">For Individuals and Families</span><h2>You Don’t Have to Carry This Alone</h2><p>Start with a free 15-minute call or a $500 records assessment.</p></div><span class="go" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 10 H16 M11 5 L16 10 L11 15" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span></a>
+</div>
+</div>
 </section>
-
-<main>
-  <section class="svc" aria-labelledby="svc-h">
-    <div class="wrap">
-      <p class="eb">Our services</p>
-      <h3 id="svc-h">Two lines of service, one standard of care.</h3>
-      <div class="svc-pair">
-        <div>
-          <span class="who">For attorneys</span>
-          <h4>Fraud Investigation and Litigation Support</h4>
-          <p>Organizing records, building chronologies and evidence indexes, tracing transactions, and preparing files that are ready for litigation.</p>
-          <p class="note">We are not licensed private investigators. Work that requires a license is performed by licensed professionals we coordinate with.</p>
-        </div>
-        <div>
-          <span class="who">For individuals and families</span>
-          <h4>Victim Advocacy and Case Coordination</h4>
-          <p>Helping you put what happened in order, and coordinating with your attorney and the professionals your matter needs, so you are not carrying it alone.</p>
-          <p class="note">We do not provide legal representation or legal advice.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap loop" id="how">
-    <div class="loop-head">
-      <h3>How a matter moves.</h3>
-      <p>Every engagement follows the same path, so an attorney always receives the file in the same form, and a client always knows what comes next.</p>
-    </div>
-    <div class="steps">
-      <div class="step"><span class="n">1</span><h4>Assessment</h4><p>An intake conversation and a review of a defined set of records.</p><span class="price">Fixed fee</span></div>
-      <div class="step"><span class="n">2</span><h4>Case Build</h4><p>Chronology, evidence index, loss summary, and a case memo.</p><span class="price">Quoted in writing</span></div>
-      <div class="step"><span class="n">3</span><h4>Handoff to counsel</h4><p>An attorney-ready file, and introductions coordinated.</p><span class="price">Included</span></div>
-      <div class="step"><span class="n">4</span><h4>Continued support</h4><p>Ongoing organization and hearing preparation, often retained by counsel.</p><span class="price">By engagement</span></div>
-    </div>
-    <div class="return">
-      <svg viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M1060 4 V30 Q1060 62 1028 62 H72 Q40 62 40 30 V10" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/><path d="M33 17 L40 8 L47 17" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>
-      <p>And every finished file is how the next attorney, and the next client, find us.</p>
-    </div>
-  </section>
-
-  <section class="carry" aria-labelledby="carry-h">
-    <div class="wrap">
-      <div>
-        <p class="eb">Why we exist</p>
-        <h3 id="carry-h">They have carried enough.</h3>
-      </div>
-      <div>
-        <p class="say">Someone who has been wronged hires an attorney to stand for them in court. Yet the work of gathering the proof has always fallen back on their own shoulders, at the very moment they have the least left to give.</p>
-        <p class="say">We believe they have carried enough. Attorneys belong in the courtroom, not buried in bank statements. Between them stands Victim Advocacy Associates, <em>turning what happened into what holds up.</em></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="ways" id="ways" aria-labelledby="ways-h">
-    <div class="wrap">
-      <h3 id="ways-h">Two ways to bring us in.</h3>
-      <div class="pair">
-        <div class="way">
-          <span class="who">On your own</span>
-          <h4>Start with an assessment.</h4>
-          <p>Individuals and families work with us directly. Begin with a case assessment at a fixed fee, and if you choose to continue, a Case Build at a fixed fee, agreed in writing before any work begins. When you are ready, we hand the finished file to the attorney of your choice.</p>
-          <a href="contact.html">Start an assessment</a>
-        </div>
-        <div class="way">
-          <span class="who">Through your attorney</span>
-          <h4>The VAA Counsel Network.</h4>
-          <p>Attorneys in our Counsel Network can recommend us as part of your representation. With your written consent, your attorney engages VAA directly, our work is guided by counsel, and our fees appear as a disclosed case cost in your fee agreement. You focus on healing. Your attorney focuses on the case.</p>
-          <a href="contact.html">For attorneys: join the Counsel Network</a>
-        </div>
-      </div>
-      <div class="bridge">
-        <div>
-          <span class="who">Already working with an attorney?</span>
-          <h4>Bring us to them.</h4>
-          <p>Tell your attorney about VAA. We will introduce ourselves, explain how we work, and show them what we can prepare. Many attorneys choose to engage us directly, so our work is guided by counsel and becomes part of their own case preparation, strengthening your position and their case at the same time.</p>
-        </div>
-        <a href="contact.html">Introduce us to your attorney</a>
-      </div>
-      <p class="fine">Bringing us in is always your choice. Our fees are never tied to the outcome of a case, and we never pay or accept referral fees.</p>
-    </div>
-  </section>
-
-  <section class="about" id="about" aria-labelledby="about-h">
-    <div class="wrap">
-      <div class="portrait has-photo"><img src="ally.jpg" alt="Ally Arpey, founder of Victim Advocacy Associates" width="776" height="1008" loading="lazy"></div>
-      <div>
-        <p class="eb">About us</p>
-        <h3 id="about-h">Built by someone who has stood where you are standing.</h3>
-        <p class="say">Victim Advocacy Associates began with Ally Arpey's own experience of fraud. She knows the disbelief of the first discovery, the long nights spent rebuilding what happened from statements and messages, and how alone it feels to carry the proof while still carrying the loss.</p>
-        <p class="say">She came through it determined that no one else should have to face that work by themselves. Today she brings the same patience and care, shaped by her training in clinical counseling, to every person who comes through the door, and the same rigor to every file that goes on to an attorney.</p>
-        <p class="say" style="font-size:15.5px;font-style:italic;opacity:.75;">Victim Advocacy Associates does not provide counseling, therapy or mental health treatment.</p>
-        <p class="say">That is the heart of this practice. We listen as people who understand, and we build as people who know what is at stake.</p>
-        <div class="sig"><b>Ally Arpey</b><span>Founder</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="creed" aria-labelledby="creed-h">
-    <div class="wrap">
-      <svg class="sealmark" viewBox="0 0 300 300" aria-hidden="true"><defs><path id="ring" d="M38,150 a112,112 0 1,1 224,0 a112,112 0 1,1 -224,0"/></defs><circle cx="150" cy="150" r="142" class="r1"/><circle cx="150" cy="150" r="137" class="r2"/><circle cx="150" cy="150" r="88" class="r2"/><text class="rt"><textPath href="#ring" textLength="690" lengthAdjust="spacing">VICTIM ADVOCACY · ASSOCIATES ·</textPath></text><use href="#mark" x="92" y="96" width="116" height="110" class="sm"/></svg>
-      <p class="pr">What drives us</p>
-      <h3 id="creed-h">We hold fast to our word.</h3>
-      <p class="lead">Every promise we make comes back to one belief: no one who has been wronged should have to prove it alone.</p>
-      <div class="two">
-        <div>
-          <span class="who">To the people we serve</span>
-          <h4>Your story will be heard.</h4>
-          <p>Your story is not set aside, softened, or lost in a stack of paper. We stay with it until it becomes a record no one can dismiss.</p>
-        </div>
-        <div>
-          <span class="who">To the attorneys we work beside</span>
-          <h4>Our word is our work.</h4>
-          <p>The scope we put in writing is the work we deliver, on the timeline we promised, in the same form every time.</p>
-        </div>
-        <div class="to-them">
-          <span class="who">Why we do this</span>
-          <h4>The truth leaves a trail.</h4>
-          <p>Fraud depends on silence, on people feeling too ashamed, too tired, or too alone to piece together what happened. But every transfer leaves a trace, and every message carries a date. What drives us is the moment the people who were harmed can finally rest, knowing the truth was heard.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="proof">
-    <div class="wrap">
-      <h3>Trusted by the people who try these cases.</h3>
-      <div class="grid">
-        <div class="item"><h5>Engaged full time by a trial firm.</h5><p>Our practice supports a firm handling fraud, financial-abuse and fiduciary litigation, every day.</p></div>
-        <div class="item"><h5>Coordinated with licensed professionals.</h5><p>Investigative and forensic work stays with licensed investigators and accountants. We organize, document and coordinate.</p></div>
-        <div class="item"><h5>Independently appraised work.</h5><p>Twenty-six deliverables reviewed by an outside appraiser for professional quality and replacement value.</p></div>
-      </div>
-    </div>
-  </section>
+<main id="content" tabindex="-1">
+<section class="proof-strip" aria-label="What you can count on"><ul>
+<li><strong>Every fact sourced</strong>Each entry points to the exact document and page it came from.</li>
+<li><strong>Claims kept separate</strong>What the records prove stays apart from what anyone claims.</li>
+<li><strong>Price in writing first</strong>A free first call, and a written price before any paid work begins.</li>
+<li><strong>A dedicated advocate</strong>The same advocate from the first call to the last hearing, with replies within one business day.</li>
+</ul></section>
+<section class="split"><div><p class="eyebrow">Why We Exist</p>
+<h2>They Have<br>Carried Enough</h2>
+</div>
+<div><p class="lead">Someone who has been wronged hires an attorney to stand for them in court. Then they’re asked to pull together years of bank statements, texts and paperwork, at the moment they have the least left to give.</p>
+<p>That’s the part we help with. We turn what happened into a record counsel can rely on, and we stay in touch with the client so the legal team isn’t chasing every detail.</p>
+</div>
+</section>
+<section style="border-top:1px solid #c4b7cd"><div class="section-top"><div><p class="eyebrow">Our Services</p>
+<h2>Help for Your Team<br>and Your Client</h2>
+</div>
+<a class="textlink" href="attorneys.html">Explore Our Services</a></div>
+<div class="service-row"><span class="number">01 /</span><h3>Case Building<br>&amp; Litigation Support</h3>
+<div><p>Help gathering the evidence, plus source-referenced chronologies, evidence indexes and financial-record summaries. Organized work product that gives counsel a clearer record to evaluate.</p>
+<a class="textlink" href="attorneys.html">The Work Behind the Matter</a></div>
+</div>
+<div class="service-row"><span class="number">02 /</span><h3>Private Advocacy<br>&amp; Client Coordination</h3>
+<div><p>A consistent point of contact for practical support, referrals, hearings and next steps. The same person stays with them through the matter and after it ends.</p>
+<a class="textlink" href="individuals.html">The Person Behind the Matter</a></div>
+</div>
+</section>
+<section><div class="section-top"><div><p class="eyebrow">Why Firms Bring Us In</p>
+<h2>When a Matter Needs<br>More Than Legal Work</h2>
+</div>
+<a class="textlink" href="attorneys.html">See What We Do for Attorneys</a></div>
+<div class="case-grid why-grid">
+<article class="case"><span class="tag">The Records</span><h3>A Box of Statements and a Story</h3><p>We turn years of bank records, messages and filings into a source-tied chronology and a loss summary your team can review in an afternoon.</p></article>
+<article class="case"><span class="tag">The Paper Trail</span><h3>A Client Who Can’t Find the Proof</h3><p>Texts buried in iMessage, receipts spread across three email accounts, statements they’ve never downloaded. We help your client find and export their own records, then organize them into a file your team can actually use.</p></article>
+<article class="case"><span class="tag">The Numbers</span><h3>A Ledger That Doesn’t Add Up</h3><p>We check every entry against bank and platform records and keep reported amounts apart from confirmed ones, so every figure your team considers is traceable to a record.</p></article>
+<article class="case"><span class="tag">The Courtroom</span><h3>A Hearing Your Client Dreads</h3><p>We help your client write their victim impact statement in their own words, then prepare them and sit with them in court.</p></article>
+</div>
+</section>
+<section class="split founder"><div class="portrait-wrap"><img class="portrait" src="ally.jpg" alt="Ally Arpey, founder of Victim Advocacy Associates" loading="lazy"><div class="portrait-label">Ally Arpey<small>Founder &amp; Litigation Consultant</small></div>
+</div>
+<div><p class="eyebrow">Our Founder</p>
+<h2>Litigation Experience and<br>a Peer Support Background</h2>
+<p>Ally works directly with attorneys on active litigation, including matters involving fraud, financial abuse and fiduciary misconduct. Her work connects detailed factual development with an understanding of the people behind the records.</p>
+<p style="margin-top:14px">When you bring in VAA, your client has a dedicated advocate from the first call to the final hearing, and your team has introductions to independent licensed professionals when a matter needs them.</p>
+<div class="credentials"><p><b>Direct Litigation Experience</b>Factual records, case materials and client coordination</p>
+<p><b>Pepperdine University</b>B.A. Organizational Communication, 2021<br>Minor in Marketing</p>
+<p><b>Peer Support &amp; Case Management</b>Supporting people through difficult experiences, with training in crisis management. Spanish-speaking support available.</p>
+</div>
+<a class="textlink" href="advocates.html">Meet Our Team</a></div>
+</section>
+<section class="split" style="border-top:1px solid #c4b7cd"><div><p class="eyebrow">Our Work</p>
+<h2>Recent Work and<br>What It Involved</h2>
+</div>
+<div><p class="lead">Every fact tied to a source. Reported and confirmed amounts kept apart. A clear list of what’s still missing.</p>
+<p>See why attorneys bring us in, and what our work involved in recent matters, from long-running fraud to safety planning.</p>
+<div class="actions" style="margin-top:20px"><a class="textlink" href="our-work.html">Explore Our Work</a><a class="textlink" href="sample-work.html">See a Sample File</a></div></div>
+</section>
+<section class="testimonials" hidden aria-label="What attorneys say"><h2>What Attorneys Say</h2>
+<div class="quote-grid">
+<!-- Hidden until real, approved quotes arrive. Add one figure per quote, then remove the "hidden" attribute above:
+<figure class="quote"><blockquote>“Exact words, as approved in writing.”</blockquote><figcaption>Name<span>Firm, City</span></figcaption></figure>
+-->
+</div>
+</section>
+<section class="cta"><div><h2>Bring VAA onto Your Team</h2>
+<p>Start with a free call or a $500 records assessment. Nothing is binding until you sign a written agreement.</p>
+</div>
+<a class="btn light" href="contact.html#attorney">Discuss a Matter</a></section>
 </main>
-
 <footer>
   <div class="wrap">
     <div class="frow">
-      <a class="fbrand" href="#" aria-label="Victim Advocacy Associates, home"><svg viewBox="0 0 2898 2746" aria-hidden="true"><use href="#mark"/></svg><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
+      <a class="fbrand" href="index.html" aria-label="Victim Advocacy Associates, home"><img src="crest.png" alt="" width="42" height="34"><span class="wm"><span class="wm1">Victim Advocacy</span><span class="wm2">Associates</span></span></a>
+      <a class="fcta" href="contact.html">Discuss a Matter</a>
     </div>
-    <p class="legal">Victim Advocacy Associates is not a law firm and does not provide legal representation or legal advice. We are not licensed private investigators; work that requires a license is performed by licensed professionals. We do not provide counseling, therapy or mental health treatment. Our fees are never tied to the outcome of a case.</p>
-    <p class="legal" style="margin-top:-14px;font-style:normal;">Victim Advocacy Associates LLC &middot; P.O. Box 281, Colleyville, Texas 76034 &middot; <a href="mailto:arpey@victimadvocacy.com" style="border-bottom:1px solid rgba(236,227,210,.35)">arpey@victimadvocacy.com</a></p>
+    <p class="legal">Victim Advocacy Associates is not a law firm and does not provide legal representation or legal advice. We are not licensed private investigators; work that requires a license is performed by licensed professionals. We do not provide counseling, therapy or mental health treatment. Our fees are never tied to the outcome of a case, and we never pay or accept referral fees.</p>
+    <p class="legal addr">Victim Advocacy Associates LLC · P.O. Box 281, Colleyville, Texas 76034 · <a href="mailto:arpey@victimadvocacy.com">arpey@victimadvocacy.com</a></p>
     <div class="fbase">
-      <span>&copy; 2026 Victim Advocacy Associates LLC.</span>
-      <a class="credit" href="https://www.dominiumdomains.com" target="_blank" rel="noopener" aria-label="Website designed by Dominium Domains (opens in a new tab)"><img class="credit-mark" src="data:image/png;base64,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" alt="" width="160" height="123"><span>Designed by <b>Dominium Domains</b></span></a>
-      <nav aria-label="Legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Refunds</a><a href="accessibility.html">Accessibility</a></nav>
+      <span>© 2026 Victim Advocacy Associates LLC.</span>
+      <a class="credit" href="https://www.dominiumdomains.com" target="_blank" rel="noopener" aria-label="Website designed by Dominium Domains (opens in a new tab)"><img class="credit-mark" src="dominium-mark.png" alt="" width="160" height="123"><span>Designed by <b>Dominium Domains</b></span></a>
+      <nav aria-label="Legal"><a href="resources.html">Resources</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms and Refunds</a><a href="accessibility.html">Accessibility</a></nav>
     </div>
   </div>
 </footer>
+<script src="site.js"></script>
+</div>
 </body>
 </html>
