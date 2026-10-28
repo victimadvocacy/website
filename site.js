@@ -13,34 +13,50 @@ const stateParam = new URLSearchParams(location.search).get('state');
 const form = $('#inquiry');
 if (form) {
   const roles = { attorney: 'Attorney / Law Firm', individual: 'Individual / Family' };
+  const stateLabels = { attorney: 'State of the Matter', individual: 'State Where This Happened' };
+  // Individuals see an example written for whoever the inquiry is about
   const guidance = {
     attorney: 'Include the general matter type and timing. Do not include confidential case details, account numbers, medical records or evidence.',
-    individual: 'A few sentences is plenty, for example: “My home aide took money from my savings, and my lawyer asked me to gather my records.” Please don’t send account numbers or documents here.',
+    self: 'A few sentences is plenty, for example: “Someone I met online talked me into sending most of my savings, and I don’t know what to do next.” Please don’t send account numbers or documents here.',
+    family: 'A few sentences is plenty, for example: “My mother’s savings have dropped since my brother started handling her bills, and I don’t know where to start.” Please don’t send account numbers or documents here.',
   };
-  // The subject line tells VAA who is writing and from where, before the email is opened
+  let role = '';
+  const setGuidance = () => {
+    if (role) $('#guidance').textContent = role === 'attorney' ? guidance.attorney : guidance[$('#about').value === 'Me' ? 'self' : 'family'];
+  };
+  // The subject line tells VAA who is writing, from where and in what language, before the email is opened
   const setSubject = () => {
-    const parts = [$('#inquiry-type').value, $('#state').value].filter(Boolean);
+    const lang = $('#language').value === 'Español' ? 'Español' : '';
+    const parts = [$('#inquiry-type').value, $('#state').value, lang].filter(Boolean);
     form.elements.subject.value = 'New inquiry from victimadvocacy.com' + (parts.length ? ': ' + parts.join(', ') : '');
   };
   document.querySelectorAll('[data-role]').forEach(b => b.onclick = () => {
+    role = b.dataset.role;
     document.querySelectorAll('[data-role]').forEach(x => {
       x.classList.toggle('selected', x === b);
       x.setAttribute('aria-pressed', String(x === b));
     });
-    $('#firm-field').classList.toggle('hidden', b.dataset.role !== 'attorney');
-    $('#safety-field').classList.toggle('hidden', b.dataset.role !== 'individual');
-    $('#guidance').textContent = guidance[b.dataset.role];
-    $('#inquiry-type').value = roles[b.dataset.role];
+    $('#firm-field').classList.toggle('hidden', role !== 'attorney');
+    $('#about-field').classList.toggle('hidden', role !== 'individual');
+    $('#safety-field').classList.toggle('hidden', role !== 'individual');
+    $('#attorney-field').classList.toggle('hidden', role !== 'individual');
+    $('#state-label').textContent = stateLabels[role];
+    $('#inquiry-type').value = roles[role];
+    setGuidance();
     setSubject();
   });
+  $('#about').onchange = setGuidance;
   $('#state').onchange = setSubject;
+  $('#language').onchange = setSubject;
 
-  // Links arrive as contact.html#individual or #attorney, and from the
-  // state finder as contact.html?state=TX#individual
-  if (stateParam && $('#state').querySelector('option[value="' + CSS.escape(stateParam) + '"]')) {
-    $('#state').value = stateParam;
-    $('#need').value = 'Getting Organized for My Lawyer';
-  }
+  // Links arrive as /contact#individual or #attorney, and from the
+  // state finder as /contact?state=TX#individual
+  // The state finder hands over the chosen state without putting it in the address bar
+  let chosen = stateParam;
+  try { chosen = chosen || sessionStorage.getItem('vaa-state'); sessionStorage.removeItem('vaa-state'); } catch (err) {}
+  if (chosen && $('#state').querySelector('option[value="' + CSS.escape(chosen) + '"]')) $('#state').value = chosen;
+  if (new URLSearchParams(location.search).get('lang') === 'es') $('#language').value = 'Español';
+  // The empty #individual and #attorney anchors at the top of the form scroll it into view
   if (location.hash === '#individual') $('[data-role="individual"]').click();
   if (location.hash === '#attorney') $('[data-role="attorney"]').click();
   setSubject();
@@ -49,16 +65,33 @@ if (form) {
     e.preventDefault();
     const status = $('#form-status');
     const button = form.querySelector('button[type="submit"]');
+    const spanish = $('#language').value === 'Español';
+    // Email is optional so someone whose inbox isn't private can leave only a phone number
+    const email = form.elements.email.value.trim();
+    if (!email && !form.elements.phone.value.trim()) {
+      status.textContent = spanish
+        ? 'Denos un correo electrónico o un número de teléfono para comunicarnos con usted.'
+        : 'Please give us an email address or a phone number so we can reach you.';
+      form.elements.email.focus();
+      return;
+    }
+    const body = new FormData(form);
+    if (!email) body.delete('email');
     button.disabled = true;
-    status.textContent = 'Sending…';
+    status.textContent = spanish ? 'Enviando…' : 'Sending…';
     try {
-      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      const res = await fetch(form.action, { method: 'POST', body, headers: { Accept: 'application/json' } });
       const data = await res.json();
       if (!res.ok || !data.success) throw new Error(data.message || 'Send failed');
       form.reset();
-      status.textContent = 'Thank you. Your inquiry was sent, and we will reply within one business day.';
+      if (role) $('[data-role="' + role + '"]').click();
+      status.textContent = spanish
+        ? 'Gracias. Recibimos su mensaje y le responderemos dentro de un día hábil.'
+        : 'Thank you. Your inquiry was sent, and we will reply within one business day.';
     } catch (err) {
-      status.textContent = 'Sorry, your inquiry did not go through. Please email arpey@victimadvocacy.com instead.';
+      status.textContent = spanish
+        ? 'Lo sentimos, su mensaje no se envió. Llame o envíe un mensaje de texto al 817-805-2467, o escriba a arpey@victimadvocacy.com.'
+        : 'Sorry, your inquiry did not go through. Please call or text 817-805-2467, or email arpey@victimadvocacy.com.';
     } finally {
       button.disabled = false;
     }
@@ -77,20 +110,42 @@ if (pick && window.VAA_STATES) {
     const comp = s.comp_url || 'https://nacvcb.org/state-information/';
     const ag = s.ag_url || 'https://www.naag.org/find-my-ag/';
     out.innerHTML =
-      `<article class="case ours"><span class="tag">Private Service · First Call Free</span><h3>Get Organized for Your Lawyer</h3>` +
-      `<p>If you live in ${esc(s.state)} and have a lawyer, or plan to hire one, we can help you gather your records and put them in order for them, by phone and video. VAA is a private, paid service, not a government program or a law firm. The first 15-minute call is free.</p>` +
-      `<p>Send a short note with the best way to reach you, and we’ll reply within one business day. Please save the details for the call.</p>` +
-      `<a class="btn" href="contact.html?state=${esc(s.abbr)}#individual">Ask for a Free Call</a></article>` +
+      `<article class="case ours"><span class="tag">Private Service · First Call Free</span><h3>Help Putting Your Records in Order</h3>` +
+      `<p>If this happened to you or someone you’re helping in ${esc(s.state)}, we can help you gather your own records and put them in order, with or without a lawyer, by phone and video. VAA is a private, paid service, not a government program or a law firm. The first 15-minute call is free.</p>` +
+      `<p>Call or text <a class="textlink" href="tel:+18178052467">817-805-2467</a>, or send a short note with the best way to reach you, and we’ll reply within one business day.</p>` +
+      `<a class="btn" href="/contact#individual" data-state="${esc(s.abbr)}">Ask for a Free Call</a></article>` +
+      (s.abbr === 'TX'
+        ? `<article class="case"><span class="tag">Adults 65+ or with a Disability in Texas</span><h3>Texas Abuse Hotline</h3>` +
+          `<p>Report abuse, neglect or financial exploitation of an adult 65 or older or an adult with a disability. 800-252-5400.</p>` +
+          `<a class="textlink" href="https://www.txabusehotline.org" target="_blank" rel="noopener">txabusehotline.org ↗</a></article>`
+        : `<article class="case"><span class="tag">Older Adults and Adults with Disabilities</span><h3>Adult Protective Services in ${esc(s.state)}</h3>` +
+          `<p>Report abuse, neglect or financial exploitation to the Adult Protective Services office in the person’s state.</p>` +
+          `<a class="textlink" href="https://www.napsa-now.org/help-in-your-area/" target="_blank" rel="noopener">napsa-now.org ↗</a></article>`) +
       `<article class="case"><span class="tag">Crime Victim Compensation in ${esc(s.state)}</span><h3>${esc(s.comp_name || 'Your State’s Compensation Program')}</h3>` +
-      `<p>May help with costs such as counseling, lost wages and relocation after a crime.</p>` +
+      `<p>May help with costs such as counseling, lost wages and relocation after a crime. It usually doesn’t repay money that was stolen.</p>` +
       `<a class="textlink" href="${esc(comp)}" target="_blank" rel="noopener">${esc(host(comp))} ↗</a></article>` +
       `<article class="case"><span class="tag">Report a Scam in ${esc(s.state)}</span><h3>${esc(s.ag_name || 'Your State Attorney General')}</h3>` +
       `<p>File a consumer complaint or report a scam with your state’s attorney general.</p>` +
       `<a class="textlink" href="${esc(ag)}" target="_blank" rel="noopener">${esc(host(ag))} ↗</a></article>`;
   };
-  pick.onchange = () => {
-    show();
-    history.replaceState(null, '', pick.value ? '?state=' + pick.value + '#every-state' : location.pathname + '#every-state');
-  };
+  pick.onchange = show;
+  out.addEventListener('click', e => {
+    const a = e.target.closest('[data-state]');
+    if (a) try { sessionStorage.setItem('vaa-state', a.dataset.state); } catch (err) {}
+  });
   if (stateParam) { pick.value = stateParam; show(); }
+}
+
+// Quick exit: opens a neutral page and replaces this one, so Back doesn't return here.
+// Esc does the same, except while someone is typing in a form field.
+const quickExit = $('#quick-exit');
+if (quickExit) {
+  const leave = () => {
+    window.open('https://weather.com', '_blank', 'noopener');
+    location.replace('https://www.google.com/search?q=weather');
+  };
+  quickExit.onclick = leave;
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !e.target.closest('input, textarea, select')) leave();
+  });
 }
