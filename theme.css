@@ -13,7 +13,7 @@ html{scroll-behavior:smooth;}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 body{font-family:var(--text);background:var(--paper);color:var(--plum);-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga";font-size:18px;line-height:1.7;}
 a{color:inherit;text-decoration:none;}
-img{max-width:100%;}
+img{max-width:100%;height:auto;}
 :focus-visible{outline:2px solid var(--mulberry);outline-offset:3px;border-radius:3px;}
 .skip{position:absolute;left:-9999px;top:0;background:var(--bone);color:var(--aubergine);padding:10px 16px;z-index:20;}
 .skip:focus{left:16px;top:16px;}
@@ -387,3 +387,68 @@ main > section.proof-strip{padding-block:clamp(28px,4.5vh,44px);}
 #state-result .ours{border-top:4px solid var(--gold);}
 #state-result .btn{align-self:flex-start;margin-top:auto;}
 .state-more{font-family:var(--display);font-weight:700;font-size:clamp(23px,1.9vw,28px);margin-top:56px;}
+/* Resources: compact spacing */
+body[data-page="resources"] main > section{padding-block:clamp(36px,5.5vh,60px);}
+body[data-page="resources"] main > section.cta{padding:clamp(24px,3vw,36px);margin-bottom:clamp(36px,5.5vh,60px);}
+body[data-page="resources"] .eyebrow{margin-bottom:6px;}
+body[data-page="resources"] main h2{font-size:clamp(27px,2.6vw,38px);}
+body[data-page="resources"] .split{gap:clamp(16px,3vw,48px);}
+body[data-page="resources"] .price-list li{padding:10px 0;line-height:1.55;}
+body[data-page="resources"] .case-grid{gap:14px;margin-top:20px;}
+body[data-page="resources"] .case{padding:18px 20px;gap:6px;}
+body[data-page="resources"] .case h3{font-size:clamp(20px,1.6vw,23px);}
+body[data-page="resources"] .case p{line-height:1.55;}
+.resource-steps{margin-top:20px;row-gap:22px;}
+body[data-page="resources"] .step{padding:14px 22px 0 0;display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:baseline;}
+body[data-page="resources"] .step b{font-size:18px;}
+body[data-page="resources"] .step h3{margin:0 0 6px;font-size:clamp(20px,1.7vw,24px);}
+body[data-page="resources"] .step p{grid-column:1/-1;max-width:none;line-height:1.55;}
+body[data-page="resources"] .state-finder{margin-top:18px;}
+body[data-page="resources"] .state-more{margin-top:32px;}
+body[data-page="resources"] aside.notice{margin:0 0 16px;}
+@media (max-width:640px){body[data-page="resources"] .price-list strong{display:inline;min-width:0;margin-right:6px;}}
+
+/* Phone in the header, footer and contact page */
+.hdr-phone{display:inline-flex;align-items:center;gap:8px;margin-left:auto;color:var(--bone);font-size:15.5px;white-space:nowrap;}
+.hdr-phone svg{flex:none;color:var(--antique);}
+.hdr-phone:hover{color:#fff;}
+.contact-phone{font-size:20px;font-weight:600;}
+section.cta .cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;}
+section.cta .textlink{color:var(--bone);border-color:var(--antique);}
+#state-result{grid-template-columns:repeat(4,minmax(0,1fr));}
+@media (max-width:1100px){#state-result{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:640px){#state-result{grid-template-columns:1fr;}}
+/* On phones the number becomes a round button so it fits beside Menu */
+@media (max-width:560px){
+  .hdr-phone{width:42px;height:42px;justify-content:center;border:1px solid rgba(236,227,210,.4);border-radius:50%;}
+  .hdr-phone span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+}
+@media (max-width:560px){.bar{gap:10px;}}
+@media (max-width:420px){
+  .brand{gap:8px;}
+  .brand img{width:34px;}
+  .wm1{font-size:18px;}
+  .wm2{font-size:8px;letter-spacing:.4em;}
+  #menu{padding:8px 12px;}
+}
+
+/* Situation guide, older-adult list and quick exit */
+.situations-intro{max-width:62ch;}
+.situation p strong{color:var(--aubergine);font-weight:600;}
+.situation .cost{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-size:15.5px;color:var(--stone);}
+.situation .textlink{align-self:flex-start;}
+#older-adults .price-list strong,#working-with-firms .price-list strong{display:inline;min-width:0;margin-right:4px;}
+.quick-exit{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:30;background:var(--aubergine);color:var(--bone);border:1px solid var(--antique);border-radius:999px;padding:10px 18px;font:inherit;font-size:15px;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.25);cursor:pointer;}
+.quick-exit:hover{background:var(--plum);}
+
+/* Matters We Support (homepage) */
+section.matters{border-top:1px solid var(--rule);}
+.matters-intro{max-width:64ch;margin-top:16px;}
+.matters-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 40px;margin-top:28px;}
+.matter{padding:20px 0;border-top:1px solid var(--rule);}
+.matter h3{font-family:var(--display);font-weight:600;font-size:21px;line-height:1.25;color:var(--aubergine);}
+.matter p{margin-top:8px;font-size:16.5px;line-height:1.6;}
+
+/* Tighter menu on narrow desktops so the phone number stays readable */
+@media (min-width:1201px) and (max-width:1360px){.bar{gap:16px 18px;}#nav{gap:6px 15px;font-size:14.5px;}}
+.safety-tip{max-width:60ch;}
