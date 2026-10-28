@@ -56,15 +56,9 @@ The form sends inquiries through **Web3Forms**, using the access key already in 
 - [ ] Add a business phone number to `contact.html` and the footer once you have one
 - [ ] Once E&O insurance is in place, add an insurance answer to the FAQ on `attorneys.html`
 
-## Hidden testimonials section
+## Testimonials
 
-`index.html` has a "What Attorneys Say" section that is hidden on purpose. To turn it on:
-
-1. Find `<section class="testimonials" hidden`.
-2. Add one `<figure class="quote">…</figure>` per quote, following the example in the comment there.
-3. Delete the word `hidden`.
-
-Only use real quotes that each attorney has approved in writing.
+The homepage no longer has a "What Attorneys Say" section. It had no approved quotes. Add that section back only with real quotes each attorney has approved in writing.
 
 ## Making small edits
 
