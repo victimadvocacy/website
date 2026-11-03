@@ -263,7 +263,7 @@ footer .legal a{color:inherit;border-bottom:1px solid rgba(236,227,210,.35);}
 .credit-mark{height:20px;width:auto;opacity:.85;}
 
 /* Responsive */
-@media (max-width:1200px){
+@media (max-width:1350px){
   #menu{display:inline-flex;gap:8px;align-items:center;}
   #nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--night);padding:8px var(--gutter) 22px;box-shadow:0 18px 30px rgba(0,0,0,.25);}
   #nav.open{display:flex;}
@@ -463,6 +463,7 @@ section.matters{border-top:1px solid var(--rule);}
 .matter h3{font-family:var(--display);font-weight:600;font-size:21px;line-height:1.25;color:var(--aubergine);}
 .matter p{margin-top:8px;font-size:16.5px;line-height:1.6;}
 
-/* Tighter menu on narrow desktops so the phone number stays readable */
-@media (min-width:1201px) and (max-width:1360px){.bar{gap:16px 18px;}#nav{gap:6px 15px;font-size:14.5px;}}
+/* Tighter menu on desktops so the logo, phone number and menu fit on one line */
+@media (min-width:1351px){.bar{gap:16px 18px;}#nav{gap:6px 15px;font-size:14.5px;}.brand{flex-shrink:0;}}
+@media (max-width:640px){#clear-pricing .price-list strong{display:block;min-width:0;margin-bottom:2px;}}
 .safety-tip{max-width:60ch;}
