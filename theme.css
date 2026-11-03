@@ -540,3 +540,24 @@ body.home footer{background:#12080e;}
 .head-cols p{margin-top:0;max-width:none;}
 .head-matters{margin-top:18px;max-width:85ch;}
 @media (max-width:860px){.head-cols{grid-template-columns:1fr;}}
+
+/* Homepage: who we support, and the paired pain points */
+body.home .who-support{padding-block:22px 18px;border-top:0;}
+body.home .who-support h2{font-size:clamp(28px,3vw,40px);}
+.support-pair{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-top:12px;}
+.support-card{background:#fbf7f0;border-radius:16px;border-top:3px solid #4b2242;padding:14px 16px 12px;}
+.support-card.firms{border-top-color:#e9c46f;}
+.support-card h3{font-size:20px;line-height:1.25;margin:0;}
+.support-card ul{list-style:none;margin:10px 0 0;padding:0;gap:6px;}
+.support-card li{font-size:15.5px;line-height:1.4;padding:2px 0 2px 12px;border-left:2px solid #4b2242;}
+.support-card.firms li{border-left-color:#e9c46f;}
+body.home main > section.familiar{max-width:none;background:#2a1420;color:#f4ece1;border-top:0;padding:24px max(var(--gutter),calc((100% - 1400px)/2 + var(--gutter))) 26px;}
+body.home .familiar h2{color:#f4ece1;font-size:clamp(28px,3vw,40px);}
+body.home .familiar .eyebrow{color:#e9c46f;}
+.familiar-list{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;}
+.familiar-list li{background:rgba(244,236,225,.06);border:1px solid rgba(233,196,111,.35);border-radius:14px;padding:11px 14px;}
+.familiar-list .pain{margin:0;font-weight:700;font-size:16px;line-height:1.35;color:#f4ece1;}
+.familiar-list .fix{margin:4px 0 0;font-size:15.5px;line-height:1.4;color:rgba(244,236,225,.84);}
+@media (max-width:800px){
+  .support-pair,.familiar-list{grid-template-columns:1fr;}
+}
