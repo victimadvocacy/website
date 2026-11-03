@@ -44,6 +44,7 @@ if (form) {
       arrangementField.classList.toggle('hidden', !forAttorney);
       arrangement.required = forAttorney;
       if (!forAttorney) arrangement.value = '';
+      else if (!arrangement.value) arrangement.value = 'Ongoing advocacy arrangement';
     }
     $('#about-field').classList.toggle('hidden', role !== 'individual');
     $('#safety-field').classList.toggle('hidden', role !== 'individual');
@@ -66,7 +67,7 @@ if (form) {
   if (new URLSearchParams(location.search).get('lang') === 'es') $('#language').value = 'Español';
   // The empty #individual and #attorney anchors at the top of the form scroll it into view
   if (location.hash === '#individual') $('[data-role="individual"]').click();
-  if (location.hash === '#attorney') $('[data-role="attorney"]').click();
+  else $('[data-role="attorney"]').click();
   setSubject();
 
   form.onsubmit = async e => {
@@ -119,9 +120,9 @@ if (pick && window.VAA_STATES) {
     const ag = s.ag_url || 'https://www.naag.org/find-my-ag/';
     out.innerHTML =
       `<article class="case ours"><span class="tag">Private Service · First Call Free</span><h3>Help Putting Your Records in Order</h3>` +
-      `<p>If this happened to you or someone you’re helping in ${esc(s.state)}, we can help you gather your own records and put them in order, with or without a lawyer, by phone and video. VAA is a private, paid service, not a government program or a law firm. The first 15-minute call is free.</p>` +
-      `<p>Call or text <a class="textlink" href="tel:+18178052467">817-805-2467</a>, or send a short note with the best way to reach you, and we’ll reply within one business day.</p>` +
-      `<a class="btn" href="/contact#individual" data-state="${esc(s.abbr)}">Ask for a Free Call</a></article>` +
+      `<p>Official programs in ${esc(s.state)} are listed below. VAA works mainly through attorneys. The first call is free.</p>` +
+      `<p>Call or text <a class="textlink" href="tel:+18178052467">817-805-2467</a>.</p>` +
+      `<a class="btn" href="/contact#attorney" data-state="${esc(s.abbr)}">Partner With VAA</a></article>` +
       (s.abbr === 'TX'
         ? `<article class="case"><span class="tag">Adults 65+ or with a Disability in Texas</span><h3>Texas Abuse Hotline</h3>` +
           `<p>Report abuse, neglect or financial exploitation of an adult 65 or older or an adult with a disability. 800-252-5400.</p>` +

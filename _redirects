@@ -1,0 +1,7 @@
+# Old individual guides now open the short page.
+# /es stays as the Spanish version of that page, so it is not redirected.
+/resources            /individuals    301
+/resources/           /individuals    301
+/resources.html       /individuals    301
+/individuals.html     /individuals    301
+/es.html              /es             301
