@@ -6,6 +6,7 @@
 /individuals.html     /individuals    301
 /es.html              /es             301
 # Draft engagement terms stay in the repo for counsel. They are not a public page.
-/docs/draft-firm-engagement-terms.md    /404.html    404
-/docs/draft-firm-engagement-terms       /404.html    404
-/docs/*                                 /404.html    404
+# 302 is a status Cloudflare Pages and Netlify both honor. 404 is not a valid redirect code here.
+/docs/draft-firm-engagement-terms.md    /404.html    302
+/docs/draft-firm-engagement-terms       /404.html    302
+/docs/*                                 /404.html    302
