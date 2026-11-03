@@ -53,7 +53,7 @@
 </div>
 <form id="inquiry" action="https://api.web3forms.com/submit" method="POST"><span id="individual"></span><span id="attorney"></span><input type="hidden" name="access_key" value="ffdc2a3f-7c4d-4645-aa49-b4b0c1e29fb9"><input type="hidden" name="subject" value="New inquiry from victimadvocacy.com"><input type="hidden" name="from_name" value="Victim Advocacy Associates website"><input type="hidden" name="inquiry_type" id="inquiry-type" value=""><input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="role-choice" aria-label="Inquiry type"><button type="button" data-role="attorney" aria-pressed="false">Attorney / Law Firm</button><button type="button" data-role="individual" aria-pressed="false">Individual / Family</button></div>
-<label for="arrangement">Arrangement</label><select id="arrangement" name="arrangement" required><option value="">Choose one</option><option>Support on one matter</option><option>Ongoing advocacy arrangement</option></select>
+<div id="arrangement-field" class="hidden"><label for="arrangement">Arrangement</label><select id="arrangement" name="arrangement"><option value="">Choose one</option><option>Support on one matter</option><option>Ongoing advocacy arrangement</option></select></div>
 <div class="form-row"><div><label for="name">Your Name</label><input id="name" name="name" required autocomplete="name" maxlength="120"></div>
 <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="160"></div>
 </div>

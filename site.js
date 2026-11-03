@@ -37,6 +37,14 @@ if (form) {
       x.setAttribute('aria-pressed', String(x === b));
     });
     $('#firm-field').classList.toggle('hidden', role !== 'attorney');
+    const arrangementField = $('#arrangement-field');
+    const arrangement = $('#arrangement');
+    if (arrangementField && arrangement) {
+      const forAttorney = role === 'attorney';
+      arrangementField.classList.toggle('hidden', !forAttorney);
+      arrangement.required = forAttorney;
+      if (!forAttorney) arrangement.value = '';
+    }
     $('#about-field').classList.toggle('hidden', role !== 'individual');
     $('#safety-field').classList.toggle('hidden', role !== 'individual');
     $('#attorney-field').classList.toggle('hidden', role !== 'individual');
