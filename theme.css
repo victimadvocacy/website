@@ -488,7 +488,8 @@ body.home .proof-strip li:nth-child(odd){border-left-color:#4b2242;}
 body.home .proof-strip li:nth-child(even){border-left-color:#e9c46f;}
 body.home .eyebrow.olive{color:#5d6a45;}
 body.home .why-grid .case,body.home .price-pair .case{background:#fbf7f0;border-radius:18px;}
-body.home .price-pair{grid-template-columns:1fr 1fr;max-width:860px;}
+body.home .price-pair{grid-template-columns:1fr;max-width:760px;}
+body.home .price-pair .entry{border-color:#e9c46f;}
 body.home .portrait{border:1px solid #e9c46f;padding:8px;background:#fff;}
 body.home main > section.cta{border-radius:22px;background:#2a1420;}
 body.home footer{background:#12080e;}
