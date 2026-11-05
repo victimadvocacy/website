@@ -554,6 +554,7 @@ body.home footer{background:#12080e;}
 /* Homepage: who we support, and the paired pain points */
 body.home .who-support{padding-block:22px 18px;border-top:0;}
 body.home .who-support h2{font-size:clamp(28px,3vw,40px);}
+body.home .who-support .who-lead{margin:8px 0 0;max-width:62ch;font-size:18px;line-height:1.45;}
 .support-pair{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-top:12px;}
 .support-card{background:#fbf7f0;border-radius:16px;border-top:3px solid #4b2242;padding:14px 16px 12px;}
 .support-card.firms{border-top-color:#e9c46f;}
