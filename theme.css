@@ -196,7 +196,9 @@ details > a{display:inline-block;}
 .price-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
 .case .price{font-family:var(--display);font-size:36px;line-height:1.1;color:var(--aubergine);margin:2px 0 4px;}
 .case .price small{font-size:17px;margin-left:2px;color:var(--mulberry);}
-.team-grid{grid-template-columns:repeat(auto-fill,minmax(260px,340px));}
+.team-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+.team-grid + .eyebrow{margin-top:36px;}
+@media (max-width:860px){.team-grid{grid-template-columns:1fr;}}
 .team-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;display:block;margin-bottom:6px;border-radius:2px;}
 .team-initials{display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 35%,#3a1b31,var(--aubergine));color:var(--antique);font-family:var(--display);font-size:56px;letter-spacing:4px;}
 .team-card .textlink{margin-top:auto;align-self:flex-start;}
