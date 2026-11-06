@@ -224,8 +224,15 @@ details > a{display:inline-block;}
 .process-card details p{font-size:15.5px;}
 
 /* About */
-.about-intro{grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:center;}
-.about-intro .credentials{margin-top:24px;}
+.about-intro{display:block;}
+.about-pair{display:grid;grid-template-columns:minmax(220px,340px) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center;margin-top:22px;}
+.about-pair .founder-portrait{max-width:none;width:100%;margin:0;}
+.about-pair .credentials{margin-top:0;padding-top:0;border-top:0;align-content:center;}
+.consult-summary{margin-top:28px;max-width:78ch;}
+@media (max-width:860px){
+  .about-pair{grid-template-columns:1fr;align-items:start;}
+  .about-pair .founder-portrait{max-width:360px;}
+}
 .bio-details{margin-top:24px;border-top:1px solid var(--rule);}
 .bio-details p{max-width:66ch;}
 .founder-portrait{max-width:420px;justify-self:center;}
