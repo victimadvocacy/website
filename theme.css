@@ -583,3 +583,15 @@ body.home .familiar .eyebrow{color:#e9c46f;}
 @media (max-width:800px){
   .support-pair,.familiar-list{grid-template-columns:1fr;}
 }
+
+/* Our Work: compact sticky heading bar, wide intro */
+body[data-page="our-work"] .work-bar{position:sticky;top:0;z-index:40;background:radial-gradient(120% 180% at 80% 0%,#3a1b31 0%,var(--aubergine) 42%,var(--night) 100%);box-shadow:0 1px 0 rgba(236,227,210,.14);}
+body[data-page="our-work"] .work-title{display:flex;align-items:baseline;gap:10px 22px;padding-block:8px 14px;}
+body[data-page="our-work"] .work-title .eyebrow{margin:0;flex:none;font-family:var(--text);font-weight:600;color:var(--antique);font-size:16px;}
+body[data-page="our-work"] .work-title h1{max-width:none;margin:0;font-family:var(--display);font-weight:600;font-size:clamp(26px,2.2vw,34px);line-height:1.15;letter-spacing:-.005em;color:var(--bone);white-space:nowrap;}
+body[data-page="our-work"] .head{padding-block:14px 22px;}
+body[data-page="our-work"] .head .lead{max-width:none;margin-top:0;line-height:1.45;}
+@media (max-width:860px){
+  body[data-page="our-work"] .work-title{flex-wrap:wrap;}
+  body[data-page="our-work"] .work-title h1{white-space:normal;}
+}
