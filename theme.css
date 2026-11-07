@@ -499,10 +499,7 @@ body.home .proof-strip li:nth-child(odd){border-left-color:#4b2242;}
 body.home .proof-strip li:nth-child(even){border-left-color:#e9c46f;}
 body.home .eyebrow.olive{color:#5d6a45;}
 body.home .why-exist .why-tagline{margin:0 0 12px;font-family:var(--text);font-weight:600;font-size:17px;line-height:1.3;color:#5d6a45;}
-body.home .why-grid .case,body.home .price-pair .case{background:#fbf7f0;border-radius:18px;}
-body.home .price-pair{grid-template-columns:1fr 1fr;max-width:920px;gap:16px;}
-body.home .price-pair .entry{border-color:#e9c46f;}
-body.home .price-pair .case{padding:18px 18px;}
+body.home .why-grid .case{background:#fbf7f0;border-radius:18px;}
 #advocate-standard .gain-list,#standards .gain-list,body[data-page="standards"] .gain-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px;}
 #advocate-standard .gain-list li,body[data-page="standards"] .gain-list li{background:#fbf7f0;border:1px solid var(--rule);border-radius:14px;padding:12px 14px;}
 #clear-pricing .price-list,#working-with-firms .price-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
@@ -510,7 +507,7 @@ body.home .price-pair .case{padding:18px 18px;}
 #clear-pricing .price-list li:nth-child(-n+2){border-color:#e9c46f;}
 #clear-pricing .price-list strong{display:block;min-width:0;margin:0 0 6px;font-size:20px;}
 @media (max-width:800px){
-  #advocate-standard .gain-list,body[data-page="standards"] .gain-list,#clear-pricing .price-list,#working-with-firms .price-list,body.home .price-pair{grid-template-columns:1fr;}
+  #advocate-standard .gain-list,body[data-page="standards"] .gain-list,#clear-pricing .price-list,#working-with-firms .price-list{grid-template-columns:1fr;}
 }
 body{overflow-x:clip;}
 @media (max-width:560px){
@@ -524,7 +521,6 @@ body{overflow-x:clip;}
 body.home .portrait{border:1px solid #e9c46f;padding:8px;background:#fff;}
 body.home main > section.cta{border-radius:22px;background:#2a1420;}
 body.home footer{background:#12080e;}
-@media (max-width:700px){body.home .price-pair{grid-template-columns:1fr;}}
 .edge-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;}
 .edge-grid .case{border-radius:16px;border-top:3px solid #e9c46f;padding:16px 18px;}
 .edge-grid .case + .case{border-top-color:#4b2242;}
