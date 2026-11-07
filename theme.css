@@ -191,15 +191,8 @@ details > a{display:inline-block;}
 .case p,.case li{font-size:16.5px;}
 .case ul{margin:6px 0 4px 1.1em;gap:6px;}
 .case .fine{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-size:15.5px;}
-.sample-cluster{grid-column:1 / -1;margin-top:8px;}
-.sample-timeline{grid-column:1 / -1;}
-.sample-timeline .fine{margin-top:4px;}
-.sample-pages{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.sample-pages.single{grid-template-columns:minmax(0,680px);}
-.sample-pages img{width:100%;height:auto;border:1px solid var(--rule);background:#fff;}
-@media (max-width:700px){.sample-pages,.sample-pages.single{grid-template-columns:1fr;}}
 .tag{font-family:var(--text);font-weight:600;color:var(--laurel-deep);font-size:15.5px;}
-.reasons-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+.reasons-grid,.practice-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
 .price-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
 .case .price{font-family:var(--display);font-size:36px;line-height:1.1;color:var(--aubergine);margin:2px 0 4px;}
 .case .price small{font-size:17px;margin-left:2px;color:var(--mulberry);}
@@ -301,7 +294,7 @@ footer .legal a{color:inherit;border-bottom:1px solid rgba(236,227,210,.35);}
   .founder .portrait-wrap,.founder-portrait{max-width:360px;}
 }
 @media (max-width:700px){
-  .market-two,.individual-paths,.reasons-grid,.credentials,.form-row{grid-template-columns:1fr;}
+  .market-two,.individual-paths,.reasons-grid,.practice-grid,.credentials,.form-row{grid-template-columns:1fr;}
   .market-two > article,.individual-paths > article{padding:0;}
   .market-two > article + article,.individual-paths > article + article{border-left:0;border-top:1px solid var(--rule);padding-top:28px;margin-top:28px;}
   main > section.cta{padding:28px;}
@@ -550,6 +543,7 @@ body.home footer{background:#12080e;}
   #menu{flex:none;padding:7px 10px;font-size:14px;}
 }
 .attorneys-head h1{max-width:16em;}
+body[data-page="our-work"] .head h1{max-width:36ch;}
 .pilot-banner{margin-top:22px;padding:20px 24px;border:1px solid var(--gold);border-radius:10px;background:rgba(233,196,111,.1);}
 .pilot-banner .pilot-title{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.1vw,30px);line-height:1.25;color:var(--bone);}
 .pilot-banner .pilot-next{margin-top:10px;max-width:none;color:rgba(236,227,210,.88);font-size:17px;line-height:1.55;}
