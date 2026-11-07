@@ -597,3 +597,7 @@ body[data-page="our-work"] .sample-pages.single{grid-template-columns:minmax(0,9
   body[data-page="our-work"] .work-title h1{white-space:normal;}
 }
 @media (max-width:560px){body[data-page="our-work"] .reasons-grid{grid-template-columns:1fr;}}
+.sample-row{padding-top:22px;}
+.sample-row .eyebrow{margin-bottom:6px;}
+.sample-row-links{margin:0;}
+.sample-row .fine{margin-top:8px;}
