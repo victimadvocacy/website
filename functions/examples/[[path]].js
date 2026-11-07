@@ -19,7 +19,11 @@ const GONE = new Set([
   "/examples/fraud-pattern-analysis-sample-redacted.pdf",
   "/examples/fraud-pattern-analysis-sample-redacted-page-1.png",
   "/examples/associates-entities-sample-redacted.pdf",
-  "/examples/associates-entities-sample-redacted-page-1.png"
+  "/examples/associates-entities-sample-redacted-page-1.png",
+  "/examples/cross-case-pattern-comparison-sample.pdf",
+  "/examples/cross-case-pattern-comparison-sample-page-1.png",
+  "/examples/associates-related-entities-sample.pdf",
+  "/examples/associates-related-entities-sample-page-1.png"
 ]);
 
 export function onRequest(context) {
