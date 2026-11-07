@@ -544,24 +544,21 @@ body.home footer{background:#12080e;}
 }
 .attorneys-head h1{max-width:16em;}
 body[data-page="attorneys"]{padding-bottom:112px;}
-.attorneys-head #clear-pricing{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:stretch;margin-top:36px;margin-bottom:48px;padding:32px 32px 56px;background:var(--paper);color:var(--plum);border:1px solid rgba(236,227,210,.45);border-radius:14px;}
+.attorneys-head #clear-pricing{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:stretch;margin-top:36px;margin-bottom:48px;padding:32px 32px 56px;background:var(--paper);color:var(--plum);border:1px solid rgba(236,227,210,.45);border-radius:2px;}
 .attorneys-head #clear-pricing h2{margin:0;font-family:var(--display);font-weight:600;line-height:1.15;color:var(--aubergine);max-width:none;}
 .attorneys-head #clear-pricing > div{display:block;min-width:0;}
-.attorneys-head #clear-pricing .price-list{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
-.attorneys-head #clear-pricing .price-list li{padding:18px 20px;color:var(--plum);}
-.attorneys-head #clear-pricing .price-list li:last-child{grid-column:1 / -1;width:calc((100% - 16px) / 2);justify-self:center;}
+.attorneys-head #clear-pricing .price-list{width:100%;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch;}
+.attorneys-head #clear-pricing .price-list li{box-sizing:border-box;aspect-ratio:1;width:auto;height:auto;min-width:0;padding:14px 15px;color:var(--plum);border-radius:2px;font-size:15.5px;line-height:1.4;}
+.attorneys-head #clear-pricing .price-list strong{font-size:17px;}
+.attorneys-head #clear-pricing .price-list li:last-child{grid-column:auto;width:auto;justify-self:stretch;}
 .attorneys-head #clear-pricing .fine{color:var(--stone);max-width:75ch;margin:28px 0 0!important;line-height:1.65;}
 .attorneys-head #clear-pricing .textlink{color:var(--aubergine);border-bottom-color:var(--mulberry);margin-top:22px!important;}
 .attorneys-head #clear-pricing .textlink + .textlink{margin-left:22px;}
-@media (min-width:1100px){
-  .attorneys-head #clear-pricing .price-list{grid-template-columns:repeat(3,minmax(0,1fr));}
-  .attorneys-head #clear-pricing .price-list li:last-child{grid-column:2;width:auto;justify-self:stretch;}
-}
 @media (max-width:800px){
   .attorneys-head #clear-pricing{margin-top:28px;margin-bottom:36px;padding:22px 18px 72px;gap:22px;}
   .attorneys-head #clear-pricing .fine{margin-top:22px!important;}
   .attorneys-head #clear-pricing .price-list{grid-template-columns:1fr;}
-  .attorneys-head #clear-pricing .price-list li:last-child{grid-column:auto;width:auto;justify-self:stretch;}
+  .attorneys-head #clear-pricing .price-list li,.attorneys-head #clear-pricing .price-list li:last-child{grid-column:auto;width:auto;aspect-ratio:1;justify-self:stretch;}
   .attorneys-head #clear-pricing .textlink{display:table;margin-left:0!important;}
 }
 body[data-page="our-work"] .head h1{max-width:36ch;}
