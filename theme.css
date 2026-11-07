@@ -543,6 +543,11 @@ body.home footer{background:#12080e;}
   #menu{flex:none;padding:7px 10px;font-size:14px;}
 }
 .attorneys-head h1{max-width:16em;}
+.attorneys-head #clear-pricing{margin-top:22px;padding:18px 18px 8px;background:var(--paper);color:var(--plum);border:1px solid rgba(236,227,210,.45);border-radius:10px;}
+.attorneys-head #clear-pricing h2{font-family:var(--display);font-weight:600;line-height:1.15;color:var(--aubergine);}
+.attorneys-head #clear-pricing .fine{color:var(--stone);max-width:none;}
+.attorneys-head #clear-pricing .textlink{color:var(--aubergine);border-bottom-color:var(--mulberry);}
+.attorneys-head #clear-pricing .price-list,.attorneys-head #clear-pricing .price-list li{color:var(--plum);}
 body[data-page="our-work"] .head h1{max-width:36ch;}
 .pilot-banner{margin-top:22px;padding:20px 24px;border:1px solid var(--gold);border-radius:10px;background:rgba(233,196,111,.1);}
 .pilot-banner .pilot-title{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.1vw,30px);line-height:1.25;color:var(--bone);}
