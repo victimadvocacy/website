@@ -225,11 +225,11 @@ details > a{display:inline-block;}
 
 /* About */
 .about-intro{display:block;}
-.about-pair{display:grid;grid-template-columns:minmax(220px,340px) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center;margin-top:22px;}
+.about-pair{display:grid;grid-template-columns:minmax(220px,340px) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:start;margin-top:22px;}
 .about-pair .founder-portrait{max-width:none;width:100%;margin:0;}
-.about-pair .credentials{margin-top:0;padding-top:0;border-top:0;align-content:center;}
+.about-pair .credentials{margin-top:0;padding-top:0;border-top:0;align-content:start;}
 .credentials .cred-span{grid-column:1 / -1;}
-.consult-in{display:block;margin-top:10px;}
+.consult-wide{margin-top:28px;max-width:none;}
 @media (max-width:860px){
   .about-pair{grid-template-columns:1fr;align-items:start;}
   .about-pair .founder-portrait{max-width:360px;}
