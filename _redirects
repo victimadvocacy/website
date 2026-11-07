@@ -1,8 +1,5 @@
-# Old individual guides now open the short page.
+# /individuals.html opens the short page. /resources is the public guide again.
 # /es stays as the Spanish version of that page, so it is not redirected.
-/resources            /individuals    301
-/resources/           /individuals    301
-/resources.html       /individuals    301
 /individuals.html     /individuals    301
 /es.html              /es             301
 # Draft engagement terms stay in the repo for counsel. They are not a public page.
