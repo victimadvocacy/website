@@ -230,6 +230,7 @@ details > a{display:inline-block;}
 .about-pair .credentials{margin-top:0;padding-top:0;border-top:0;align-content:start;}
 .credentials .cred-span{grid-column:1 / -1;}
 .consult-wide{margin:28px 0;padding:24px;max-width:none;background:#fbf7f0;border:1px solid var(--rule);border-radius:14px;}
+body[data-page="about"] #advocate-standard .nacp-item{grid-column:1 / -1;}
 body[data-page="about"] #advocate-standard .nacp-item strong{display:block;min-width:0;margin:0 0 6px;}
 body[data-page="about"] #advocate-standard .nacp-item span{display:block;font-weight:400;}
 @media (max-width:860px){
