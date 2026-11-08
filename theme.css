@@ -21,7 +21,7 @@ img{max-width:100%;height:auto;}
 .hidden{display:none!important;}
 
 /* Header and wordmark. Fixed so the bar stays on screen while the page scrolls. */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:50;background:radial-gradient(120% 140% at 80% 0%,#3a1b31 0%,var(--aubergine) 45%,var(--night) 100%);box-shadow:0 1px 0 rgba(23,13,20,.4);}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:50;background-color:#2a1424;background-image:radial-gradient(120% 140% at 80% 0%,#3a1b31 0%,var(--aubergine) 45%,var(--night) 100%);color:var(--bone);box-shadow:0 1px 0 rgba(23,13,20,.4);}
 html{scroll-padding-top:96px;}
 .top,.hero,body[data-page="our-work"] .work-bar{padding-top:88px;}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px 28px;min-height:68px;padding-block:10px;}
