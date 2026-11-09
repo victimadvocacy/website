@@ -4,21 +4,13 @@ $('.skip').onclick = e => { e.preventDefault(); $('#content').focus(); $('#conte
 
 const menuBtn = $('#menu');
 const nav = $('#nav');
-const moreBtn = $('#more');
-const moreMenu = $('#more-menu');
 const closeMenu = () => {
   if (!nav || !menuBtn) return;
   nav.classList.remove('open');
   menuBtn.setAttribute('aria-expanded', 'false');
 };
-const closeMore = () => {
-  if (!moreBtn || !moreMenu) return;
-  moreMenu.classList.remove('open');
-  moreBtn.setAttribute('aria-expanded', 'false');
-};
 if (menuBtn && nav) {
   menuBtn.onclick = () => {
-    closeMore();
     const open = nav.classList.toggle('open');
     menuBtn.setAttribute('aria-expanded', String(open));
     if (open) {
@@ -26,17 +18,12 @@ if (menuBtn && nav) {
       if (first) first.focus();
     }
   };
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { closeMenu(); closeMore(); }));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
   document.addEventListener('click', e => {
-    if (nav.classList.contains('open') && !e.target.closest('#nav') && !e.target.closest('#menu')) closeMenu();
-    if (moreMenu && moreMenu.classList.contains('open') && !e.target.closest('#more') && !e.target.closest('#more-menu')) closeMore();
+    if (!nav.classList.contains('open')) return;
+    if (e.target.closest('#nav') || e.target.closest('#menu')) return;
+    closeMenu();
   });
-}
-if (moreBtn && moreMenu) {
-  moreBtn.onclick = () => {
-    const open = moreMenu.classList.toggle('open');
-    moreBtn.setAttribute('aria-expanded', String(open));
-  };
 }
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -215,12 +202,6 @@ if (quickExit) {
   quickExit.onclick = leave;
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
-    const moreOpen = moreMenu && moreMenu.classList.contains('open') && getComputedStyle(moreBtn).display !== 'none';
-    if (moreOpen) {
-      closeMore();
-      moreBtn.focus();
-      return;
-    }
     if (nav && nav.classList.contains('open')) {
       closeMenu();
       if (menuBtn) menuBtn.focus();
