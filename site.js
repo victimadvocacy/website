@@ -168,7 +168,7 @@ if (pick && window.VAA_STATES) {
       `<article class="case ours"><span class="tag">Private Service · First Call Free</span><h3>Help Putting Your Records in Order</h3>` +
       `<p>Official programs in ${esc(s.state)} are listed below. VAA works mainly through attorneys. The first call is free.</p>` +
       `<p>Call or text <a class="textlink" href="tel:+18178052467">817-805-2467</a>.</p>` +
-      `<a class="btn" href="/contact#attorney" data-state="${esc(s.abbr)}">Partner With VAA</a></article>` +
+      `<a class="btn" href="/contact?state=${esc(s.abbr)}#individual" data-state="${esc(s.abbr)}">Ask About Support</a></article>` +
       (s.abbr === 'TX'
         ? `<article class="case"><span class="tag">Adults 65+ or with a Disability in Texas</span><h3>Texas Abuse Hotline</h3>` +
           `<p>Report abuse, neglect or financial exploitation of an adult 65 or older or an adult with a disability. 800-252-5400.</p>` +
