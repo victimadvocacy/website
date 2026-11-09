@@ -602,6 +602,7 @@ body.home .familiar .eyebrow{color:#e9c46f;}
 @media (max-width:800px){
   .support-pair,.familiar-list{grid-template-columns:1fr;}
 }
+#our-approach .approach-measure{max-width:68ch;}
 
 /* Our Work layout only: smaller cards and a compact heading bar in the existing theme. */
 .sample-pages{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;}
