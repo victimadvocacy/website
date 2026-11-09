@@ -24,6 +24,8 @@ const GONE = new Set([
   "/examples/associates-related-entities-sample.pdf"
 ]);
 
+// This function has to ship with the deployment. Without it, /examples
+// answers with Cloudflare's "Deployment Not Found" page instead of the files.
 export function onRequest(context) {
   const path = new URL(context.request.url).pathname;
   if (!GONE.has(path)) return context.next();
