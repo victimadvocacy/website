@@ -2,10 +2,29 @@ const $ = s => document.querySelector(s);
 
 $('.skip').onclick = e => { e.preventDefault(); $('#content').focus(); $('#content').scrollIntoView(); };
 
-$('#menu').onclick = () => {
-  const open = $('#nav').classList.toggle('open');
-  $('#menu').setAttribute('aria-expanded', String(open));
+const menuBtn = $('#menu');
+const nav = $('#nav');
+const closeMenu = () => {
+  if (!nav || !menuBtn) return;
+  nav.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
 };
+if (menuBtn && nav) {
+  menuBtn.onclick = () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    if (open) {
+      const first = nav.querySelector('a');
+      if (first) first.focus();
+    }
+  };
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('click', e => {
+    if (!nav.classList.contains('open')) return;
+    if (e.target.closest('#nav') || e.target.closest('#menu')) return;
+    closeMenu();
+  });
+}
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const stateParam = new URLSearchParams(location.search).get('state');
@@ -13,6 +32,12 @@ const stateParam = new URLSearchParams(location.search).get('state');
 const form = $('#inquiry');
 if (form) {
   const roles = { attorney: 'Attorney / Law Firm', individual: 'Individual / Family' };
+  const serviceMap = {
+    'records-assessment': { arrangement: 'Support on one matter', need: 'Records assessment' },
+    'one-matter-pilot': { arrangement: 'Support on one matter', need: 'One-matter pilot' },
+    'monthly-partnership': { arrangement: 'Ongoing advocacy arrangement', need: 'Monthly partnership' },
+  };
+  const params = new URLSearchParams(location.search);
   const stateLabels = { attorney: 'State of the Matter', individual: 'State Where This Happened' };
   // Individuals see an example written for whoever the inquiry is about
   const guidance = {
@@ -53,10 +78,24 @@ if (form) {
     $('#inquiry-type').value = roles[role];
     setGuidance();
     setSubject();
+    setRequestNote();
   });
+  function setRequestNote() {
+    const note = $('#request-note');
+    if (!note) return;
+    const spanish = $('#language').value === 'Español';
+    const base = spanish
+      ? 'Este formulario solicita una llamada. No reserva un horario.'
+      : 'This form requests a call. It does not reserve a time.';
+    const selected = Object.values(serviceMap).find(spec => spec.need === $('#need').value);
+    note.textContent = role === 'attorney' && selected
+      ? base + (spanish ? ' Servicio: ' : ' Service: ') + selected.need + '.'
+      : base;
+  }
   $('#about').onchange = setGuidance;
   $('#state').onchange = setSubject;
-  $('#language').onchange = setSubject;
+  $('#language').onchange = () => { setSubject(); setRequestNote(); };
+  $('#need').onchange = setRequestNote;
 
   // Links arrive as /contact#individual or #attorney, and from the
   // state finder as /contact?state=TX#individual
@@ -64,11 +103,18 @@ if (form) {
   let chosen = stateParam;
   try { chosen = chosen || sessionStorage.getItem('vaa-state'); sessionStorage.removeItem('vaa-state'); } catch (err) {}
   if (chosen && $('#state').querySelector('option[value="' + CSS.escape(chosen) + '"]')) $('#state').value = chosen;
-  if (new URLSearchParams(location.search).get('lang') === 'es') $('#language').value = 'Español';
+  if (params.get('lang') === 'es') $('#language').value = 'Español';
   // The empty #individual and #attorney anchors at the top of the form scroll it into view
   if (location.hash === '#individual') $('[data-role="individual"]').click();
   else $('[data-role="attorney"]').click();
+  const serviceKey = (params.get('service') || '').toLowerCase();
+  if (role === 'attorney' && serviceMap[serviceKey]) {
+    const spec = serviceMap[serviceKey];
+    if ($('#arrangement')) $('#arrangement').value = spec.arrangement;
+    if ($('#need')) $('#need').value = spec.need;
+  }
   setSubject();
+  setRequestNote();
 
   form.onsubmit = async e => {
     e.preventDefault();
@@ -122,7 +168,7 @@ if (pick && window.VAA_STATES) {
       `<article class="case ours"><span class="tag">Private Service · First Call Free</span><h3>Help Putting Your Records in Order</h3>` +
       `<p>Official programs in ${esc(s.state)} are listed below. VAA works mainly through attorneys. The first call is free.</p>` +
       `<p>Call or text <a class="textlink" href="tel:+18178052467">817-805-2467</a>.</p>` +
-      `<a class="btn" href="/contact#attorney" data-state="${esc(s.abbr)}">Partner With VAA</a></article>` +
+      `<a class="btn" href="/contact?state=${esc(s.abbr)}#individual" data-state="${esc(s.abbr)}">Ask About Support</a></article>` +
       (s.abbr === 'TX'
         ? `<article class="case"><span class="tag">Adults 65+ or with a Disability in Texas</span><h3>Texas Abuse Hotline</h3>` +
           `<p>Report abuse, neglect or financial exploitation of an adult 65 or older or an adult with a disability. 800-252-5400.</p>` +
@@ -155,6 +201,12 @@ if (quickExit) {
   };
   quickExit.onclick = leave;
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && !e.target.closest('input, textarea, select')) leave();
+    if (e.key !== 'Escape') return;
+    if (nav && nav.classList.contains('open')) {
+      closeMenu();
+      if (menuBtn) menuBtn.focus();
+      return;
+    }
+    if (!e.target.closest('input, textarea, select')) leave();
   });
 }

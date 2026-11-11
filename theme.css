@@ -493,10 +493,11 @@ body.home .wm1{font-variant-caps:small-caps;letter-spacing:.14em;font-size:18px;
 body.home .wm2{letter-spacing:.28em;font-size:9px;}
 body.home .seal{width:64px;margin-bottom:14px;}
 body.home .hero-tag{font-family:"Source Sans 3","Segoe UI",sans-serif;font-weight:600;font-variant:normal;text-transform:none;font-size:16px;letter-spacing:.04em;color:#e9c46f;text-align:center;max-width:44em;margin-bottom:18px;}
-body.home .hero h1{font-family:"Source Sans 3","Segoe UI",sans-serif;font-weight:600;font-size:clamp(36px,4.6vw,58px);line-height:1.08;max-width:22em;color:#f4ece1;}
+body.home .hero h1{font-family:"Source Sans 3","Segoe UI",sans-serif;font-weight:600;font-size:clamp(30px,3.6vw,52px);line-height:1.12;max-width:16em;color:#f4ece1;text-wrap:balance;}
 body.home .hero h1 .soft{display:block;color:rgba(236,227,210,.5);}
 body.home .hero-cardline{margin:14px 0 0;font-family:"Source Sans 3","Segoe UI",sans-serif;font-weight:600;font-size:clamp(26px,3vw,40px);line-height:1.15;color:#fff;max-width:20em;}
 body.home .hero-cardline span{display:block;color:#c4a0b0;}
+@media (max-width:520px){body.home .hero-cardline{font-size:22px;}}
 body.home .hero-sub{font-family:"Source Sans 3","Segoe UI",sans-serif;font-weight:600;font-size:clamp(22px,2.2vw,30px);line-height:1.25;color:#f4ece1;max-width:16em;margin-top:22px;}
 body.home .hero .desc{color:rgba(244,236,225,.86);}
 body.home .hero .textlink{color:#f4ece1;border-bottom-color:rgba(244,236,225,.7);}
@@ -624,3 +625,36 @@ body[data-page="our-work"] .sample-pages.single{grid-template-columns:minmax(0,9
 .sample-row .eyebrow{margin-bottom:6px;}
 .sample-row-links{margin:0;}
 .sample-row .fine{margin-top:8px;}
+
+/* Editorial content on the live theme: centered hero label, starting cards,
+   readable secondary type, a full-width quick exit, and 48px controls. */
+.site-header :focus-visible,.top :focus-visible,.hero :focus-visible,footer :focus-visible,.quick-exit:focus-visible,main > section.cta :focus-visible,main > section.dark :focus-visible{outline-color:var(--gold);}
+html{scroll-padding-top:96px;scroll-padding-bottom:88px;}
+a,button,input,select,textarea,summary,[tabindex]{scroll-margin-bottom:88px;}
+body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px));}
+#menu,.role-choice button,.hdr-phone{min-height:48px;}
+@media (min-width:1351px){#nav .btn{min-height:48px;}}
+@media (min-width:1560px){#nav .btn{min-height:48px;}}
+@media (max-width:560px){.hdr-phone{width:48px;height:48px;}#menu{min-height:48px;padding:8px 14px;}.head{padding-block:12px 8px;}}
+body.home .hero-kicker{margin:0 0 10px;font-family:"Source Sans 3","Segoe UI",sans-serif;font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#e9c46f;max-width:36em;text-align:center;}
+body.home .seal{margin-bottom:8px;}
+body.home .hero-actions{margin-top:14px;}
+body.home .hero-quiet{margin-top:10px;}
+body.home .hero h1 .soft{display:block;color:rgba(236,227,210,.72);}
+body.home .hero-quiet,body.home .hero-quiet a{color:rgba(244,236,225,.78);}
+.quick-exit{position:fixed;left:0;right:0;bottom:0;z-index:40;width:auto;background:var(--aubergine);color:var(--bone);border:0;border-top:1px solid var(--antique);border-radius:0;min-height:48px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));font:inherit;font-size:15px;font-weight:600;text-align:center;box-shadow:0 -4px 16px rgba(0,0,0,.22);cursor:pointer;}
+@media screen{footer p.legal:not(.addr){font-size:11px;line-height:1.5;}}
+@media screen and (max-width:600px){footer p.legal:not(.addr){font-size:12px;line-height:1.5;}}
+#our-approach .approach-measure{max-width:68ch;}
+#advocate-standard .standard-lead{grid-column:1 / -1;}
+#advocate-standard .standard-lead strong{display:block;min-width:0;margin:0 0 6px;}
+#advocate-standard .standard-lead span{display:block;font-weight:400;}
+.start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px;align-items:stretch;}
+.start-grid article{background:#fbf7f0;border:1px solid var(--rule);border-radius:16px;border-top:3px solid var(--gold);padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;height:100%;}
+.start-grid h3{font-size:clamp(22px,2vw,28px);}
+.start-grid p{margin:0;}
+.start-grid .textlink{margin-top:auto;align-self:flex-start;}
+@media (max-width:800px){.start-grid{grid-template-columns:1fr;}}
+.support-pair{align-items:stretch;}
+.support-card{display:flex;flex-direction:column;height:100%;}
+.support-card h3{min-height:2.5em;}
