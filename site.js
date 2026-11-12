@@ -118,6 +118,36 @@ if (form) {
   };
 }
 
+document.querySelectorAll('form.short-inquiry').forEach(form => {
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const status = form.querySelector('.form-status');
+    const button = form.querySelector('button[type="submit"]');
+    const email = form.elements.email.value.trim();
+    const phone = form.elements.phone.value.trim();
+    if (!email && !phone) {
+      status.textContent = 'Please give us an email address or a phone number so we can reach you.';
+      form.elements.email.focus();
+      return;
+    }
+    const body = new FormData(form);
+    if (!email) body.delete('email');
+    button.disabled = true;
+    status.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, { method: 'POST', body, headers: { Accept: 'application/json' } });
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error(data.message || 'Send failed');
+      form.reset();
+      status.textContent = 'Thank you. Your inquiry was sent, and we will reply within one business day.';
+    } catch (err) {
+      status.textContent = 'Sorry, your inquiry did not go through. Please call or text 817-805-2467, or email arpey@victimadvocacy.com.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+});
+
 // Resources: the chosen state's official programs, led by a call with VAA
 const pick = $('#state-pick');
 if (pick && window.VAA_STATES) {
