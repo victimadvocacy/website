@@ -126,6 +126,30 @@ aside.notice{background:rgba(233,196,111,.16);border-color:rgba(180,140,60,.35);
 .scan-steps .n{font-weight:700;color:var(--aubergine);font-size:20px;line-height:1.2;}
 .scan-steps strong{display:block;color:var(--aubergine);}
 .scan-steps p{margin:4px 0 0;}
+.flow-aside{max-width:42ch;margin-top:10px;color:var(--plum);}
+.flow{position:relative;margin-top:36px;}
+.flow-wide,.flow-narrow{position:absolute;pointer-events:none;}
+.flow-wide{inset:0;width:100%;height:100%;}
+.flow-narrow{display:none;}
+.flow-steps{list-style:none;margin:0;padding:12px 0 8px;position:relative;}
+.flow-steps li{display:grid;grid-template-columns:1fr 52px 1fr;column-gap:40px;align-items:start;width:auto;margin:0 0 76px;padding:0;border:0;background:none;}
+.flow-steps li:last-child{margin-bottom:8px;}
+.flow-steps li:nth-child(odd) .flow-dot{grid-column:2;grid-row:1;justify-self:center;}
+.flow-steps li:nth-child(odd) div{grid-column:1;grid-row:1;text-align:right;justify-self:end;}
+.flow-steps li:nth-child(even) .flow-dot{grid-column:2;grid-row:1;justify-self:center;}
+.flow-steps li:nth-child(even) div{grid-column:3;grid-row:1;text-align:left;}
+.flow-dot{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--antique);background:#f4ece1;color:var(--aubergine);font-weight:600;font-size:16px;}
+body:not(.home) .flow-dot{background:#f3ede2;}
+.flow-steps h3{font-size:clamp(22px,2vw,28px);margin:0;}
+.flow-steps p{margin-top:8px;max-width:34ch;font-size:17px;line-height:1.5;}
+@media (max-width:760px){
+  .flow-wide{display:none;}
+  .flow-narrow{display:block;top:0;bottom:0;left:8px;width:34px;height:100%;}
+  .flow-steps li,.flow-steps li:nth-child(odd),.flow-steps li:nth-child(even){display:block;margin:0 0 44px 36px;}
+  .flow-steps li div,.flow-steps li:nth-child(odd) div{text-align:left;}
+  .flow-dot{margin-bottom:8px;}
+  .flow-steps p{max-width:none;}
+}
 .cover-list{margin-top:8px;}
 .plain-list{margin:12px 0 0 0;display:flex;flex-direction:column;gap:10px;}
 .plain-list li{padding-left:16px;border-left:2px solid var(--antique);}
