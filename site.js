@@ -7,17 +7,6 @@ $('#menu').onclick = () => {
   $('#menu').setAttribute('aria-expanded', String(open));
 };
 
-const toTop = document.createElement('button');
-toTop.type = 'button';
-toTop.className = 'to-top';
-toTop.setAttribute('aria-label', 'Back to top');
-toTop.textContent = 'Top';
-document.body.appendChild(toTop);
-const syncTop = () => toTop.classList.toggle('show', window.scrollY > 480);
-window.addEventListener('scroll', syncTop, { passive: true });
-syncTop();
-toTop.onclick = () => window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
-
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const stateParam = new URLSearchParams(location.search).get('state');
 
