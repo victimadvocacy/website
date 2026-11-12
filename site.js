@@ -124,14 +124,12 @@ document.querySelectorAll('form.short-inquiry').forEach(form => {
     const status = form.querySelector('.form-status');
     const button = form.querySelector('button[type="submit"]');
     const email = form.elements.email.value.trim();
-    const phone = form.elements.phone.value.trim();
-    if (!email && !phone) {
-      status.textContent = 'Please give us an email address or a phone number so we can reach you.';
+    if (!email) {
+      status.textContent = 'Please give us an email address so we can reach you.';
       form.elements.email.focus();
       return;
     }
     const body = new FormData(form);
-    if (!email) body.delete('email');
     button.disabled = true;
     status.textContent = 'Sending…';
     try {

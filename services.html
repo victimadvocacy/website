@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="theme.css?v=22">
+<link rel="stylesheet" href="theme.css?v=23">
 </head>
 <body data-page="services">
 <a class="skip" href="#content">Skip to Content</a>
@@ -84,17 +84,14 @@
 <input type="hidden" name="subject" value="Services inquiry">
 <input type="hidden" name="from_name" value="Victim Advocacy Associates website">
 <input type="hidden" name="inquiry_type" value="Services inquiry">
-<input type="hidden" name="form_location" value="top of services">
 <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 <h2 id="services-inquiry-title">Send a Short Note</h2>
 <label for="svc-name">Name</label>
 <input id="svc-name" name="name" required autocomplete="name" maxlength="120">
-<label for="svc-firm">Firm</label>
-<input id="svc-firm" name="firm" autocomplete="organization" maxlength="160">
-<div class="form-row">
-<div><label for="svc-email">Email</label><input id="svc-email" name="email" type="email" autocomplete="email" maxlength="160"></div>
-<div><label for="svc-phone">Phone</label><input id="svc-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
-</div>
+<label for="svc-email">Email</label>
+<input id="svc-email" name="email" type="email" required autocomplete="email" maxlength="160">
+<label for="svc-phone">Phone (optional)</label>
+<input id="svc-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
 <label for="svc-message">Message</label>
 <textarea id="svc-message" name="message" required maxlength="3000"></textarea>
 <p class="field-note">Please don't include case details or client names.</p>

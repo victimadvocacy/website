@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="theme.css?v=22">
+<link rel="stylesheet" href="theme.css?v=23">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["ProfessionalService","Organization"],"name":"Victim Advocacy Associates","legalName":"Victim Advocacy Associates LLC","url":"https://victimadvocacy.com/","logo":{"@type":"ImageObject","url":"https://victimadvocacy.com/crest.png","width":367,"height":299},"image":"https://victimadvocacy.com/share-v13.jpg?v=13","email":"arpey@victimadvocacy.com","description":"Your firm leads the case. VAA supports your client and your team with a dedicated advocate and source-tied records.","telephone":"+1-817-805-2467","founder":{"@type":"Person","@id":"https://victimadvocacy.com/about#ally-arpey","name":"Ally Arpey","jobTitle":"Founder and Litigation Consultant","url":"https://victimadvocacy.com/about"},"address":{"@type":"PostalAddress","streetAddress":"P.O. Box 281","addressLocality":"Colleyville","addressRegion":"TX","postalCode":"76034","addressCountry":"US","postOfficeBoxNumber":"281"},"areaServed":{"@type":"Country","name":"United States"},"@id":"https://victimadvocacy.com/#organization","alternateName":"VAA","foundingDate":"2026","contactPoint":{"@type":"ContactPoint","contactType":"customer service","telephone":"+1-817-805-2467","email":"arpey@victimadvocacy.com","availableLanguage":["English","Spanish"]},"knowsLanguage":["en","es"]},{"@type":"WebSite","@id":"https://victimadvocacy.com/#website","name":"Victim Advocacy Associates","alternateName":"VAA","url":"https://victimadvocacy.com/","inLanguage":"en-US","publisher":{"@id":"https://victimadvocacy.com/#organization"}}]}</script>
 </head>
 <body class="home">
@@ -54,31 +54,6 @@
 </div>
 </section>
 <main id="content" tabindex="-1">
-<section class="inquiry-band" aria-labelledby="home-inquiry-title">
-<form class="short-inquiry" action="https://api.web3forms.com/submit" method="POST">
-<input type="hidden" name="access_key" value="ffdc2a3f-7c4d-4645-aa49-b4b0c1e29fb9">
-<input type="hidden" name="subject" value="Homepage inquiry">
-<input type="hidden" name="from_name" value="Victim Advocacy Associates website">
-<input type="hidden" name="inquiry_type" value="Homepage inquiry">
-<input type="hidden" name="form_location" value="top of homepage">
-<input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-<h2 id="home-inquiry-title">Send a Short Note</h2>
-<label for="home-name">Name</label>
-<input id="home-name" name="name" required autocomplete="name" maxlength="120">
-<label for="home-firm">Firm</label>
-<input id="home-firm" name="firm" autocomplete="organization" maxlength="160">
-<div class="form-row">
-<div><label for="home-email">Email</label><input id="home-email" name="email" type="email" autocomplete="email" maxlength="160"></div>
-<div><label for="home-phone">Phone</label><input id="home-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
-</div>
-<label for="home-message">Message</label>
-<textarea id="home-message" name="message" required maxlength="3000"></textarea>
-<p class="field-note">Please don't include case details or client names.</p>
-<p class="field-note">Submitting this form does not create a working relationship. See our <a class="textlink" href="/privacy">Privacy Policy</a>.</p>
-<button class="btn" type="submit">Send Inquiry</button>
-<div class="form-status" role="status" aria-live="polite"></div>
-</form>
-</section>
 <section class="fit" aria-labelledby="fit-title">
 <p class="eyebrow">A quick check</p>
 <h2 id="fit-title">Are We Right for You?</h2>
@@ -104,6 +79,28 @@
 <li><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="18" cy="12" r="1.2"/></svg><span>And more</span></li>
 </ul>
 </div>
+</section>
+<section class="inquiry-band" aria-labelledby="home-inquiry-title">
+<form class="short-inquiry" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="ffdc2a3f-7c4d-4645-aa49-b4b0c1e29fb9">
+<input type="hidden" name="subject" value="Homepage inquiry">
+<input type="hidden" name="from_name" value="Victim Advocacy Associates website">
+<input type="hidden" name="inquiry_type" value="Homepage inquiry">
+<input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+<h2 id="home-inquiry-title">Send a Short Note</h2>
+<label for="home-name">Name</label>
+<input id="home-name" name="name" required autocomplete="name" maxlength="120">
+<label for="home-email">Email</label>
+<input id="home-email" name="email" type="email" required autocomplete="email" maxlength="160">
+<label for="home-phone">Phone (optional)</label>
+<input id="home-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+<label for="home-message">Message</label>
+<textarea id="home-message" name="message" required maxlength="3000"></textarea>
+<p class="field-note">Please don't include case details or client names.</p>
+<p class="field-note">Submitting this form does not create a working relationship. See our <a class="textlink" href="/privacy">Privacy Policy</a>.</p>
+<button class="btn" type="submit">Send Inquiry</button>
+<div class="form-status" role="status" aria-live="polite"></div>
+</form>
 </section>
 <section class="familiar" aria-labelledby="sound-familiar">
 <p class="eyebrow">For the Practice</p>
@@ -197,31 +194,6 @@
 <div><p class="lead">Every fact tied to a source. Reported and confirmed amounts kept apart. A clear list of what’s still missing.</p>
 <p>See illustrative samples of litigation support and client support. No real client, subject, or matter.</p>
 <div class="actions" style="margin-top:20px"><a class="textlink" href="/services">Explore Services</a><a class="textlink" href="/sample-work">See a Sample File</a></div></div>
-</section>
-<section class="inquiry-band" aria-labelledby="home-inquiry-bottom">
-<form class="short-inquiry" action="https://api.web3forms.com/submit" method="POST">
-<input type="hidden" name="access_key" value="ffdc2a3f-7c4d-4645-aa49-b4b0c1e29fb9">
-<input type="hidden" name="subject" value="Homepage inquiry">
-<input type="hidden" name="from_name" value="Victim Advocacy Associates website">
-<input type="hidden" name="inquiry_type" value="Homepage inquiry">
-<input type="hidden" name="form_location" value="bottom of homepage">
-<input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-<h2 id="home-inquiry-bottom">Send a Short Note</h2>
-<label for="home-b-name">Name</label>
-<input id="home-b-name" name="name" required autocomplete="name" maxlength="120">
-<label for="home-b-firm">Firm</label>
-<input id="home-b-firm" name="firm" autocomplete="organization" maxlength="160">
-<div class="form-row">
-<div><label for="home-b-email">Email</label><input id="home-b-email" name="email" type="email" autocomplete="email" maxlength="160"></div>
-<div><label for="home-b-phone">Phone</label><input id="home-b-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
-</div>
-<label for="home-b-message">Message</label>
-<textarea id="home-b-message" name="message" required maxlength="3000"></textarea>
-<p class="field-note">Please don't include case details or client names.</p>
-<p class="field-note">Submitting this form does not create a working relationship. See our <a class="textlink" href="/privacy">Privacy Policy</a>.</p>
-<button class="btn" type="submit">Send Inquiry</button>
-<div class="form-status" role="status" aria-live="polite"></div>
-</form>
 </section>
 <section class="cta"><div><h2>Bring VAA Onto Your Team</h2>
 <p>Book a 15-minute call. Nothing is binding until you sign a written agreement. <a class="textlink" href="/how-it-works#pricing">See pricing</a>.</p>
