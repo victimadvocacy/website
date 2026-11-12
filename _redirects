@@ -1,3 +1,10 @@
+# Old page names now open Services.
+/our-work            /services    301
+/our-work.html       /services    301
+/attorneys           /services    301
+/attorneys.html      /services    301
+/for-attorneys       /services    301
+/for-attorneys.html  /services    301
 # The advocate standard now lives on How It Works. Old /standards links still open it.
 /standards           /how-it-works#advocate-standard    301
 /standards.html      /how-it-works#advocate-standard    301
