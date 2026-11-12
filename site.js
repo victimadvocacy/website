@@ -7,6 +7,17 @@ $('#menu').onclick = () => {
   $('#menu').setAttribute('aria-expanded', String(open));
 };
 
+const toTop = document.createElement('button');
+toTop.type = 'button';
+toTop.className = 'to-top';
+toTop.setAttribute('aria-label', 'Back to top');
+toTop.textContent = 'Top';
+document.body.appendChild(toTop);
+const syncTop = () => toTop.classList.toggle('show', window.scrollY > 480);
+window.addEventListener('scroll', syncTop, { passive: true });
+syncTop();
+toTop.onclick = () => window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const stateParam = new URLSearchParams(location.search).get('state');
 
@@ -145,16 +156,3 @@ if (pick && window.VAA_STATES) {
   if (stateParam) { pick.value = stateParam; show(); }
 }
 
-// Quick exit: opens a neutral page and replaces this one, so Back doesn't return here.
-// Esc does the same, except while someone is typing in a form field.
-const quickExit = $('#quick-exit');
-if (quickExit) {
-  const leave = () => {
-    window.open('https://weather.com', '_blank', 'noopener');
-    location.replace('https://www.google.com/search?q=weather');
-  };
-  quickExit.onclick = leave;
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && !e.target.closest('input, textarea, select')) leave();
-  });
-}

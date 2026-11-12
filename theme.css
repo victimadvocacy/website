@@ -461,14 +461,12 @@ section.cta .textlink{color:var(--bone);border-color:var(--antique);}
   #menu{padding:8px 12px;}
 }
 
-/* Situation guide, older-adult list and quick exit */
+/* Situation guide and older-adult list */
 .situations-intro{max-width:62ch;}
 .situation p strong{color:var(--aubergine);font-weight:600;}
 .situation .cost{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);font-size:15.5px;color:var(--stone);}
 .situation .textlink{align-self:flex-start;}
 #older-adults .price-list strong,#working-with-firms .price-list strong{display:inline;min-width:0;margin-right:4px;}
-.quick-exit{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:30;background:var(--aubergine);color:var(--bone);border:1px solid var(--antique);border-radius:999px;padding:10px 18px;font:inherit;font-size:15px;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.25);cursor:pointer;}
-.quick-exit:hover{background:var(--plum);}
 
 /* Matters We Support (homepage) */
 section.matters{border-top:1px solid var(--rule);}
@@ -626,3 +624,8 @@ body[data-page="services"] .sample-pages.single{grid-template-columns:minmax(0,9
 .sample-row .fine{margin-top:8px;}
 .service-flow{max-width:960px;margin:8px 0 22px;}
 .service-flow svg{width:100%;height:auto;display:block;}
+.to-top{display:none;}
+@media (max-width:760px){
+  .to-top{position:fixed;left:16px;bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:45;border:0;border-radius:999px;background:var(--aubergine);color:var(--bone);font:inherit;font-weight:700;padding:12px 16px;box-shadow:0 8px 20px rgba(23,13,20,.28);cursor:pointer;}
+  .to-top.show{display:inline-flex;}
+}
