@@ -18,6 +18,12 @@ window.addEventListener('scroll', syncTop, { passive: true });
 syncTop();
 toTop.onclick = () => window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 
+const sticky = document.createElement('a');
+sticky.className = 'sticky-cta';
+sticky.href = '/#home-inquiry-title';
+sticky.textContent = 'Request a Free Intro Call';
+document.body.appendChild(sticky);
+
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const stateParam = new URLSearchParams(location.search).get('state');
 
