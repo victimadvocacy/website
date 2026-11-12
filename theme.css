@@ -89,7 +89,7 @@ html{scroll-padding-top:96px;}
 .individual-motto{margin-top:14px;font-family:var(--text);font-weight:600;color:var(--antique);font-size:clamp(18px,1.6vw,22px);}
 
 /* Page sections */
-main > section{width:100%;max-width:1400px;margin:0 auto;padding:clamp(28px,4vh,44px) var(--gutter);}
+main > section{width:100%;max-width:1400px;margin:0 auto;padding:clamp(40px,6vh,72px) var(--gutter);}
 main > section + section{border-top:1px solid var(--rule);}
 main > section[style*="border-top"]{border-top:1px solid var(--rule)!important;}
 .eyebrow{font-family:var(--text);font-weight:600;color:var(--laurel-deep);font-size:17px;margin-bottom:12px;}
@@ -112,6 +112,24 @@ aside.notice{background:rgba(233,196,111,.16);border-color:rgba(180,140,60,.35);
 .service-row .number{font-family:var(--display);font-size:22px;color:var(--mulberry);}
 .service-row h3{font-family:var(--display);font-weight:700;font-size:clamp(26px,2.3vw,34px);line-height:1.15;letter-spacing:.005em;}
 .service-row .textlink{display:inline-block;margin-top:14px;}
+.hero-points{list-style:none;margin:18px 0 4px;padding:0;max-width:62ch;text-align:left;}
+.hero-points li{color:rgba(236,227,210,.92);padding:7px 0;font-size:clamp(16px,1.25vw,18px);line-height:1.45;}
+.hero-points strong{color:var(--gold);}
+.fit-group{margin-top:28px;}
+.fit-group h3{font-size:clamp(20px,2vw,26px);margin-bottom:4px;}
+.fit-list,.scan-steps,.plain-list{list-style:none;margin:8px 0 0;padding:0;}
+.fit-list{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;}
+.fit-list li,.scan-steps li{display:grid;align-items:center;gap:12px 14px;padding:14px 0;border-bottom:1px solid var(--rule);}
+.fit-list li{grid-template-columns:32px minmax(0,1fr);}
+.scan-steps li{grid-template-columns:32px 28px minmax(0,1fr);align-items:start;}
+.fit-list svg,.scan-steps svg{width:28px;height:28px;stroke:var(--aubergine);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+.scan-steps .n{font-weight:700;color:var(--aubergine);font-size:20px;line-height:1.2;}
+.scan-steps strong{display:block;color:var(--aubergine);}
+.scan-steps p{margin:4px 0 0;}
+.cover-list{margin-top:8px;}
+.plain-list{margin:12px 0 0 0;display:flex;flex-direction:column;gap:10px;}
+.plain-list li{padding-left:16px;border-left:2px solid var(--antique);}
+@media (max-width:800px){.fit-list{grid-template-columns:1fr;}}
 
 /* Dark full-width bands */
 main > section.dark{max-width:none;background:var(--aubergine);color:var(--bone);padding-inline:max(var(--gutter),calc((100% - 1400px)/2 + var(--gutter)));border-top:0!important;}
