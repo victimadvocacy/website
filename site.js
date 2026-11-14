@@ -21,7 +21,7 @@ toTop.onclick = () => window.scrollTo({ top: 0, behavior: matchMedia('(prefers-r
 const sticky = document.createElement('a');
 sticky.className = 'sticky-cta';
 sticky.href = '/#home-inquiry-title';
-sticky.textContent = 'Request a 15-Minute Call';
+sticky.textContent = document.body.dataset.page === 'es' ? 'Solicite una llamada de 15 minutos' : 'Request a 15-Minute Call';
 document.body.appendChild(sticky);
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
