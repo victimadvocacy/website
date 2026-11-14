@@ -94,6 +94,8 @@ main > section + section{border-top:1px solid var(--rule);}
 main > section[style*="border-top"]{border-top:1px solid var(--rule)!important;}
 .eyebrow{font-family:var(--text);font-weight:600;color:var(--laurel-deep);font-size:17px;margin-bottom:12px;}
 main h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,3.4vw,48px);line-height:1.15;color:var(--aubergine);text-wrap:balance;}
+h2.samples-heading{max-width:none;text-wrap:nowrap;}
+@media (max-width:640px){h2.samples-heading{text-wrap:wrap;}}
 main h3{font-family:var(--display);font-weight:600;font-size:clamp(23px,2vw,30px);line-height:1.12;color:var(--aubergine);}
 main p{color:var(--plum);}
 main p + p{margin-top:14px;}
