@@ -550,7 +550,11 @@ body.home .why-exist .why-tagline{margin:0 0 12px;font-family:var(--text);font-w
 .why-icon{width:28px;height:28px;stroke:#5b2c6f;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
 .why-list strong{display:block;font-size:15px;line-height:1.25;color:var(--aubergine);}
 .why-list p,.head .why-list p,.hero .why-list p{margin:4px 0 0;font-size:14px;line-height:1.4;color:var(--plum);max-width:none;}
-@media (max-width:860px){.why-list{grid-template-columns:1fr;}}
+.offer-list,.exp-list{margin-top:14px;}
+.exp-list h3{margin:14px 0 8px;font-size:18px;color:var(--aubergine);}
+.exp-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));}
+.offer-more{margin:12px 0 0;}
+@media (max-width:860px){.why-list,.exp-grid{grid-template-columns:1fr;}}
 #advocate-standard .gain-list,#standards .gain-list,body[data-page="standards"] .gain-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px;}
 #advocate-standard .gain-list li,body[data-page="standards"] .gain-list li{background:#fbf7f0;border:1px solid var(--rule);border-radius:14px;padding:12px 14px;}
 #clear-pricing .price-list,#working-with-firms .price-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
