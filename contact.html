@@ -43,19 +43,16 @@
 <p class="lead">Tell us about support for your firm, or about a client you want to refer. Nothing is binding until you sign a written agreement. <a class="textlink" href="/how-it-works#pricing">See pricing</a>.</p>
 </div></div>
 <main id="content" tabindex="-1">
-<section class="form-grid"><div>
-<h2>Tell us what you need</h2>
-<p>A short note is enough. Nothing is binding until you sign a written agreement.</p>
-<p>VAA is not a law firm and does not give legal advice.</p>
-<p><a class="textlink" href="/individuals">Not an attorney? Start here</a></p>
+<section class="reach-band"><div class="wrap" style="padding-block:28px">
+<form id="inquiry" class="reach-card" action="https://api.web3forms.com/submit" method="POST"><span id="individual"></span><span id="attorney"></span><input type="hidden" name="access_key" value="ffdc2a3f-7c4d-4645-aa49-b4b0c1e29fb9"><input type="hidden" name="subject" value="New inquiry from victimadvocacy.com"><input type="hidden" name="from_name" value="Victim Advocacy Associates website"><input type="hidden" name="inquiry_type" id="inquiry-type" value=""><input type="hidden" name="requester_type" id="requester-type" value="I'm with a law firm"><input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="reach-head"><p class="eyebrow">Contact Us</p><h2>Reach out when you're ready</h2><p class="reach-intro">A few sentences is all we need to start. We'll follow up to talk about how we can help.</p></div>
+<div class="role-toggle" role="group" aria-label="Who is writing"><button type="button" data-role="attorney" aria-pressed="false">I'm with a law firm</button><button type="button" data-role="individual" aria-pressed="false">I'm a client or family member</button></div>
+<p class="client-note" id="client-note">VAA supports clients through their attorney and does not give legal advice.</p>
 <details><summary>Hours and address</summary>
 <p>We reply within one business day. We call only people who contacted us, or whom you asked us to call.</p>
 <p>Monday–Friday, 11 a.m.–7 p.m. Central (9 a.m.–5 p.m. Pacific). Messages left after hours are returned the next business day. Consultations are by appointment.</p>
 <p><a class="textlink" href="mailto:arpey@victimadvocacy.com">arpey@victimadvocacy.com</a><br>Victim Advocacy Associates LLC<br>P.O. Box 281<br>Colleyville, Texas 76034</p>
 </details>
-</div>
-<form id="inquiry" action="https://api.web3forms.com/submit" method="POST"><span id="individual"></span><span id="attorney"></span><input type="hidden" name="access_key" value="ffdc2a3f-7c4d-4645-aa49-b4b0c1e29fb9"><input type="hidden" name="subject" value="New inquiry from victimadvocacy.com"><input type="hidden" name="from_name" value="Victim Advocacy Associates website"><input type="hidden" name="inquiry_type" id="inquiry-type" value=""><input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-<div class="role-choice" aria-label="Inquiry type"><button type="button" data-role="attorney" aria-pressed="false">Attorney / Law Firm</button><button type="button" data-role="individual" aria-pressed="false">Individual / Family</button></div>
 <div id="arrangement-field" class="hidden"><label for="arrangement">Arrangement</label><select id="arrangement" name="arrangement"><option value="">Choose one</option><option>Ongoing advocacy arrangement</option><option>Support on one matter</option></select></div>
 <div class="form-row"><div><label for="name">Your Name</label><input id="name" name="name" required autocomplete="name" maxlength="120"></div>
 <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="160"></div>
@@ -69,11 +66,15 @@
 <div id="safety-field" class="hidden"><label for="safe-time">When Is It Safe to Call? Can We Leave a Message?</label><p class="field-note">If someone else can read your email or texts, tell us here and give us a way to reach you that they can’t see.</p><input id="safe-time" name="safe_to_call" maxlength="200" placeholder="For example: weekdays after 5 p.m., no voicemail"></div>
 <div id="attorney-field" class="hidden"><label for="your-attorney">Your Attorney, If You Have One (Optional)</label><input id="your-attorney" name="your_attorney" maxlength="160"></div>
 <div id="firm-field" class="hidden"><label for="firm">Firm Name</label><input id="firm" name="firm" autocomplete="organization" maxlength="160"><label for="parties">Party Names, for Our Conflicts Check (Optional)</label><input id="parties" name="parties" maxlength="300" aria-describedby="parties-note"><p class="field-note" id="parties-note">Names only, no case details. We use them only to check for conflicts. If you’d rather share names after a mutual confidentiality agreement, leave this blank.</p></div>
-<label for="need">Support Needed</label><select id="need" name="support_needed"><option>Ongoing Support</option><option>Refer a Client</option><option>Support for my own situation (not through a lawyer)</option><option>Chronology or evidence index</option><option>Records Organization</option><option>Victim Impact Statement</option><option>Introduction to a licensed professional</option><option>Not Sure Yet</option><option>Help Finding an Attorney or Counselor</option></select><label for="message">Briefly Describe the Support You Need</label><p class="field-note" id="guidance">A few sentences is plenty. Please don’t send account numbers, medical records or documents here.</p>
-<textarea id="message" name="message" required maxlength="3000" aria-describedby="guidance"></textarea><p class="field-note">VAA is not a law firm. Submitting this form does not create an engagement or an attorney-client relationship. Do not send confidential details before a written agreement. See our <a class="textlink" href="/privacy">Privacy Policy</a>.</p>
-<button class="btn" type="submit">Send Inquiry</button><div id="form-status" role="status" aria-live="polite"></div>
+<fieldset id="has-attorney-field"><legend>Do you have an attorney?</legend><div class="choice-line"><label><input type="radio" name="has_attorney" value="Yes"> Yes</label><label><input type="radio" name="has_attorney" value="No"> No</label><label><input type="radio" name="has_attorney" value="Not sure"> Not sure</label></div></fieldset>
+<div id="attorney-name-field"><label for="attorney-name">Attorney or firm name <span class="opt-pill">Optional</span></label><input id="attorney-name" name="attorney_name" maxlength="160"><p class="reach-hint">Optional. Just the name is fine.</p></div>
+<label for="need">Support Needed</label><select id="need" name="support_needed"><option>Ongoing Support</option><option>Refer a Client</option><option>Support for my own situation (not through a lawyer)</option><option>Chronology or evidence index</option><option>Records Organization</option><option>Victim Impact Statement</option><option>Introduction to a licensed professional</option><option>Not Sure Yet</option><option>Help Finding an Attorney or Counselor</option></select><label for="message">How can we help?</label><p class="field-note" id="guidance">A few sentences is plenty. Please don’t send account numbers, medical records or documents here.</p>
+<textarea id="message" name="message" required maxlength="3000" aria-describedby="guidance" placeholder="A short description of the matter type and what support you need."></textarea>
+<div class="keep-general"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><rect x="6" y="10" width="12" height="9" rx="1.5"/><path d="M8 10 V8 a4 4 0 0 1 8 0 v2"/></svg><div><strong>Please keep it general for now</strong><p>Leave out case details and names. We'll go over the specifics with you once we've connected.</p></div></div>
+<div class="reach-actions"><button class="btn send-btn" type="submit">Send message →</button><p class="reach-fine">Sending this form doesn't create a working relationship with us. See our <a class="textlink" href="/privacy">Privacy Policy</a>.</p></div>
+<div id="form-status" role="status" aria-live="polite"></div>
 </form>
-</section>
+</div></section>
 </main>
 <footer>
   <div class="wrap">
