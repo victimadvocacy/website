@@ -89,25 +89,28 @@
 </ul>
 </div>
 </section>
-<section class="inquiry-band" aria-labelledby="home-inquiry-title">
-<form class="short-inquiry" action="https://api.web3forms.com/submit" method="POST">
+<section class="inquiry-band reach-band" aria-labelledby="home-inquiry-title">
+<form class="short-inquiry reach-card" action="https://api.web3forms.com/submit" method="POST">
 <input type="hidden" name="access_key" value="ffdc2a3f-7c4d-4645-aa49-b4b0c1e29fb9">
 <input type="hidden" name="subject" value="Homepage inquiry">
 <input type="hidden" name="from_name" value="Victim Advocacy Associates website">
 <input type="hidden" name="inquiry_type" value="Homepage inquiry">
 <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-<h2 id="home-inquiry-title">Send a Short Note</h2>
-<label for="home-name">Name</label>
+<div class="reach-head">
+<p class="eyebrow">Contact Us</p>
+<h2 id="home-inquiry-title">Reach out when you're ready</h2>
+<p class="reach-intro">A few sentences is all we need to start. We'll follow up to talk about how we can help.</p>
+</div>
+<label for="home-name">Your name</label>
 <input id="home-name" name="name" required autocomplete="name" maxlength="120">
-<label for="home-email">Email</label>
-<input id="home-email" name="email" type="email" required autocomplete="email" maxlength="160">
-<label for="home-phone">Phone (optional)</label>
-<input id="home-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
-<label for="home-message">Message</label>
-<textarea id="home-message" name="message" required maxlength="3000"></textarea>
-<p class="field-note">Please don't include case details or client names.</p>
-<p class="field-note">Submitting this form does not create a working relationship. See our <a class="textlink" href="/privacy">Privacy Policy</a>.</p>
-<button class="btn" type="submit">Send Inquiry</button>
+<div class="reach-row">
+<div><label for="home-email">Email</label><input id="home-email" name="email" type="email" required autocomplete="email" maxlength="160"></div>
+<div><label for="home-phone">Phone <span class="opt-pill">Optional</span></label><input id="home-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"><p class="reach-hint">Add a number if you'd rather we call.</p></div>
+</div>
+<label for="home-message">How can we help?</label>
+<textarea id="home-message" name="message" required maxlength="3000" placeholder="A short description of what you're looking for."></textarea>
+<div class="keep-general"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><rect x="6" y="10" width="12" height="9" rx="1.5"/><path d="M8 10 V8 a4 4 0 0 1 8 0 v2"/></svg><div><strong>Please keep it general for now</strong><p>Leave out case details and names. We'll go over the specifics with you once we've connected.</p></div></div>
+<div class="reach-actions"><button class="btn send-btn" type="submit">Send message →</button><p class="reach-fine">Sending this form doesn't create a working relationship with us. See our <a class="textlink" href="/privacy">Privacy Policy</a>.</p></div>
 <div class="form-status" role="status" aria-live="polite"></div>
 </form>
 </section>

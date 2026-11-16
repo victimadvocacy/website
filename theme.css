@@ -127,7 +127,7 @@ section.inquiry-band .short-inquiry .field-note{color:var(--stone);}
 section.inquiry-band .short-inquiry .textlink,.reach-card .textlink{color:var(--aubergine);border-bottom-color:var(--mulberry);}
 .reach-band{background:#2a1424;}
 .reach-card{background:#FAF6F2;border-radius:16px;padding:36px 32px 28px;max-width:720px;margin:0 auto;color:#2a1424;}
-.reach-card .reach-head{text-align:center;}
+.reach-card .reach-head{text-align:left;}
 .reach-card .reach-head .eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:#4b2242;margin-bottom:8px;}
 .reach-card h2{color:#2a1424;font-size:clamp(28px,3vw,40px);margin:0;}
 .reach-card .reach-intro{color:#4b2242;max-width:36em;margin:10px auto 0;font-size:17px;line-height:1.5;}
@@ -159,6 +159,7 @@ section.inquiry-band .short-inquiry .textlink,.reach-card .textlink{color:var(--
   .reach-card{padding:24px 16px;}
 }
 .short-inquiry{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:clamp(18px,2.5vw,28px);display:flex;flex-direction:column;max-width:760px;}
+.short-inquiry.reach-card{background:#FAF6F2;border:0;border-radius:16px;padding:36px 32px 28px;max-width:720px;}
 section.inquiry-band .short-inquiry{margin-inline:auto;}
 .short-inquiry h2{font-size:clamp(26px,2.4vw,36px);}
 .short-inquiry label{display:block;font-weight:600;font-size:16px;color:var(--aubergine);margin:14px 0 6px;}
