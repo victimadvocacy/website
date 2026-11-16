@@ -95,22 +95,26 @@
 <input type="hidden" name="subject" value="Homepage inquiry">
 <input type="hidden" name="from_name" value="Victim Advocacy Associates website">
 <input type="hidden" name="inquiry_type" value="Homepage inquiry">
+<input type="hidden" name="requester_type" value="I'm with a law firm">
 <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="reach-head">
 <p class="eyebrow">Contact Us</p>
 <h2 id="home-inquiry-title">Reach out when you're ready</h2>
 <p class="reach-intro">A few sentences is all we need to start. We'll follow up to talk about how we can help.</p>
 </div>
+<div class="role-toggle" role="group" aria-label="Who is writing"><button type="button" data-requester="law firm" class="selected" aria-pressed="true">I'm with a law firm</button><button type="button" data-requester="client" aria-pressed="false">I'm a client or family member</button></div>
+<p class="client-note">We work with your attorney's direction. If you don't have one yet, we can still talk about next steps.</p>
 <label for="home-name">Your name</label>
 <input id="home-name" name="name" required autocomplete="name" maxlength="120">
+<div class="firm-slot"><label for="home-firm">Firm name <span class="opt-pill">Optional</span></label><input id="home-firm" name="firm" autocomplete="organization" maxlength="160"></div>
 <div class="reach-row">
 <div><label for="home-email">Email</label><input id="home-email" name="email" type="email" required autocomplete="email" maxlength="160"></div>
 <div><label for="home-phone">Phone <span class="opt-pill">Optional</span></label><input id="home-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"><p class="reach-hint">Add a number if you'd rather we call.</p></div>
 </div>
-<fieldset class="attorney-slot"><legend>Do you have an attorney?</legend><div class="choice-line"><label><input type="radio" name="has_attorney" value="Yes"> Yes</label><label><input type="radio" name="has_attorney" value="No"> No</label><label><input type="radio" name="has_attorney" value="I'm an attorney"> I'm an attorney</label></div></fieldset>
+<fieldset class="attorney-slot"><legend>Do you have an attorney?</legend><div class="choice-line"><label><input type="radio" name="has_attorney" value="Yes"> Yes</label><label><input type="radio" name="has_attorney" value="No"> No</label><label><input type="radio" name="has_attorney" value="Not sure"> Not sure</label></div></fieldset>
 <div class="attorney-name-slot"><label for="home-attorney">Attorney or firm name <span class="opt-pill">Optional</span></label><input id="home-attorney" name="attorney_name" maxlength="160"><p class="reach-hint">Optional. Just the name is fine.</p></div>
 <label for="home-message">How can we help?</label>
-<textarea id="home-message" name="message" required maxlength="3000" placeholder="A short description of what you're looking for."></textarea>
+<textarea id="home-message" name="message" required maxlength="3000" placeholder="A short description of the matter type and what support you need."></textarea>
 <div class="keep-general"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><rect x="6" y="10" width="12" height="9" rx="1.5"/><path d="M8 10 V8 a4 4 0 0 1 8 0 v2"/></svg><div><strong>Please keep it general for now</strong><p>Leave out case details and names. We'll go over the specifics with you once we've connected.</p></div></div>
 <div class="reach-actions"><button class="btn send-btn" type="submit">Send message →</button><p class="reach-fine">Sending this form doesn't create a working relationship with us. See our <a class="textlink" href="/privacy">Privacy Policy</a>.</p></div>
 <div class="form-status" role="status" aria-live="polite"></div>

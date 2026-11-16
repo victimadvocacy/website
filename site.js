@@ -2,8 +2,9 @@ const $ = s => document.querySelector(s);
 const syncAttorneyName = form => {
   const nameSlot = form.querySelector('.attorney-name-slot');
   if (!nameSlot) return;
+  const slot = form.querySelector('.attorney-slot, #has-attorney-field');
   const yes = form.querySelector('input[name="has_attorney"]:checked');
-  nameSlot.hidden = !yes || yes.value !== 'Yes';
+  nameSlot.hidden = (slot && slot.hidden) || !yes || yes.value !== 'Yes';
 };
 
 $('.skip').onclick = e => { e.preventDefault(); $('#content').focus(); $('#content').scrollIntoView(); };
@@ -67,6 +68,8 @@ if (form) {
     if (requester) requester.value = role === 'attorney' ? "I'm with a law firm" : "I'm a client or family member";
     const note = $('#client-note');
     if (note) note.hidden = role !== 'individual';
+    const hasAt = $('#has-attorney-field');
+    if (hasAt) hasAt.hidden = role !== 'individual';
     syncAttorneyName(form);
     const msg = $('#message');
     if (msg) msg.placeholder = role === 'attorney'
@@ -149,6 +152,8 @@ document.querySelectorAll('form.short-inquiry').forEach(form => {
     if (note) note.hidden = kind !== 'client';
     const firm = form.querySelector('.firm-slot');
     if (firm) firm.hidden = kind === 'client';
+    const slot = form.querySelector('.attorney-slot');
+    if (slot) slot.hidden = kind !== 'client';
     syncAttorneyName(form);
     const ta = form.querySelector('textarea');
     if (ta) ta.placeholder = kind === 'client' ? "A short description of what you're looking for." : 'A short description of the matter type and what support you need.';
@@ -175,6 +180,7 @@ document.querySelectorAll('form.short-inquiry').forEach(form => {
       const data = await res.json();
       if (!res.ok || !data.success) throw new Error(data.message || 'Send failed');
       form.reset();
+      if (form.querySelector('[data-requester]')) sync('law firm');
       status.textContent = 'Thank you. Your inquiry was sent, and we will reply within one business day.';
     } catch (err) {
       status.textContent = 'Sorry, your inquiry did not go through. Please call or text 817-805-2467, or email arpey@victimadvocacy.com.';
