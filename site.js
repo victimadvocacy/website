@@ -77,6 +77,13 @@ if (form) {
     const atName = $('#attorney-name-field');
     if (atName) atName.hidden = role !== 'individual' || r.value !== 'Yes' || !r.checked;
   }));
+  const noLawyerNote = $('#no-lawyer-note');
+  const syncNoLawyer = () => {
+    if (!noLawyerNote) return;
+    noLawyerNote.hidden = $('#need').value !== "I don't have a lawyer yet";
+  };
+  $('#need').addEventListener('change', syncNoLawyer);
+  syncNoLawyer();
   $('#about').onchange = setGuidance;
   $('#state').onchange = setSubject;
   $('#language').onchange = setSubject;
@@ -116,6 +123,7 @@ if (form) {
       const data = await res.json();
       if (!res.ok || !data.success) throw new Error(data.message || 'Send failed');
       form.reset();
+      syncNoLawyer();
       if (role) $('[data-role="' + role + '"]').click();
       status.textContent = spanish
         ? 'Gracias. Recibimos su mensaje y le responderemos dentro de un día hábil.'
