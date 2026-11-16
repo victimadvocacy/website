@@ -1,4 +1,10 @@
 const $ = s => document.querySelector(s);
+const syncAttorneyName = form => {
+  const nameSlot = form.querySelector('.attorney-name-slot');
+  if (!nameSlot) return;
+  const yes = form.querySelector('input[name="has_attorney"]:checked');
+  nameSlot.hidden = !yes || yes.value !== 'Yes';
+};
 
 $('.skip').onclick = e => { e.preventDefault(); $('#content').focus(); $('#content').scrollIntoView(); };
 
@@ -61,11 +67,7 @@ if (form) {
     if (requester) requester.value = role === 'attorney' ? "I'm with a law firm" : "I'm a client or family member";
     const note = $('#client-note');
     if (note) note.hidden = role !== 'individual';
-    const hasAt = $('#has-attorney-field');
-    if (hasAt) hasAt.hidden = role !== 'individual';
-    const picked = form.querySelector('input[name="has_attorney"]:checked');
-    const atName = $('#attorney-name-field');
-    if (atName) atName.hidden = role !== 'individual' || !picked || picked.value !== 'Yes';
+    syncAttorneyName(form);
     const msg = $('#message');
     if (msg) msg.placeholder = role === 'attorney'
       ? 'A short description of the matter type and what support you need.'
@@ -73,10 +75,7 @@ if (form) {
     setGuidance();
     setSubject();
   });
-  form.querySelectorAll('input[name="has_attorney"]').forEach(r => r.addEventListener('change', () => {
-    const atName = $('#attorney-name-field');
-    if (atName) atName.hidden = role !== 'individual' || r.value !== 'Yes' || !r.checked;
-  }));
+  form.querySelectorAll('input[name="has_attorney"]').forEach(r => r.addEventListener('change', () => syncAttorneyName(form)));
   const noLawyerNote = $('#no-lawyer-note');
   const syncNoLawyer = () => {
     if (!noLawyerNote) return;
@@ -150,20 +149,14 @@ document.querySelectorAll('form.short-inquiry').forEach(form => {
     if (note) note.hidden = kind !== 'client';
     const firm = form.querySelector('.firm-slot');
     if (firm) firm.hidden = kind === 'client';
-    const slot = form.querySelector('.attorney-slot');
-    if (slot) slot.hidden = kind !== 'client';
-    const yes = form.querySelector('input[name="has_attorney"]:checked');
-    const nameSlot = form.querySelector('.attorney-name-slot');
-    if (nameSlot) nameSlot.hidden = kind !== 'client' || !yes || yes.value !== 'Yes';
+    syncAttorneyName(form);
     const ta = form.querySelector('textarea');
     if (ta) ta.placeholder = kind === 'client' ? "A short description of what you're looking for." : 'A short description of the matter type and what support you need.';
   };
   form.querySelectorAll('[data-requester]').forEach(b => b.addEventListener('click', () => sync(b.dataset.requester)));
-  form.querySelectorAll('input[name="has_attorney"]').forEach(r => r.addEventListener('change', () => {
-    const current = form.querySelector('[data-requester].selected');
-    sync(current ? current.dataset.requester : 'law firm');
-  }));
+  form.querySelectorAll('input[name="has_attorney"]').forEach(r => r.addEventListener('change', () => syncAttorneyName(form)));
   if (form.querySelector('[data-requester]')) sync('law firm');
+  syncAttorneyName(form);
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const status = form.querySelector('.form-status');
