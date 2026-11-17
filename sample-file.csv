@@ -1,54 +1,133 @@
-﻿"Illustrative sample. No real client, subject, or matter."
+This is an illustrative sample prepared the way we prepare real work. No real client, subject, or matter.
 
-Source-Referenced Chronology
-Date,Event,Amount,Source,Status
-03/04/2025,Caregiver B added as an authorized signer on Client A’s checking account.,,Ex. 3 at 2,Documented
-03/18/2025,"Transfer of $2,400 to an account ending 7781, the first of 12.",2400,Ex. 1 at 15; Ex. 2 at 1,Documented
-04/02/2025,Client A tells her daughter she “never approved” the March transfer.,,Ex. 4 at 1,Reported
-04/07/2025,"Transfer of $1,500 to the account ending 7781.",1500,Ex. 1 at 20; Ex. 2 at 2,Documented
-04/18/2025,"Transfer of $1,750 to the account ending 7781.",1750,Ex. 1 at 20; Ex. 2 at 3,Documented
-04/29/2025,"Transfer of $1,600 to the account ending 7781.",1600,Ex. 1 at 21; Ex. 2 at 4,Documented
-05/06/2025,"Transfer of $2,000 to the account ending 7781.",2000,Ex. 1 at 26; Ex. 2 at 5,Documented
-05/10/2025,"$4,000 cash withdrawal at a branch. Who made it is not yet known.",4000,Ex. 1 at 26,"Amount documented, person unresolved"
-05/16/2025,"Transfer of $1,800 to the account ending 7781.",1800,Ex. 1 at 27; Ex. 2 at 6,Documented
-05/23/2025,"Transfer of $1,650 to the account ending 7781.",1650,Ex. 1 at 27; Ex. 2 at 7,Documented
-05/30/2025,"Transfer of $2,200 to the account ending 7781.",2200,Ex. 1 at 28; Ex. 2 at 8,Documented
-06/04/2025,"Transfer of $1,900 to the account ending 7781.",1900,Ex. 1 at 32; Ex. 2 at 9,Documented
-06/09/2025,"Transfer of $1,700 to the account ending 7781.",1700,Ex. 1 at 32; Ex. 2 at 10,Documented
-06/13/2025,"Transfer of $1,850 to the account ending 7781.",1850,Ex. 1 at 33; Ex. 2 at 11,Documented
-06/16/2025,"Transfer of $1,900 to the account ending 7781, the last of 12.",1900,Ex. 1 at 33; Ex. 2 at 12,Documented
-06/21/2025,Caregiver B writes that the transfers were “agreed pay.”,,Ex. 5 at 1,Reported
-06/30/2025,Daughter files a police report.,,Ex. 6 at 1,Documented
-06/30/2025,"The police report lists jewelry the family believes is missing, estimated at $3,500.",,Ex. 6 at 3,Reported
-07/2025,No further transfers to the account ending 7781 appear in the July statement.,,Ex. 1 at 37–42,Documented
-Unknown,The family reports concerns to Adult Protective Services. The case number has not been located.,,"Daughter’s account; no record located",Reported
-Unknown,A caregiving pay agreement. Caregiver B’s email refers only to “agreed pay.”,,Ex. 5 at 1; no agreement located,Unresolved
+Parties and Identification
+Field,Value
+Client A,"Age 81, lives alone. Age and household as provided by her daughter. Date of birth is not in the records provided."
+Caregiver B,"Paid caregiver, as provided by the daughter. No employment record is in the file."
+Daughter,Family member who first reported the concern. Relationship as provided. No legal name is used in this sample.
+Client A's bank,The institution named on the checking statements the firm provided. Statements are for the account ending 4402.
+Checking account ending 4402,The checking account on the statements. Client A is the customer named on those statements.
+Account ending 7781,Destination of the twelve transfers. The holder is not yet documented.
+Written pay agreement,Not located in the records provided. Caregiver B's email refers only to agreed pay.
+Other authority,Power of attorney or similar authority: none located in the records provided.
 
-Evidence Index
+Documented Funds Summary
+Category / Destination,Source of figure,Amount,Status,Notes
+Twelve transfers to account ending 7781,Ex. 1 and Ex. 2,22250,Documented,Authorization unresolved. Holder of 7781 is not documented.
+Branch cash withdrawal,Ex. 1 at 26,4000,"Amount documented, person unresolved",Date and amount are on the statement. The person is not named.
+Reported jewelry,Ex. 6 at 3,3500,Reported,Family estimate. Not added to the documented total.
+February transfers to 7781,Ex. 1 at 7 to 12,0,Documented,The February statement shows none.
+July transfers to 7781,Ex. 1 at 37 to 42,0,Documented,The July statement shows none.
+Caregiver pay rate or hours,Not in the records provided,,Unresolved,"No pay rate, hours, or wage record located."
+Later movement of account 7781,Not in the records provided,,Unresolved,Ownership and any later transfer are not documented.
+Written pay agreement,Not in the records provided,,Unresolved,No signed agreement is in the file.
+Documented total,Transfers plus the cash withdrawal,26250,Documented,"Documented transactions, not a finding of loss. Authorization is unresolved. The holder of the account ending 7781 is not documented. Reported amounts are never added to documented totals."
+
+Grouped Chronology
+Date,Period,Event Type,Event,Amount,Source,Status
+01/14/2025,Before account access,FAMILY REPORT,"The daughter says paid caregiving in the home began on or about this date. No employment record, schedule, or pay record is in the file.",,Daughter's account,Reported
+02/02/2025,Before account access,FAMILY REPORT,The daughter says Client A asked her for help finding a paid caregiver. That account is not in a produced message in this file.,,Daughter's account,Reported
+02/28/2025,Before account access,NEGATIVE FINDING,The February statement for the account ending 4402 shows no transfer to the account ending 7781. Ex. 1 at 7 to 12.,0,Ex. 1 at 7 to 12,Documented
+02/28/2025,Before account access,RECORD GAP,No written caregiving or pay agreement for the period before the signer change is in the records provided.,,Not in the records provided,Unresolved
+03/04/2025,March to April 2025,ACCOUNT ACCESS,Caregiver B was added as an authorized signer on the checking account ending 4402. The signature card is Ex. 3 at 2. What Client A understood about that change is not in the records.,,Ex. 3 at 2,Documented
+03/18/2025,March to April 2025,TRANSFER,"Online transfer of 2400 to the account ending 7781, the first of 12. The statement and the transfer confirmation both show the date and the amount. Authorization is unresolved.",2400,Ex. 1 at 15; Ex. 2 at 1,Documented
+04/02/2025,March to April 2025,FAMILY REPORT,"Client A tells her daughter, by text, that she never approved the March transfer. The text is a report. It does not, by itself, show what the bank was told.",,Ex. 4 at 1,Reported
+04/07/2025,March to April 2025,TRANSFER,Online transfer of 1500 to the account ending 7781. Ex. 1 at 20 and Ex. 2 at 2. Authorization is unresolved.,1500,Ex. 1 at 20; Ex. 2 at 2,Documented
+04/18/2025,March to April 2025,TRANSFER,Online transfer of 1750 to the account ending 7781. Ex. 1 at 20 and Ex. 2 at 3.,1750,Ex. 1 at 20; Ex. 2 at 3,Documented
+04/29/2025,March to April 2025,TRANSFER,Online transfer of 1600 to the account ending 7781. Ex. 1 at 21 and Ex. 2 at 4.,1600,Ex. 1 at 21; Ex. 2 at 4,Documented
+04/30/2025,March to April 2025,NEGATIVE FINDING,The April statement lists the four transfers to 7781 in that month and no other destination of that kind. Ex. 1 at 19 to 24.,,Ex. 1 at 19 to 24,Documented
+05/06/2025,May 2025,TRANSFER,Online transfer of 2000 to the account ending 7781. Ex. 1 at 26 and Ex. 2 at 5.,2000,Ex. 1 at 26; Ex. 2 at 5,Documented
+05/10/2025,May 2025,CASH WITHDRAWAL,"Cash withdrawal of 4000 at a branch, on the May statement. The amount and the date are documented. The statement does not name the person who made it. Ex. 1 at 26.",4000,Ex. 1 at 26,"Amount documented, person unresolved"
+05/12/2025,May 2025,FAMILY REPORT,The daughter texts that she will ask the bank who made the 05/10/2025 withdrawal. Ex. 4 at 4. No bank reply is in the file.,,Ex. 4 at 4,Reported
+05/16/2025,May 2025,TRANSFER,Online transfer of 1800 to the account ending 7781. Ex. 1 at 27 and Ex. 2 at 6.,1800,Ex. 1 at 27; Ex. 2 at 6,Documented
+05/23/2025,May 2025,TRANSFER,Online transfer of 1650 to the account ending 7781. Ex. 1 at 27 and Ex. 2 at 7.,1650,Ex. 1 at 27; Ex. 2 at 7,Documented
+05/30/2025,May 2025,TRANSFER,Online transfer of 2200 to the account ending 7781. Ex. 1 at 28 and Ex. 2 at 8.,2200,Ex. 1 at 28; Ex. 2 at 8,Documented
+05/31/2025,May 2025,RECORD GAP,"No branch slip, teller note, or video for the 05/10/2025 withdrawal is in the records provided.",,Not in the records provided,Unresolved
+06/04/2025,June 2025,TRANSFER,Online transfer of 1900 to the account ending 7781. Ex. 1 at 32 and Ex. 2 at 9.,1900,Ex. 1 at 32; Ex. 2 at 9,Documented
+06/09/2025,June 2025,TRANSFER,Online transfer of 1700 to the account ending 7781. Ex. 1 at 32 and Ex. 2 at 10.,1700,Ex. 1 at 32; Ex. 2 at 10,Documented
+06/13/2025,June 2025,TRANSFER,Online transfer of 1850 to the account ending 7781. Ex. 1 at 33 and Ex. 2 at 11.,1850,Ex. 1 at 33; Ex. 2 at 11,Documented
+06/16/2025,June 2025,TRANSFER,"Online transfer of 1900 to the account ending 7781, the last of 12. Ex. 1 at 33 and Ex. 2 at 12.",1900,Ex. 1 at 33; Ex. 2 at 12,Documented
+06/21/2025,June 2025,CAREGIVER STATEMENT,"Caregiver B writes that the transfers were agreed pay. The email is Ex. 5 at 1. It does not attach a pay agreement, a rate, or hours.",,Ex. 5 at 1,Reported
+06/24/2025,June 2025,FAMILY REPORT,The daughter replies and asks for the written agreement. Ex. 4 at 7. No agreement is attached in the records provided.,,Ex. 4 at 7,Reported
+06/30/2025,June 2025,POLICE REPORT,The daughter files a police report. The filing itself is documented. Ex. 6 at 1. The report is not a finding about the transfers.,,Ex. 6 at 1,Documented
+06/30/2025,June 2025,POLICE REPORT,"The same report lists jewelry the family believes is missing, estimated at 3500. Ex. 6 at 3. No appraisal or photo is attached.",3500,Ex. 6 at 3,Reported
+07/2025,July 2025 and after,NEGATIVE FINDING,The July statement shows no further transfer to the account ending 7781. Ex. 1 at 37 to 42. Months after July are not in the file.,,Ex. 1 at 37 to 42,Documented
+07/08/2025,July 2025 and after,RECORD GAP,Login and device records for the online transfers were asked about and are not in the records provided.,,Not in the records provided,Unresolved
+07/18/2025,July 2025 and after,AGENCY REPORT,"The daughter says the family contacted Adult Protective Services. No case number has been located, and no agency record is in the file.",,Daughter's account; no record located,Reported
+08/02/2025,July 2025 and after,RECORD GAP,Statements after July 2025 are not in the records provided. The file stops with the July statement.,,Not in the records provided,Unresolved
+Unknown,July 2025 and after,RECORD GAP,The holder of the account ending 7781 is not documented. No signature card or ownership record for that account is in the file.,,Not in the records provided,Unresolved
+Unknown,July 2025 and after,RECORD GAP,No power of attorney or other written authority over the account ending 4402 is in the records provided.,,Not in the records provided,Unresolved
+Unknown,July 2025 and after,RECORD GAP,No record of Caregiver B's pay rate or hours is in the file. The agreed-pay email does not state either figure.,,Ex. 5 at 1; no pay record located,Unresolved
+Unknown,July 2025 and after,RECORD GAP,Medical records bearing on capacity in early 2025 are not in the file. They would be requested only if counsel asks.,,Not in the records provided,Unresolved
+
+Episode A Money Flow
+Line,Date,Amount,Description / Concern Level,Source,Status
+1,03/18/2025,2400,First of 12 transfers to the account ending 7781.,Ex. 1 at 15; Ex. 2 at 1,Documented
+2,04/07/2025,1500,Amount documented; authorization unresolved.,Ex. 1 at 20; Ex. 2 at 2,Documented
+3,04/18/2025,1750,Amount documented; authorization unresolved.,Ex. 1 at 20; Ex. 2 at 3,Documented
+4,04/29/2025,1600,Amount documented; authorization unresolved.,Ex. 1 at 21; Ex. 2 at 4,Documented
+5,05/06/2025,2000,Amount documented; authorization unresolved.,Ex. 1 at 26; Ex. 2 at 5,Documented
+6,05/16/2025,1800,Amount documented; authorization unresolved.,Ex. 1 at 27; Ex. 2 at 6,Documented
+7,05/23/2025,1650,Amount documented; authorization unresolved.,Ex. 1 at 27; Ex. 2 at 7,Documented
+8,05/30/2025,2200,Amount documented; authorization unresolved.,Ex. 1 at 28; Ex. 2 at 8,Documented
+9,06/04/2025,1900,Amount documented; authorization unresolved.,Ex. 1 at 32; Ex. 2 at 9,Documented
+10,06/09/2025,1700,Amount documented; authorization unresolved.,Ex. 1 at 32; Ex. 2 at 10,Documented
+11,06/13/2025,1850,Amount documented; authorization unresolved.,Ex. 1 at 33; Ex. 2 at 11,Documented
+12,06/16/2025,1900,Last of 12 transfers to the account ending 7781.,Ex. 1 at 33; Ex. 2 at 12,Documented
+,,22250,Documented transfers only. Authorization unresolved.,Ex. 1; Ex. 2,Documented
+
+Episode B Money Flow
+Line,Date,Amount,Description / Concern Level,Source,Status
+1,05/10/2025,4000,Branch cash withdrawal. Amount documented; the person is not named in the records provided.,Ex. 1 at 26,"Amount documented, person unresolved"
+2,06/30/2025,3500,Reported jewelry estimate. Not included in the documented total.,Ex. 6 at 3,Reported
+,,4000,Documented amount only. The reported jewelry estimate is excluded.,Ex. 1 at 26,Documented
+
+Key Parties and Entities
+Party,Role,Details
+Client A,Subject of the records,"Age 81 and lives alone, as provided by her daughter. Customer on the statements for the account ending 4402."
+Caregiver B,Paid caregiver; authorized signer,Added as a signer on 03/04/2025 (Ex. 3 at 2). Later wrote that the transfers were agreed pay (Ex. 5 at 1).
+Daughter,Family member who reported the concern,"First described the missing money, kept the texts, and filed the police report."
+Client A's bank,Source of the statements,"Produced the statements, transfer confirmations, and signature card that are in this file."
+Holder of account 7781,Not documented,Twelve transfers name that account ending. No ownership record is in the file.
+Police department,Source of the report,"The 06/30/2025 report is Ex. 6. It documents the filing, not a result."
+Adult Protective Services,Reported contact only,The daughter says the family made contact. No case number has been located.
+
+Claimed Explanations vs. the Records
+Claimed Element,What the Records Show,Status,Source
+Transfers were agreed pay,"No written pay agreement, rate, or hours record is in the file. The email is Caregiver B's own statement.",Reported,Ex. 5 at 1
+Client A never approved the March transfer,The text to her daughter reports that account. The bank records show the transfer. They do not show her approval or a refusal sent to the bank.,Reported,Ex. 4 at 1
+"Jewelry is missing, estimated at 3500","The estimate is written in the police report. No appraisal, receipt, or photo is in the records provided.",Reported,Ex. 6 at 3
+A 4000 cash withdrawal occurred,The date and the amount are on the May statement. No branch record in the file names the person.,"Amount documented, person unresolved",Ex. 1 at 26
+The family contacted Adult Protective Services,"This is the daughter's account. No case number has been located, and no agency paper is in the file.",Reported,Daughter's account; no record located
+Caregiver B was an authorized signer,The signature card shows the addition on 03/04/2025. What Client A understood is not in the records.,Documented,Ex. 3 at 2
+Transfers to 7781 stopped after June,The July statement shows no further transfer to that account. Later months are not in the file.,Documented,Ex. 1 at 37 to 42
+There was a written pay agreement,None has been located. The email refers to agreed pay and does not attach an agreement.,Unresolved,Ex. 5 at 1; no agreement located
+
+Evidence Inventory
 Exhibit,Description,Dates,Pages,Obtained From
-Ex. 1,"Checking account statements, six pages per month",01/2025–07/2025,42,"Client A, via online banking"
-Ex. 2,Transfer confirmations,03/2025–06/2025,12,"Client A, via online banking"
-Ex. 3,Account signature card,03/04/2025,2,"Bank, at Client A’s request"
-Ex. 4,"Text messages, Client A and daughter",04/2025–06/2025,9,"Daughter’s phone, exported"
-Ex. 5,Email from Caregiver B,06/21/2025,1,Daughter’s email account
-Ex. 6,Police report,06/30/2025,4,"Daughter, from the police department"
+Ex. 1,"Checking account statements, about six pages a month",01/2025 to 07/2025,42,"Client A, through online banking"
+Ex. 2,Transfer confirmations for the twelve transfers,03/2025 to 06/2025,12,"Client A, through online banking"
+Ex. 3,Account signature card adding Caregiver B,03/04/2025,2,"Client A's bank, at Client A's request"
+Ex. 4,Text messages between Client A and her daughter,04/2025 to 06/2025,9,"Daughter's phone, exported"
+Ex. 5,Email from Caregiver B referring to agreed pay,06/21/2025,1,Daughter's email account
+Ex. 6,Police report filed by the daughter,06/30/2025,4,"Daughter, from the police department"
+Not in the records provided,Ownership records for the account ending 7781,Requested,,"Client A's bank, or the institution that holds 7781"
+Not in the records provided,Branch slip or video for the 05/10/2025 withdrawal,Requested,,"Client A's bank, branch named on the statement"
+Not in the records provided,Written caregiving or pay agreement,Requested,,"Client A, Caregiver B, or the daughter's files"
+Not in the records provided,"Appraisal, receipt, or photos of the reported jewelry",Requested,,Daughter or Client A
+Not in the records provided,Login and device records for the online transfers,Requested,,Client A's bank
+Not in the records provided,"Any claim to the bank, and the bank's response",Requested,,Client A's bank
 
-Documented Transactions Summary
-Category,Transactions Documented by Records,Reported Only,Notes
-Transfers to account ending 7781,"$22,250",—,"12 transfers, each listed in the chronology; Ex. 1 and Ex. 2"
-Branch cash withdrawal,"$4,000",—,Amount documented; who withdrew it is unresolved
-Missing jewelry,—,"$3,500","Family estimate in the police report, Ex. 6 at 3; no appraisal or photos yet"
-Total,"$26,250","$3,500","Documented transactions, not a finding of loss. $22,250 went to the account ending 7781, whose holder is unconfirmed; the $4,000 cash withdrawal isn’t yet tied to anyone. Authorization is unresolved for all of it. Reported amounts are never added to documented totals."
-
-What's Still Missing
-Ownership records for the account ending 7781.
-Branch records or video for the 05/10/2025 cash withdrawal.
-Any written caregiving or pay agreement between Client A and Caregiver B.
-Photos, receipts or an appraisal for the missing jewelry.
-Login and device records for the online transfers.
-Any fraud claim Client A or her daughter filed with the bank, and the bank’s response.
-Statements after July 2025.
-Any record of Caregiver B’s pay rate or hours worked.
-The case number for the family’s report to Adult Protective Services.
-Any power of attorney or other authority over Client A’s accounts.
-Medical records bearing on Client A’s capacity in early 2025, if counsel requests them.
+Open Items and Recommended Next Steps
+Priority,Open Item,Who Holds It / Where to Request,Notes
+High,Ownership records for the account ending 7781,"Client A's bank, or the institution that holds 7781",Holder is not documented.
+High,Branch records or video for the 05/10/2025 cash withdrawal,"Client A's bank, at the branch named on the statement",Amount is documented. The person is not.
+High,Written caregiving or pay agreement,"Client A, Caregiver B, or the daughter's files",Not located. The email refers only to agreed pay.
+High,Login and device records for the online transfers,Client A's bank,Not in the records provided.
+Medium,"Photos, receipts, or an appraisal for the reported jewelry",Daughter or Client A,The 3500 figure is a family estimate only.
+Medium,"Any claim filed with the bank, and the bank's response",Client A's bank,Not in the records provided.
+Medium,Statements after July 2025,"Client A's bank, or Client A",The file ends with the July statement.
+Medium,Caregiver B's pay rate or hours,"Daughter, Caregiver B, or pay records",Not located.
+Medium,Any power of attorney or other authority,"Client A, or the file counsel already holds",None located in the records provided.
+Lower,Adult Protective Services case number,"The agency, if a report was made",Reported by the daughter. No number located.
+Lower,"Medical records bearing on capacity, if counsel requests them","A health provider, only if counsel asks",Not in this file. Not requested here.
