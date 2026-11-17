@@ -145,19 +145,22 @@ section.inquiry-band .short-inquiry .textlink,.reach-card .textlink{color:var(--
 .keep-general strong{display:block;color:#2a1424;}
 .keep-general p{margin:2px 0 0;color:#4b2242;font-size:15px;}
 .reach-actions{display:flex;align-items:center;gap:16px;margin-top:18px;}
+.reach-card fieldset.attorney-slot,.reach-card #has-attorney-field{border:0;margin:16px 0 16px;padding:0;}
+.reach-card .choice-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin:0;}
+.reach-card .choice-line label{display:inline-flex;align-items:center;gap:8px;margin:0;min-height:44px;font-weight:500;}
+.reach-card .choice-line input{width:18px;height:18px;margin:0;flex:none;}
+.role-toggle{display:flex;background:#efe7e2;border-radius:999px;padding:4px;gap:6px;margin:16px 0 16px;}
+.role-toggle button{flex:1;border:0;background:transparent;border-radius:999px;min-height:44px;padding:12px 14px;font:inherit;font-size:15px;line-height:1.25;cursor:pointer;color:#2a1424;display:flex;align-items:center;justify-content:center;text-align:center;}
 .reach-card .send-btn{font-size:18px;min-height:56px;padding:0 34px;background:#2a1424;color:#FAF6F2;border-color:#2a1424;border-radius:999px;}
 .reach-card .send-btn:hover{background:#4b2242;border-color:#4b2242;color:#FAF6F2;}
 .reach-fine{font-size:13px;line-height:1.4;color:#6f655f;margin:0;}
-.role-toggle{display:flex;background:#efe7e2;border-radius:999px;padding:4px;gap:4px;margin:18px 0 8px;}
-.role-toggle button{flex:1;border:0;background:transparent;border-radius:999px;padding:10px 12px;font:inherit;font-size:15px;cursor:pointer;color:#2a1424;}
 .role-toggle button.selected{background:#2a1424;color:#FAF6F2;}
 .client-note{font-size:14px;line-height:1.4;margin:8px 0 0;color:#4b2242;}
-.choice-line{display:flex;gap:14px;flex-wrap:wrap;margin:0;}
-.choice-line label{font-weight:500;margin:0;}
-.choice-line input{width:auto;}
 @media (max-width:700px){
   .reach-row{grid-template-columns:1fr;}
   .reach-actions{flex-direction:column;align-items:stretch;}
+  .reach-fine{text-align:center;}
+  .reach-card .choice-line{flex-direction:column;align-items:flex-start;gap:4px;}
   .reach-card .send-btn{width:100%;justify-content:center;}
   .reach-card{padding:24px 16px;}
 }
