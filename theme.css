@@ -333,6 +333,7 @@ footer{background:var(--night);color:rgba(236,227,210,.75);padding:32px 0 24px;f
 .fbrand img{width:42px;height:auto;}
 .fcta{color:var(--bone);border-bottom:1px solid var(--antique);padding-bottom:2px;font-size:16px;}
 footer .legal{max-width:none;line-height:1.6;margin:22px 0 0;}
+footer .legal:not(.addr){font-size:12px;line-height:1.35;margin:8px 0 0;color:rgba(236,227,210,.92);}
 footer .legal.addr{max-width:82ch;font-style:normal;margin:10px 0 30px;}
 footer .legal a{color:inherit;border-bottom:1px solid rgba(236,227,210,.35);}
 .fbase{display:flex;justify-content:space-between;align-items:center;gap:14px 28px;flex-wrap:wrap;font-size:13.5px;color:rgba(236,227,210,.45);}
