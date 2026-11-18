@@ -124,17 +124,22 @@ if (form) {
     const status = $('#form-status');
     const button = form.querySelector('button[type="submit"]');
     const spanish = $('#language').value === 'Español';
-    // Email is optional so someone whose inbox isn't private can leave only a phone number
-    const email = form.elements.email.value.trim();
-    if (!email && !form.elements.phone.value.trim()) {
+    // Email and phone are both required, for clients and firms alike
+    if (!form.elements.email.value.trim()) {
       status.textContent = spanish
-        ? 'Denos un correo electrónico o un número de teléfono para comunicarnos con usted.'
-        : 'Please give us an email address or a phone number so we can reach you.';
+        ? 'Denos un correo electrónico para comunicarnos con usted.'
+        : 'Please give us an email address so we can reach you.';
       form.elements.email.focus();
       return;
     }
+    if (!form.elements.phone.value.trim()) {
+      status.textContent = spanish
+        ? 'Denos un número de teléfono para comunicarnos con usted.'
+        : 'Please give us a phone number so we can reach you.';
+      form.elements.phone.focus();
+      return;
+    }
     const body = new FormData(form);
-    if (!email) body.delete('email');
     button.disabled = true;
     status.textContent = spanish ? 'Enviando…' : 'Sending…';
     try {
@@ -187,6 +192,11 @@ document.querySelectorAll('form.short-inquiry').forEach(form => {
     if (!email) {
       status.textContent = 'Please give us an email address so we can reach you.';
       form.elements.email.focus();
+      return;
+    }
+    if (form.elements.phone && !form.elements.phone.value.trim()) {
+      status.textContent = 'Please give us a phone number so we can reach you.';
+      form.elements.phone.focus();
       return;
     }
     const body = new FormData(form);
