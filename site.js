@@ -19,6 +19,23 @@ sticky.className = 'sticky-cta';
 sticky.href = '/#home-inquiry-title';
 sticky.textContent = document.body.dataset.page === 'es' ? 'Solicite una llamada de 15 minutos' : 'Request a 15-Minute Call';
 document.body.appendChild(sticky);
+const clearSticky = () => {
+  if (window.innerWidth > 480) {
+    sticky.style.visibility = 'visible';
+    return;
+  }
+  const sb = sticky.getBoundingClientRect();
+  const covered = [...document.querySelectorAll('a.btn, button.btn, a[href*="sample-file"]')].some(el => {
+    if (el === sticky) return false;
+    const b = el.getBoundingClientRect();
+    if (b.width < 8 || b.height < 8) return false;
+    return b.bottom > sb.top + 2 && b.top < sb.bottom - 2 && b.right > sb.left && b.left < sb.right;
+  });
+  sticky.style.visibility = covered ? 'hidden' : 'visible';
+};
+addEventListener('scroll', clearSticky, { passive: true });
+addEventListener('resize', clearSticky);
+clearSticky();
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const stateParam = new URLSearchParams(location.search).get('state');

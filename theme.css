@@ -177,6 +177,13 @@ section.inquiry-band .short-inquiry{margin-inline:auto;}
 .hero details summary{color:var(--bone);}
 .sticky-cta{position:fixed;right:16px;bottom:16px;z-index:46;background:var(--aubergine);color:var(--bone);border:1px solid var(--antique);border-radius:999px;padding:12px 18px;font-weight:700;box-shadow:0 8px 20px rgba(23,13,20,.28);}
 @media (max-width:760px){.sticky-cta{right:12px;bottom:max(12px,env(safe-area-inset-bottom,0px));padding:10px 12px;font-size:14px;max-width:62%;text-align:center;line-height:1.25;}}
+@media (max-width:480px){
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));}
+  .sticky-cta{left:12px;right:12px;max-width:none;bottom:max(8px,env(safe-area-inset-bottom,0px));}
+  body.home .hero-body{padding-bottom:calc(108px + env(safe-area-inset-bottom,0px));}
+  .head{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px));}
+  a[href*="sample-file"]{position:relative;z-index:47;}
+}
 @media (max-width:800px){.fit-list{grid-template-columns:1fr;}}
 
 /* Dark full-width bands */
@@ -645,6 +652,14 @@ body[data-page="attorneys"]{padding-bottom:112px;}
   .attorneys-head #clear-pricing .fine{padding-right:132px;}
 }
 body[data-page="services"] .head h1{max-width:36ch;}
+.experience-block ul,.pilot-assignment ul{margin:10px 0 0;padding-left:1.15em;}
+.experience-block li,.pilot-assignment li{margin:8px 0;}
+.experience-block h2,.pilot-assignment h2{margin-top:6px;}
+.pilot-assignment h3{margin:18px 0 0;font-family:var(--display);font-weight:600;font-size:22px;color:var(--aubergine);}
+.top .experience-block{color:rgba(236,227,210,.92);}
+.top .experience-block .eyebrow{color:var(--antique);}
+.top .experience-block strong{color:var(--bone);}
+.featured-samples{border-top:0;}
 .pilot-banner{margin-top:22px;padding:20px 24px;border:1px solid var(--gold);border-radius:10px;background:rgba(233,196,111,.1);}
 .pilot-banner .pilot-title{font-family:var(--display);font-weight:700;font-size:clamp(22px,2.1vw,30px);line-height:1.25;color:var(--bone);}
 .pilot-banner .pilot-next{margin-top:10px;max-width:none;color:rgba(236,227,210,.88);font-size:17px;line-height:1.55;}
@@ -704,3 +719,11 @@ body[data-page="services"] .sample-pages.single{grid-template-columns:minmax(0,9
 .sample-row .fine{margin-top:8px;}
 .service-flow{max-width:960px;margin:8px 0 22px;}
 .service-flow svg{width:100%;height:auto;display:block;}
+body[data-page="services"] .case-grid.featured-samples{grid-template-columns:repeat(3,minmax(0,1fr));max-width:1100px;}
+body[data-page="services"] .featured-samples .sample-pages img{max-height:220px;}
+@media (max-width:800px){body[data-page="services"] .case-grid.featured-samples{grid-template-columns:1fr;}}
+@media (max-width:480px){
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));}
+  .head{padding-bottom:calc(108px + env(safe-area-inset-bottom,0px));}
+  body.home .hero-body{padding-bottom:calc(128px + env(safe-area-inset-bottom,0px));}
+}
