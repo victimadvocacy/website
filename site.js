@@ -139,13 +139,14 @@ if (form) {
       form.elements.phone.focus();
       return;
     }
+    if (form.elements.botcheck) form.elements.botcheck.checked = false;
     const body = new FormData(form);
     button.disabled = true;
     status.textContent = spanish ? 'Enviando…' : 'Sending…';
     try {
       const res = await fetch(form.action, { method: 'POST', body, headers: { Accept: 'application/json' } });
       const data = await res.json();
-      if (!res.ok || !data.success) throw new Error(data.message || 'Send failed');
+      if (!res.ok || data.success !== true) throw new Error(data.message || 'Send failed');
       form.reset();
       syncNoLawyer();
       if (role) $('[data-role="' + role + '"]').click();
@@ -199,13 +200,14 @@ document.querySelectorAll('form.short-inquiry').forEach(form => {
       form.elements.phone.focus();
       return;
     }
+    if (form.elements.botcheck) form.elements.botcheck.checked = false;
     const body = new FormData(form);
     button.disabled = true;
     status.textContent = 'Sending…';
     try {
       const res = await fetch(form.action, { method: 'POST', body, headers: { Accept: 'application/json' } });
       const data = await res.json();
-      if (!res.ok || !data.success) throw new Error(data.message || 'Send failed');
+      if (!res.ok || data.success !== true) throw new Error(data.message || 'Send failed');
       form.reset();
       if (form.querySelector('[data-requester]')) sync('law firm');
       status.textContent = 'Thank you. Your inquiry was sent, and we will reply within one business day.';
