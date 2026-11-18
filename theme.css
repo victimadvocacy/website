@@ -683,13 +683,13 @@ body[data-page="services"] .head h1{max-width:36ch;}
 @media (max-width:860px){.head-cols{grid-template-columns:1fr;}}
 
 /* Homepage: who we support, and the paired pain points */
-body.home .who-support{padding-block:22px 18px;border-top:0;}
-body.home .who-support h2{font-size:clamp(28px,3vw,40px);}
+body.home .who-support,body[data-page="es"] .who-support{padding-block:22px 18px;border-top:0;}
+body.home .who-support h2,body[data-page="es"] .who-support h2{font-size:clamp(28px,3vw,40px);}
 .support-pair{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-top:12px;}
 .support-card{background:#fbf7f0;border-radius:16px;border-top:3px solid #4b2242;padding:14px 16px 12px;}
 .support-card.firms{border-top-color:#e9c46f;}
 .support-card h3{font-size:20px;line-height:1.25;margin:0;}
-.support-card ul{list-style:none;margin:10px 0 0;padding:0;gap:6px;}
+.support-card ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;}
 .support-card li{font-size:15.5px;line-height:1.4;padding:2px 0 2px 12px;border-left:2px solid #4b2242;}
 .support-card.firms li{border-left-color:#e9c46f;}
 body.home main > section.familiar{max-width:none;background:#2a1420;color:#f4ece1;border-top:0;padding:24px max(var(--gutter),calc((100% - 1400px)/2 + var(--gutter))) 26px;}
