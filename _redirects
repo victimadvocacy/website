@@ -3,6 +3,8 @@
 /our-work.html       /services    301
 /attorneys           /services    301
 /attorneys.html      /services    301
+/advocates           /about       301
+/advocates.html      /about       301
 /for-attorneys       /services    301
 /for-attorneys.html  /services    301
 # The advocate standard now lives on How It Works. Old /standards links still open it.

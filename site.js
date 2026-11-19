@@ -19,6 +19,23 @@ sticky.className = 'sticky-cta';
 sticky.href = '/#home-inquiry-title';
 sticky.textContent = document.body.dataset.page === 'es' ? 'Solicite una llamada de 15 minutos' : 'Request a 15-Minute Call';
 document.body.appendChild(sticky);
+const clearSticky = () => {
+  if (window.innerWidth > 480) {
+    sticky.style.visibility = 'visible';
+    return;
+  }
+  const sb = sticky.getBoundingClientRect();
+  const covered = [...document.querySelectorAll('a.btn, button.btn, a[href*="sample-file"]')].some(el => {
+    if (el === sticky) return false;
+    const b = el.getBoundingClientRect();
+    if (b.width < 8 || b.height < 8) return false;
+    return b.bottom > sb.top + 2 && b.top < sb.bottom - 2 && b.right > sb.left && b.left < sb.right;
+  });
+  sticky.style.visibility = covered ? 'hidden' : 'visible';
+};
+addEventListener('scroll', clearSticky, { passive: true });
+addEventListener('resize', clearSticky);
+clearSticky();
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const stateParam = new URLSearchParams(location.search).get('state');
@@ -107,23 +124,29 @@ if (form) {
     const status = $('#form-status');
     const button = form.querySelector('button[type="submit"]');
     const spanish = $('#language').value === 'Español';
-    // Email is optional so someone whose inbox isn't private can leave only a phone number
-    const email = form.elements.email.value.trim();
-    if (!email && !form.elements.phone.value.trim()) {
+    // Email and phone are both required, for clients and firms alike
+    if (!form.elements.email.value.trim()) {
       status.textContent = spanish
-        ? 'Denos un correo electrónico o un número de teléfono para comunicarnos con usted.'
-        : 'Please give us an email address or a phone number so we can reach you.';
+        ? 'Denos un correo electrónico para comunicarnos con usted.'
+        : 'Please give us an email address so we can reach you.';
       form.elements.email.focus();
       return;
     }
+    if (!form.elements.phone.value.trim()) {
+      status.textContent = spanish
+        ? 'Denos un número de teléfono para comunicarnos con usted.'
+        : 'Please give us a phone number so we can reach you.';
+      form.elements.phone.focus();
+      return;
+    }
+    if (form.elements.botcheck) form.elements.botcheck.checked = false;
     const body = new FormData(form);
-    if (!email) body.delete('email');
     button.disabled = true;
     status.textContent = spanish ? 'Enviando…' : 'Sending…';
     try {
       const res = await fetch(form.action, { method: 'POST', body, headers: { Accept: 'application/json' } });
       const data = await res.json();
-      if (!res.ok || !data.success) throw new Error(data.message || 'Send failed');
+      if (!res.ok || data.success !== true) throw new Error(data.message || 'Send failed');
       form.reset();
       syncNoLawyer();
       if (role) $('[data-role="' + role + '"]').click();
@@ -172,13 +195,19 @@ document.querySelectorAll('form.short-inquiry').forEach(form => {
       form.elements.email.focus();
       return;
     }
+    if (form.elements.phone && !form.elements.phone.value.trim()) {
+      status.textContent = 'Please give us a phone number so we can reach you.';
+      form.elements.phone.focus();
+      return;
+    }
+    if (form.elements.botcheck) form.elements.botcheck.checked = false;
     const body = new FormData(form);
     button.disabled = true;
     status.textContent = 'Sending…';
     try {
       const res = await fetch(form.action, { method: 'POST', body, headers: { Accept: 'application/json' } });
       const data = await res.json();
-      if (!res.ok || !data.success) throw new Error(data.message || 'Send failed');
+      if (!res.ok || data.success !== true) throw new Error(data.message || 'Send failed');
       form.reset();
       if (form.querySelector('[data-requester]')) sync('law firm');
       status.textContent = 'Thank you. Your inquiry was sent, and we will reply within one business day.';
