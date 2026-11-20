@@ -13,6 +13,9 @@
 /standards.html      /how-it-works    301
 /advocates           /about           301
 /advocates.html      /about           301
+# Old Spanish about page. The Spanish site is /es.
+/es/about            /about           301
+/es/about.html       /about           301
 # /individuals.html opens the short page. /resources is the public guide again.
 # /es stays as the Spanish version of that page, so it is not redirected.
 /individuals.html     /individuals    301
