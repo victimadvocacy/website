@@ -1,15 +1,18 @@
-# Old page names now open Services.
-/our-work            /services    301
-/our-work.html       /services    301
-/attorneys           /services    301
-/attorneys.html      /services    301
-/advocates           /about       301
-/advocates.html      /about       301
-/for-attorneys       /services    301
-/for-attorneys.html  /services    301
-# The advocate standard now lives on How It Works. Old /standards links still open it.
-/standards           /how-it-works#advocate-standard    301
-/standards.html      /how-it-works#advocate-standard    301
+# Pages removed November 20, 2026 open How It Works. No redirect chains.
+/services            /how-it-works    301
+/services.html       /how-it-works    301
+/partnership         /how-it-works    301
+/partnership.html    /how-it-works    301
+/our-work            /how-it-works    301
+/our-work.html       /how-it-works    301
+/attorneys           /how-it-works    301
+/attorneys.html      /how-it-works    301
+/for-attorneys       /how-it-works    301
+/for-attorneys.html  /how-it-works    301
+/standards           /how-it-works    301
+/standards.html      /how-it-works    301
+/advocates           /about           301
+/advocates.html      /about           301
 # /individuals.html opens the short page. /resources is the public guide again.
 # /es stays as the Spanish version of that page, so it is not redirected.
 /individuals.html     /individuals    301
