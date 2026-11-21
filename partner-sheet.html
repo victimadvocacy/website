@@ -21,9 +21,11 @@
 <style>
 :root{--plum:#2a1420;--ink:#2a1424;--rule:rgba(42,20,32,.18);--gold:#8a7040;--paper:#f4ece1;}
 *{box-sizing:border-box;}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Sans 3",sans-serif;font-size:15px;line-height:1.4;}
-.sheet{max-width:8.5in;margin:0 auto;padding:28px 32px 24px;}
-header{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:2px solid var(--plum);padding-bottom:10px;}
+html,body{max-width:100%;overflow-x:clip;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Sans 3",sans-serif;font-size:15px;line-height:1.4;overflow-wrap:break-word;}
+.sheet{max-width:min(8.5in,100%);margin:0 auto;padding:28px 32px 24px;}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-bottom:2px solid var(--plum);padding-bottom:10px;}
+header > div:last-child{max-width:100%;overflow-wrap:anywhere;}
 .brand{display:flex;align-items:center;gap:10px;}
 .brand img{width:42px;height:auto;}
 .brand b{display:block;font-size:18px;letter-spacing:.04em;}
@@ -36,7 +38,12 @@ ul{margin:0;padding-left:1.1em;}
 li{margin:2px 0;}
 .quote{margin:8px 0 0;padding:8px 10px;border-left:3px solid var(--gold);background:#fff;}
 .fine{font-size:12.5px;margin:8px 0 0;}
-.actions{margin-top:14px;display:flex;gap:16px;align-items:center;}
+.actions{margin-top:14px;display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;}
+@media (max-width:640px){
+  .sheet{padding:20px 16px 24px;}
+  header{align-items:flex-start;gap:12px 16px;}
+  .columns{grid-template-columns:1fr;}
+}
 .btn{display:inline-block;background:var(--plum);color:#f4ece1;text-decoration:none;border-radius:999px;padding:8px 16px;font-weight:600;}
 a{color:var(--plum);}
 @media print{
@@ -52,7 +59,7 @@ a{color:var(--plum);}
 <article class="sheet">
 <header>
 <div class="brand"><img src="crest.png" alt="" width="56" height="46"><div><b>Victim Advocacy Associates</b><span>Information Sheet for Firms</span></div></div>
-<div>Call or text 817-805-2467<br>arpey@victimadvocacy.com</div>
+<div>Call or text 817-805-2467<br><a href="mailto:arpey@victimadvocacy.com">arpey@victimadvocacy.com</a></div>
 </header>
 <h1>Your Firm Leads the Case. We Support Your Client and Your Team.</h1>
 <p class="lede">A dedicated advocate stays with your client through hearings and follow-up calls. Organized, source-tied records come back to your team. The work stays under your firm’s direction, and legal questions stay with counsel. Nothing is binding until you sign a written agreement.</p>
@@ -67,7 +74,7 @@ a{color:var(--plum);}
 <li>Work with firms in every state, by phone and video, and travel for hearings when a matter needs it.</li>
 </ul>
 <h2>Fees</h2>
-<p class="fine">Every engagement starts with a written proposal. <a href="/how-it-works#pricing">See pricing</a>.</p>
+<p class="fine">Every engagement starts with a written proposal. <a href="/pricing">See pricing</a>.</p>
 </section>
 <section>
 <h2>How an Engagement Starts</h2>
@@ -87,7 +94,7 @@ a{color:var(--plum);}
 <p class="fine">Victim Advocacy Associates is a private business, not a government or nonprofit victim services program. It is not a law firm and does not provide legal representation or legal advice. We are not licensed private investigators and do not perform work that requires that license. If a matter needs it, a licensed professional does that work under their own engagement. We do not provide counseling, therapy or mental health treatment. Using this website or sending a message does not create an engagement or an attorney-client relationship with VAA. When a firm retains VAA, the work is performed under that attorney’s direction.</p>
 <p class="fine">Our founder also works as an independent consultant for Bealke Law; if we ever suggest that firm, we’ll tell you, and it pays us nothing for introductions. Ally Arpey, Pepperdine University B.A. 2021, has completed NACP training.</p>
 <p class="fine">Victim Advocacy Associates LLC · P.O. Box 281, Colleyville, Texas 76034 · victimadvocacy.com</p>
-<p class="actions no-print"><a class="btn" href="/contact#attorney">Request a 15-Minute Call</a><a href="/sample-work">Review Our Work Product</a><a href="#" onclick="print();return false;">Print this sheet</a></p>
+<p class="actions no-print"><a class="btn" href="/contact">Request a 15-Minute Call</a><a href="/sample-work">Review Our Work Product</a><a href="#" onclick="print();return false;">Print this sheet</a></p>
 </article>
 </body>
 </html>
